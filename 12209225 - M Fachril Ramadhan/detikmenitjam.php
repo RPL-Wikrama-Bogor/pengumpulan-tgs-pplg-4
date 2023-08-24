@@ -28,5 +28,6 @@
         echo "Detik: $detik detik<br>";
     }
     ?>
+    
 </body>
 </html>
