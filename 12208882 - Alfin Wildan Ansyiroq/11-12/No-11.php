@@ -106,7 +106,7 @@ if (isset($_POST["submit"])) {
     if ( $bulan == "01") {
          $bulan = "Januari";
     } else if ( $bulan == "02") {
-         $bulan = "Fenruari";
+         $bulan = "Februari";
     } else if ( $bulan == "03") {
          $bulan = "maret";
     } else if ( $bulan == "04") {
