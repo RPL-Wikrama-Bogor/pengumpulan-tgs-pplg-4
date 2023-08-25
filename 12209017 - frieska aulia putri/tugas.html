@@ -33,7 +33,7 @@
       .baris{
         box-sizing: border-box;
 				padding: 20px;
-                padding-top: 23%;
+                padding-top: 18%;
                 text-align: center;
       }
       .petunjuk{
@@ -42,6 +42,7 @@
         background-color:#ccc;
         margin: 5px;
         box-sizing: border-box;
+        border-radius: 43px;
 				padding: 10px;
       }
       .kolom2,.kolom3 ,.kolom4,.kolom5{
@@ -49,16 +50,17 @@
         margin:4px;
         margin-top: -8%;
       }
-      .form-container {
-    max-width: 400px;
-    margin: 0 auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+   .tabel {
+    background-color:antiquewhite;
+    width: 355px;
+    height: 425px;
+    margin-top: 40px;
+    border-radius: 15px;
+    outline: auto;
+   }
   .form-group {
-    margin-bottom:15px;
+    margin-bottom:8px;
+    padding: 5px;
   }
 
   label {
@@ -69,23 +71,29 @@
 
   input[type="text"],
   input[type="rayon"] {
-    width: 20%;
+    width: 65%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 3px solid #ccc;
     border-radius: 3px;
   }
-
+  .nam {
+    text-align: center;
+  }
   button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    padding: 10px 20px;
+    padding: 10px 25px;
     border-radius: 3px;
     cursor: pointer;
   }
 
   button:hover {
     background-color: #0056b3;
+  }
+  .sub {
+    float: right;
+    padding: 2px 25px;
   }
     </style>
 </head>
@@ -103,6 +111,9 @@
             <li>Lebih banyak anak perempuan mendapatkan pendidikan.</li>
             <li>Lebih banyak wanita akan berada di tempat kerja dan menjadi pimpinan.</li>
         </ol>
+        <ul>
+            <li> pentingnya kesetaraan dalam keberagaman ialah untuk mewujudkan kehidupan yang harmonis diantaranya tercipta relasi yang adil, bebas dari kesenjangan, terciptanya rasa saling menghargai dan menghormati. </li>
+        </ul>
       </div>
       </div>
       <section class="baris">
@@ -111,8 +122,10 @@
         <div class=" petunjuk kolom4">MANFAAT <br>akan menghasilkan kesetaraan antara laki-laki dan perempuan dan untuk mendapatkan hasil yang sama dalam pembangunan.</div>
         <div class=" petunjuk kolom5">KONTROL <br>kekuasaan untuk menggunakan hak-hak secara berdaya guna berhasil guna.</div>
    </section>
-   <div cl ass="form-container">
+   <section class="tabel">
+    <div class="nam">
     <h2>Form data siswa</h2>
+    </div>
     <form>
       <div class="form-group">
         <label for="nama">Nama:</label>
@@ -130,8 +143,10 @@
         <label for="nis">Pesan:</label>
         <input type="text" id="pesan" name="pesan" placeholder="Masukkan Pesan">
       </div>
+      <div class="sub">
       <button type="submit">Submit</button>
+      </div>
     </form>
-   </div>
+   </section>
 </body>
 </html>
