@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="logo">
+        <button class="hire-btn">Hire me</button>
+        
+    </div>
+
+    <div class="text-container">
+        <p>Hello,</p>
+        <p>I&#8217;M ridho</p>
+        <p>Seorang Pelajar </p>
+        <p>saya hanya seorang lelaki 
+        <br>barudak suka ngahuleng</p>
+        </div>
+
+        <img alt="model" class="model" src="arah.png">
+
+        <section class="baris">
+            <div class="kolom kolom1">jumlah kecmatan<br>15</br> </div>
+            <div class="kolom kolom2">jumlah desa<br>42</br></div>
+            <div class="kolom kolom3">jumlah penduduk<br>12.000</br></div>
+            <div class="kolom kolom4">data per tahun<br>2023</br></div>
+       </section>
+
+       <div class="container">
+        
+    
+        <form action="tabel.php" method="post">
+                <label>Nik<span>*</span>: </label>
+                <input type="text" name="nama">
+                <br>
+                <label>Nama lengkap<span>*</span>: </label>
+                <input type="text" name="nis">
+                <br>
+                <label>no/telp<span>*</span>: </label>
+                <input type="text" name="rom">
+                <label>pengaduan<span>*</span>: </label>
+                <input type="text" name="rom">
+
+                <p>Upload a File</p>
+    <form action="#" method="post" enctype="multipart/form-data">
+        <label for="fileInput">Select a file:</label>
+        <input type="file" id="fileInput" name="fileInput">
+        <button type="submit">Upload</button>
+    </form>
+                <button type="submit" name="submit">SUBMIT</button>
+        </div>
+     
+
+
+    <style>
+        .logo{
+    font-family:RoadTest;
+    color: black;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+.hire-btn{
+    float: right;
+    border: 2px solid #373636;
+    color: #373636;
+}
+
+.text-container p:nth-child(1){
+    font-family: calibri;
+    font-weight: bold;
+    color: #6d6d6d;
+    font-size: 22px;
+}
+ 
+.text-container p:nth-child(2){
+    font-family: calibri;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #1a1a1a;
+    font-size: 60px;
+}
+ 
+.text-container p:nth-child(3){
+    font-family: myriad pro regular;
+    color: #403e3e;
+    font-size: 30px;
+    line-height: 30px;
+}
+ 
+.text-container p:nth-child(4){
+    font-family: calibri;
+    color: #403e3e;
+    font-size: 17px;
+    margin-top: 10px;
+    line-height: 30px;
+}
+ 
+.text-container p{
+    line-height: 0px;
+    margin: 55px 0px 25px;
+}
+ 
+.text-container{
+    position: absolute;
+    left: 13%;
+    top: 42%;
+    transform: translate(-13%, -42%);
+}
+
+.model{
+    height: 300px;
+    position: absolute;
+    bottom: 200px;
+    left: 80%;
+    transform: translateX(-70%);
+    border-radius: 25%;
+}
+.baris{
+        box-sizing: border-box;
+				padding: 20px;
+      }
+      .kolom{
+        width: 350px;
+        height: 120px;
+        background-color: aquamarine;
+        margin: 6px;
+        margin-top: 600px;
+        box-sizing: border-box;
+				padding: 40px;
+                text-align: center;
+
+      }
+      .kolom1,.kolom2, .kolom3, .kolom4{
+        float: left;
+      }
+
+      span{
+            color:red;
+        }
+
+        
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+    position: absolute;
+    right: 63%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 25px;
+    width: 300px;
+    margin-top: 630px;
+    
+    background-color: rgba(0, 0, 0, 0.623);
+    box-shadow: 0 0 10px rgba(255,255,255,.3);
+}
+.container h1{
+    text-align: left;
+    color: #fafafa;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 4px solid #2979ff;
+}
+.container label{
+    text-align: left;
+    color: #90caf9;
+}
+.container form input{
+    width: calc(100% - 20px);
+    padding: 8px 10px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid #2979ff;
+    color: #fff;
+    font-size: 20px;
+}
+.container form button{
+    width: 100%;
+    padding: 5px 0;
+    border: none;
+    background-color:#2979ff;
+    font-size: 18px;
+    color: #fafafa;
+}
+
+
+
+    </style>
+
+
+</body>
+</html>
