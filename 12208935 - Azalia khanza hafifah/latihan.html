@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .back{
+        background-color: #FFF6DC;
+       }
+        .klm{
+        width: 120px;
+        height: 50px;
+        background-color: #FFC6AC;
+        box-sizing: border-box;
+        margin: 20px;
+        float:right ;
+        border-radius: 40px;
+        text-align: center;
+        }
+        .gambar{
+            float: right;
+            margin-top: 7%;
+            float: right;
+            width: 37%;
+        }
+        .text{
+            font-size: 30px;
+            padding-top: 2%;
+            margin-right: 10%;
+        }
+        .baris{
+        box-sizing: border-box;
+				padding: 20px;
+      }
+      .kolom{
+        width: 250px;
+        height: 120px;
+        background-color: #FFC6AC;
+        margin: 3px;
+        box-sizing: border-box;
+				padding: 10px;
+      }
+      .kolom1,.kolom2, .kolom3{
+        float: left;
+        border-radius: 20%;
+      }
+      .tabel {
+        background-color:antiquewhite;
+        width: 400px;
+        height: 455px;
+        margin-top: 40px;
+        border-radius: 15px;
+        outline: auto;
+      }
+      .form-group {
+        margin-bottom:15px;
+        padding: 5px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+
+      input[type="text"],
+      input[type="rayon"] {
+        width: 65%;
+        padding: 10px;
+        border: 3px solid #ccc;
+        border-radius: 3px;
+      }
+      .nam {
+        text-align: center;
+      }
+      button {
+        background-color: #FFC6AC;
+        color: #fff;
+        border: none;
+        padding: 10px 25px;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: pink;
+      }
+     .sub {
+        float: right;
+        padding: 2px 20px;
+      }
+
+      ---------------------------------
+
+      .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .form-group {
+    margin-bottom:15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="rayon"] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  button {
+    background-color: pink;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: pink;
+  }
+    </style>
+
+</head>
+<body>
+  <div class="back">
+      <div class="klm">
+        <h3>hallo</h3>
+      </div>
+
+      <div class="gambar">
+        <img src="p.png" alt="">
+      </div>
+
+      <div class="text">
+        <h2>cake shop</h2>
+        <h5>selamat datang di cake shop, kami menjual bermacam macam kue yang menarik</h5>
+       <ul>
+        <li>cake ulang tahun</li>
+        <li>cake pernikahan</li>
+        <li>cake untuk hari hari besar</li>
+        <li>cake cake decoration untuk cemilan</li>
+       </ul>
+
+       <h6> hubungi telfon: 089001000/ 10008007845</h6>
+
+      </div>
+
+      <section class="baris">
+        <div class="kolom kolom1">    
+          <h5>cake ultah</h5>
+          <p>di pesan seminggu sebelum ulang tahun</p>
+            
+           
+        </div>
+        <div class="kolom kolom2">         
+            <h5>cake pernikahan</h5>
+            <p>di pesan sebulan sebelu pernikahan di langsungkan</p>
+           
+        </div>
+        <div class="kolom kolom3">
+          <h5>cake untuk hari besar</h5>
+          <p>di pesa seminggu sebelumnya</p>
+          
+        </div>
+        <div class="kolom kolom3">
+          <h5>cake decoration</h5>
+          <p>bisa langsung di beli di toko atau mau di pesan dahulu</p>     
+      </div>
+
+      <div class="kolom kolom3">
+        <h4>jalan raya blondong, ciawi-bogor</h4>
+        <h4>jalan raya sindang sari, bogor timur</h4>
+        </div>
+
+
+        <div cl ass="form-container">
+          <h2>Form data pembeli</h2>
+          <form>
+            <div class="form-group">
+              <label for="nama">Nama:</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan Nama">
+            </div>
+            <div class="form-group">
+              <label for="rayon">Alamat:</label>
+              <input type="rayon" id="alamat" name="alamat" placeholder="Masukkan alamat">
+            </div>
+            <div class="form-group">
+              <label for="nis">No Telpon:</label>
+              <input type="text" id="no telpon" name="no telpon" placeholder="Masukkan no telpon">
+            </div>
+            <div class="form-group">
+              <label for="nis">Pesan:</label>
+              <input type="text" id="pesan" name="pesan" placeholder="Masukkan Pesan">
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+         </div>
+    </body>
+    </html>
+
+    
