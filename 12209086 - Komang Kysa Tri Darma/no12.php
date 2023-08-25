@@ -121,7 +121,7 @@ if($_POST){
         if($mm >= 60){
             $hh++ && $mm = 0 && $ss = 0;
         }
-        else if($hh >= 24){
+        if($hh >= 24){
             $hh = 0;
             $mm = 0;
             $ss = 0;
