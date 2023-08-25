@@ -8,6 +8,7 @@
 
 <body>
     <style>
+        /* Tampilan default untuk semua lebar layar */
         body {
             padding: 300px;
             background-image: linear-gradient(to bottom right, rgb(120, 59, 139), rgb(92, 138, 237), rgb(127, 193, 250));
@@ -45,6 +46,35 @@
             background-color: #A084E8;
             border-radius: 25px;
             border-color: #A084E8;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 100px;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100vh;
+            }
+
+            #feedback-form {
+                width: 80%;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+            body {
+                padding: 50px;
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-size: cover;
+
+            }
+
+            #feedback-form {
+                width: 90%;
+                padding: 15px;
+            }
         }
     </style>
     <form action="" method="post">

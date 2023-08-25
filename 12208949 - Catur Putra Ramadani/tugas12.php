@@ -10,6 +10,7 @@
 <body>
     <center>
         <style>
+            /* Tampilan default untuk semua lebar layar */
             body {
                 background-image: linear-gradient(to bottom right, rgb(120, 59, 139), rgb(92, 138, 237), rgb(127, 193, 250));
                 background-repeat: no-repeat;
@@ -41,7 +42,6 @@
             }
 
             .form-style-3 fieldset {
-
                 border-radius: 10px;
                 -webkit-border-radius: 10px;
                 -moz-border-radius: 10px;
@@ -52,9 +52,7 @@
                 box-shadow: inset 0px 0px 15px #FFE5E5;
                 -moz-box-shadow: inset 0px 0px 15px #FFE5E5;
                 -webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
-
             }
-
 
             .form-style-3 textarea {
                 width: 250px;
@@ -100,7 +98,6 @@
                 -webkit-border-radius: 3px;
                 -moz-border-radius: 3px;
                 font-weight: bold;
-
             }
 
             .required {
@@ -111,7 +108,52 @@
             .button {
                 background-color: #A084E8;
                 border-radius: 25px;
+                border-color: #A084E8;
+            }
 
+            @media (max-width: 768px) {
+                body {
+                    padding: 100px;
+                    height: 100vh;
+                }
+
+                .form-style-3 input[type=text],
+                .form-style-3 input[type=date],
+                .form-style-3 input[type=datetime],
+                .form-style-3 input[type=number],
+                .form-style-3 input[type=search],
+                .form-style-3 input[type=time],
+                .form-style-3 input[type=url],
+                .form-style-3 input[type=email],
+                .form-style-3 select,
+                .form-style-3 textarea {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 480px) {
+                body {
+                    padding: 50px;
+                    height: 100vh;
+                }
+
+                .form-style-3 {
+                    max-width: 50%;
+                }
+
+                .form-style-3 input[type=text],
+                .form-style-3 input[type=date],
+                .form-style-3 input[type=datetime],
+                .form-style-3 input[type=number],
+                .form-style-3 input[type=search],
+                .form-style-3 input[type=time],
+                .form-style-3 input[type=url],
+                .form-style-3 input[type=email],
+                .form-style-3 select,
+                .form-style-3 textarea {
+                    width: 100%;
+                    margin: 0;
+                }
             }
         </style>
         </style>
