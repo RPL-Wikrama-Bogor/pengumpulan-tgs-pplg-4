@@ -4,11 +4,11 @@
     $d;
 
     echo "j";
-    $j(int)readline();
+    $j();
     echo "m";
-    $m(int)readline();
+    $m();
     echo "d";
-    $d(int)readline();
+    $d();
 
     $td = $j * 3600 + $m * 60 + $d;
 
