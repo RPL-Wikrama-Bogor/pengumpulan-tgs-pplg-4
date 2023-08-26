@@ -11,6 +11,7 @@ echo "\n";
 
 if ($vip > 50 || $exc > 50 || $eco > 50) {
     echo "Jumlah tiket tidak valid";
+    exit;
 } else {
     if ($vip >= 35) {
         $kvip = 25;
