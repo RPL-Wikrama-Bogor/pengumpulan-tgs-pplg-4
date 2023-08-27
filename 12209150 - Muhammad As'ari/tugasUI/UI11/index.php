@@ -7,9 +7,9 @@
 <body>
     <div class="form-container">
     <form action="" method="post">
-        <label>Nomor</label>
-        <input type="number" name="no">
-        <input type="submit" name="submit" class="submit">
+        <label>Nomor karyawan</label><br>
+        <input type="number" name="no" placeholder="eg. 120201200704" class="top-input"><br>
+        <input type="submit" name="submit">
     </form>
     
     <section class="output">
@@ -36,5 +36,4 @@
     </section>
     </div>
 </body>
-<!-- 120201200704 -->
 </html>

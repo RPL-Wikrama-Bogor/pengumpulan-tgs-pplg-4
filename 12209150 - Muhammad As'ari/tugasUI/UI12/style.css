@@ -15,21 +15,21 @@
     margin-top: 30px;
     border-radius: 10px;
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
-    height: 340px;
+    height: auto;
   }
 
 .form-container h4 {
-  font-size: 18px;
+  font-size: 19px;
   margin-bottom: 11px;
   color: rgb(66, 75, 90);
 }
   
 .form-container h5 {
-    color: rgba(111, 113, 116, 0.61);
+  font-size: 15px;
+  color: rgba(111, 113, 116, 0.61);
 }
   
 .form-container button {
-    margin-top: 15px;
     background-color: #3498db;
     color: white;
     border: none;
@@ -37,10 +37,18 @@
     border-radius: 5px;
     font-size: 16px;
   }
-  
-  .form-container input {
-    padding: 2px 0 2px 0;
-    padding-left: 9px;
+
+  input[type="number"]{
+    padding: 2px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(111, 113, 116);
+  }
+
+  input[type="submit"]{
+    margin-top: 3px;
+    padding: 2px 8px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -51,7 +59,8 @@
     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
     outline: none;
   }
-  
-input[type="submit"] {
-    padding-right: 5px;
+
+.error {
+  margin-top: 8px;
+  color: rgba(233, 47, 33, 0.568);
 }
