@@ -18,7 +18,7 @@ $det4 = 59;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menambah Detik ke jam</title>
+    <title>Penambahan detik</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -30,13 +30,18 @@ $det4 = 59;
         <h5><?= sprintf("%02d", $jam3).":".$men3.":".$det3; ?></h5>
         <h5><?= "$jam4:$men4:$det4"; ?></h5>
         <br>
+
         <form action="" method="post">
             <h4>Tambahan Detik</h4>
-            <input type="number" name="det">
+            <input type="number" name="det"><br>
             <input type="submit" name="submit">
         </form>
+
 <?php
-if (isset($_POST["det"])) {
+if (isset($_POST["submit"])) {
+    if (empty($_POST["det"])) {
+        exit("<p class='error'>Masukan input terlebih dahulu</p>");
+    } else {
     $d = $_POST["det"];
 
     $det1 += $d;
@@ -68,6 +73,7 @@ if (isset($_POST["det"])) {
     $jam2 %= 24;
     $jam3 %= 24;
     $jam4 %= 24;
+    }
 ?>
     <div class="sudh">
     <br>
