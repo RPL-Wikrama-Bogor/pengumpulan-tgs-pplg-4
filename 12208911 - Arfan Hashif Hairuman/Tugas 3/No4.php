@@ -18,4 +18,3 @@ echo "\n";
 echo "Pajak: " . number_format($pjk);
 echo "\n";
 echo "Gaji bersih: " . number_format($gb);
-?>
