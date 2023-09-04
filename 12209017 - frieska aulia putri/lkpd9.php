@@ -1,43 +1,52 @@
-<?php
-$suhu_f; $suhu_c;;
-?>
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>suhu</title>
+<style>
+    body {
+        background-color:#867070;
+    }
 
-<body>
-    <form action="" method="post">
-        <div style="display: flex;">
-            <label for="fahrenheit">Masukan Suhu FAHRENHEIT</label>
-            <input type="string" name="fahrenheit" id="fahrenheit">
-        </div>
-        <button type="submit" name="submit">Kirim</button>
-    </form>
-</body>
+    .card {
+        background-color:#E4D0D0;
+        border-radius: 25px;
+        max-width: 100%;
+        text-align: center;
+        padding: 50px 130px;
+        margin: 125px 400px;
+    }
+    input{
+      border-radius: 25px;
+      width:85%;
+      margin:7px;
+      padding:4px;
+    }
+    </style>
 
-<?php
-if(isset($_POST['submit'])){
-    $suhu_f = $_POST['fahrenheit'];
+  <body>
 
-$suhu_c = ($suhu_f - 32)*5/9 ;
-
-if($suhu_c > 30){
-    echo "Suhu panas";
-}
-else if($suhu_c < 25){
-    echo "Suhu dingin";
-}
-else{
-    echo "Suhu normal";
-}
-}
-
-?>
-
+  <div class="card">
+  <h1>Keadaan Cuaca</h1>
+<form action="" method="POST">
+<label for="suhu">Suhu:</label>
+<input type="text" id="suhu" name="suhu" required placeholder=>
+<br><br>
+ <input type="submit" value="Submit" name="hitung"><br><br>
+</form>
+   </div>
+   </body>
 </html>
+<?php 
+if (isset($_POST["hitung"])) {
+ $suhu = $_POST["suhu"];
+
+ $c = ($suhu-32)*5/9;
+ if ($c > '300' ) {
+    echo "cuaca panas";
+  } elseif ($c < '250' ) {
+    echo "cuaca dingin";
+  } else {
+    echo "cuaca normal";}
+ }
