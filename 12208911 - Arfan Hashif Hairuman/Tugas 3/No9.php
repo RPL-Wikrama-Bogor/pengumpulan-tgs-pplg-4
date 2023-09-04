@@ -11,4 +11,3 @@ if ($shc > 300) {
 } else { 
     echo "Normal";
 }
-?>

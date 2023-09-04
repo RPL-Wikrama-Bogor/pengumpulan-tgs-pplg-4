@@ -21,4 +21,3 @@ if ($r >= 80 && $r <= 100) {
 } else {
     echo "Nilai K";
 }
-?>

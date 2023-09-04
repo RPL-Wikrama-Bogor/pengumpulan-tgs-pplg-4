@@ -1,6 +1,4 @@
-<?php 
-$vip; $exc; $eco; $kvip; $kexc; $keco;
-
+<?php
 echo "Tiket Vip: ";
 $vip = readline();
 echo "Tiket Executive: ";
