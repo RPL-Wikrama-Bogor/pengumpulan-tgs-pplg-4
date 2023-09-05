@@ -2,16 +2,18 @@
 # password = "pertamina"
 # kesempatan = 3
 
-# while kesempatan > 3:
-#     username_user = input("Masukkan Username :")
-#     password_user = input("Masukkan password :")
+# while kesempatan > 0:  
+#     username_user = input("Masukkan Username : ")
+#     password_user = input("Masukkan password : ")
 
 #     if username == username_user and password == password_user:
-#         print("Ingin berhasil")
+#         print("Login berhasil")
 #         break
 #     else:
 #         kesempatan -= 1
-#         print("Kesempatan tersisa () Kali lagi".format(kesempatan))
+#         print(
+#             "Kesempatan tersisa {} kali lagi".format(kesempatan)
+#         )  
 
 
 # def perkalian(angka1, angka2):
