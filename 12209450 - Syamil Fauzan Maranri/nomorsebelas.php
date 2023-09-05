@@ -18,7 +18,7 @@ function getbulannama($bulan) {
     return $bulanNama[$bulan];
 }
 
-$employeeCode = "32005200313"; // Ganti dengan kode pegawai yang diinginkan
+$employeeCode = "20110200715"; // Ganti dengan kode pegawai yang diinginkan
 
 $golongan = substr($employeeCode, 0, 1);
 $hari = substr($employeeCode, 1, 2);
