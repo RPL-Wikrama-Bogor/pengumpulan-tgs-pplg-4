@@ -7,9 +7,9 @@
 <body>
     <div class="form-container">
     <form action="" method="post">
-        <label>Nomor</label>
-        <input type="number" name="no">
-        <input type="submit" name="submit" class="submit">
+        <label>Nomor karyawan</label><br>
+        <input type="number" name="no" placeholder="eg. 10107200701" class="top-input"><br>
+        <input type="submit" name="submit">
     </form>
     
     <section class="output">
@@ -22,10 +22,12 @@
         } else {
             $ng = intval(substr($no, 0, 1));
             $tgl = intval(substr($no, 1, 2));
-            $bln = intval(substr($no, 4, 2));
-            $thn = intval(substr($no, 6, 4));
-            $nu = intval(substr($no, 10, 2));
+            $bln = intval(substr($no, 3, 2));
+            $thn = intval(substr($no, 5, 4));
+            $nu = intval(substr($no, 9, 2));
             ?>
+<!--            101207200702-->
+
             <h4>Nomor golongan: <?= $ng; ?></h4>
             <h4>Nomor urut: <?= $nu; ?></h4>
             <h4>Tanggal lahir: <?= $tgl . " " . $sbln[$bln - 1] . " " . $thn; ?></h4>
@@ -36,5 +38,4 @@
     </section>
     </div>
 </body>
-<!-- 120201200704 -->
 </html>
