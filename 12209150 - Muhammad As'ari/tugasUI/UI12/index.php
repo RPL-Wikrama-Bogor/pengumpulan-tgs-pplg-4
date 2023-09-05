@@ -12,9 +12,9 @@ $jam4 = 23;
 $men4 = 59;
 $det4 = 59;
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
+<!DOCTYPE html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -75,14 +75,12 @@ if (isset($_POST["submit"])) {
     $jam4 %= 24;
     }
 ?>
-    <div class="sudh">
     <br>
     <h4>Jam sesudah ditambah <?= $d?> detik</h4>
     <h5><?= sprintf("%02d", $jam1) . ":" . sprintf("%02d", $men1) . ":" . sprintf("%02d", $det1) ?></h5>
     <h5><?= sprintf("%02d", $jam2) . ":" . sprintf("%02d", $men2) . ":" . sprintf("%02d", $det2) ?></h5>
     <h5><?= sprintf("%02d", $jam3) . ":" . sprintf("%02d", $men3) . ":" . sprintf("%02d", $det3) ?></h5>
     <h5><?= sprintf("%02d", $jam4) . ":" . sprintf("%02d", $men4) . ":" . sprintf("%02d", $det4) ?></h5>
-    </div>
 <?php } ?>
 </div>
 </body>
