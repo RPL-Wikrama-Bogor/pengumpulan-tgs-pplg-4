@@ -22,7 +22,10 @@ for($x = 0; $x < $arrlength; $x++) {
     echo " ";
 }
 echo "</br>";
-$n[5] += 3;
+$cn = array_search(72, $n);
+if ($cn) {
+    $n[$cn] = 75;
+}
 echo "Setelah melakukan perbaikan nilai 72 sekarang berubah menjadi 75, nilai saya sekarang: ";
 $arrlength = count($n);
 for($x = 0; $x < $arrlength; $x++) {
