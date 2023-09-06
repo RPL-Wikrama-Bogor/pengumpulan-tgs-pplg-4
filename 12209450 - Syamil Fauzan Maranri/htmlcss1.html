@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('bc.jpg');
+            background-size: cover;
+        }
+
+        .navbar {
+            background-color: #2b2828;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            padding-right: 3%;
+        }
+
+        .navbar a .button {
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .navbar a:hover button {
+            color: black;
+        }
+
+        header {
+            padding: 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 100px;
+        }
+
+        .header-text {
+            flex: 1;
+            color: white;
+            margin-bottom: 350px;
+        }
+
+        .header-image {
+            display: flex; 
+            align-items: center;
+            border-radius: 10px;
+            border: solid white;
+            
+        }
+
+        .header-image img {
+            max-width: 400px;
+            height: auto;
+            
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .item {
+            max-width: 250px;
+            height: 100px;
+            background-color: #555;
+            color: white;
+            margin: 4px;
+            border: white;
+            flex-grow: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            border: solid white;
+        }
+
+        .form-container {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid black;
+        }
+
+        .form-container input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="button">
+            <a href="#"><button class="button">Administrator</button></a>
+        </div>
+    </div>
+    <header>
+        <div class="bro">
+            
+        </div>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Bogor</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam asperiores magnam in nisi. Ullam aperiam sed unde deleniti qui ipsum autem, aspernatur magnam quibusdam laborum voluptatibus reprehenderit, corrupti corporis ratione quis praesentium consequuntur provident, sunt voluptate dicta facilis! Suscipit quasi quibusdam ea commodi enim qui vitae aspernatur molestias quam ab aut, eum dolorem corrupti nesciunt consequatur similique autem voluptatem consequuntur consectetur alias nobis, incidunt illum. Sapiente facilis quo fuga itaque aliquam, debitis saepe cum sed officiis veniam nulla culpa deserunt corrupti earum quisquam neque dignissimos alias minima incidunt, veritatis officia nam nemo accusamus? Laboriosam, commodi mollitia sed obcaecati beatae voluptatum?</p>
+            </div>
+            <div class="header-image">
+                <img src="bgr.jpg" alt="Background Image">
+            </div>
+        </div>
+        <section class="flex-container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>  
+        </section>
+        <div class="form-container">
+            <h2>Contact Form</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <input type="text" placeholder="Your Message"><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </header>
+</body>
+</html>
