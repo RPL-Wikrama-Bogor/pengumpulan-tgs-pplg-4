@@ -2,8 +2,6 @@
 <html>
 <head>
     <title>Kasir Sederhana</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
-    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <style>
         table {
             border-collapse: collapse;
@@ -23,12 +21,6 @@
 
         .total {
             font-weight: bold;
-        }
-
-        .card2{
-            margin-left: auto;
-            margin-right: auto;
-            top:200 0vh;
         }
     </style>
 </head>
@@ -50,6 +42,8 @@
     $jumlahMakanan = 0;
     $namaMinuman = "";
     $jumlahMinuman = 0;
+    $totalHarga = 0;
+    $diskon = 0;
 
     // Cek apakah form sudah disubmit
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -57,69 +51,54 @@
         $jumlahMakanan = intval($_POST["jumlah_makanan"]);
         $namaMinuman = $_POST["nama_minuman"];
         $jumlahMinuman = intval($_POST["jumlah_minuman"]);
-    }
 
-    // Validasi kunci menu yang dipilih
-    if (array_key_exists($namaMakanan, $menu) && array_key_exists($namaMinuman, $menu)) {   
-        // Hitung total harga
-        $totalHarga = ($menu[$namaMakanan]["Harga"] * $jumlahMakanan) + ($menu[$namaMinuman]["Harga"] * $jumlahMinuman);
+        // Validasi kunci menu yang dipilih
+        if (array_key_exists($namaMakanan, $menu) && array_key_exists($namaMinuman, $menu)) {   
+            // Hitung total harga
+            $totalHarga = ($menu[$namaMakanan]["Harga"] * $jumlahMakanan) + ($menu[$namaMinuman]["Harga"] * $jumlahMinuman);
 
-        // Diskon setiap pembelian 5
-        $diskon = 0;
-        $totalItem = $jumlahMakanan + $jumlahMinuman;
-        if ($totalItem >= 5) {
-            $diskon = 0.10 * $totalHarga;
+            // Diskon setiap pembelian 5
+            $diskon = 0;
+            $totalItem = $jumlahMakanan + $jumlahMinuman;
+            if ($totalItem >= 5) {
+                $diskon = 0.10 * $totalHarga;
+            }
+        } else {
+            // Pesan kesalahan jika kunci menu tidak valid
+            echo "Menu yang dipilih tidak valid.";
+            $totalHarga = 0;
+            $diskon = 0;
         }
-    } else {
-        // Pesan kesalahan jika kunci menu tidak valid
-        echo "Menu yang dipilih tidak valid.";
-        $totalHarga = 0;
-        $diskon = 0;
     }
     ?>
 
-<div class="card1" style="width: 18rem;">
-  <img src="mknn.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <form method="post">
-          <h2>Menu Makanan</h2>
-          <label for="nama_makanan">Nama Makanan / Minuman:</label>
-          <select name="nama_makanan" id="nama_makanan">
-              <?php foreach ($menu as $key => $item): ?>
-                  <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
-              <?php endforeach; ?>
-          </select>
-          <br>
-          <label for="jumlah_makanan">Jumlah Makanan / Minuman:</label>
-          <input type="number" name="jumlah_makanan" id="jumlah_makanan" min="0">
-          <br>
-      </form>
-    
-  </div>
-</div>
-<div class="card2" style="width: 18rem;">
-  <img src="mnmn.jpg" class="card-img-top" alt="...">
-  <div class="card-body">
-      <form method="post">
-          <h2>Menu Minuman</h2>
-          <label for="nama_minuman">Nama Minuman / Makanan:</label>
-          <select name="nama_minuman" id="nama_minuman">
-              <?php foreach ($menu as $key => $item): ?>
-                  <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
-              <?php endforeach; ?>
-          </select>
-          <br>
-          <label for="jumlah_minuman">Jumlah Minuman / Makanan:</label>
-          <input type="number" name="jumlah_minuman" id="jumlah_minuman" min="0">
-          <br>
-      
-          <input type="submit" value="Pesan">
-      </form>
-     
-  </div>
-</div>
+    <form method="post">
+        <h2>Menu Makanan</h2>
+        <label for="nama_makanan">Nama Makanan / Minuman:</label>
+        <select name="nama_makanan" id="nama_makanan">
+            <?php foreach ($menu as $key => $item): ?>
+                <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <br>
+        <label for="jumlah_makanan">Jumlah Makanan / Minuman:</label>
+        <input type="number" name="jumlah_makanan" id="jumlah_makanan" min="0">
+        <br>
 
-            
+        <h2>Menu Minuman</h2>
+        <label for="nama_minuman">Nama Minuman / Makanan:</label>
+        <select name="nama_minuman" id="nama_minuman">
+            <?php foreach ($menu as $key => $item): ?>
+                <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
+            <?php endforeach; ?>
+        </select>
+        <br>
+        <label for="jumlah_minuman">Jumlah Minuman / Makanan:</label>
+        <input type="number" name="jumlah_minuman" id="jumlah_minuman" min="0">
+        <br>
+      
+        <input type="submit" value="Pesan">
+    </form>
 
     <?php if ($totalHarga > 0): ?>
         <h2>Struk Pembayaran</h2>
