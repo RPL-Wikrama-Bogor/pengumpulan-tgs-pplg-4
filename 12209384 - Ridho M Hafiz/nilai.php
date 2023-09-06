@@ -33,7 +33,7 @@ $rata_rata = array_sum($nilai) / count($nilai);
 echo "Rata-rata nilai keseluruhan: " . $rata_rata;
 
 echo"<br>";
-$ubah = array_search(72, $nilai);
+$ubah = array_search(72, $nilai); 
 if ($ubah !== false) {
     $nilai[$ubah] = 75;
 }
@@ -49,5 +49,5 @@ arsort($nilai);
 echo "<br>Nilai dari terbesar ke terkecil setelah perubahan:<br>";
 foreach ($nilai as $key => $value) {
     echo "$key: $value<br>";
-}
+} 
 ?>
