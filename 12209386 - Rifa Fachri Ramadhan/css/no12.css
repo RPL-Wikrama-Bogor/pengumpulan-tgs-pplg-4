@@ -1,0 +1,25 @@
+.jam{
+    margin-left: 28px;
+    width: 15rem;
+    max-width: 100%;
+}
+.menit{
+    margin-left: 18px;
+    width: 15rem;
+    max-width: 100%;
+}
+.detik{
+    width: 15rem;
+    margin-left: 21px;
+    max-width: 100%;
+}
+
+.submit{
+    border: 2px solid black; /* Misalnya, border solid dengan ketebalan 2px dan warna merah */
+    border-radius: 8px; /* Untuk membuat border sudut menjadi lebih melengkung */
+    padding: 10px 15x; /* Untuk memberi ruang di dalam tombol */
+    background-color: gray; /* Warna latar belakang tombol */
+    color: white; /* Warna teks di dalam tombol */
+    font-size: 12px; /* Ukuran font teks di dalam tombol */
+    margin-top: 5px;
+}
