@@ -41,7 +41,7 @@ if ($ubah !== false) {
 echo "<br>Nilai setelah perubahan:<br>";
 ksort($nilai);
 foreach ($nilai as $key => $value) {
-    echo "$key: $value<br>";
+    echo "$key: $value<br>";  
 }
 
 arsort($nilai); 

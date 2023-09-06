@@ -21,7 +21,7 @@
         $tunj = 0.2 * $gaji_pokok;
 
         $pjk = 0.15 * ($gaji_pokok + $tunj);
-
+ 
         $gaji_bersih = $gaji_pokok + $tunj - $pjk;
 
         echo "<h2>Hasil Perhitungan:</h2>";

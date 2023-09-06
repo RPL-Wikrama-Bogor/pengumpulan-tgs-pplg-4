@@ -18,7 +18,7 @@
 
         $sebelum_diskon = ($berat_jeruk / 100) * $harga_per_100_gram;
 
-        $diskon = 0.05 * $sebelum_diskon;
+        $diskon = 0.05 * $sebelum_diskon; 
 
         $setelah_diskon = $sebelum_diskon - $diskon;
 
