@@ -1,7 +1,9 @@
 <?php
 
 $n = array(80, 78, 72, 84, 92, 88);
-
+echo "Nilai saya: " . implode(", ", $n);
+echo "</br>";
+echo "</br>";
 echo "Dari keseluruhan nilai yang terbesar adalah: " . max($n);
 echo "</br>";
 echo "Sedangkan nilai yang terkecil adalah: " . min($n);
