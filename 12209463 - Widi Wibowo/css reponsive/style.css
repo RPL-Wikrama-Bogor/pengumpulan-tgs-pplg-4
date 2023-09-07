@@ -1,0 +1,149 @@
+.container {
+  display: flex; /* mengubah ke mode flexbox */
+  flex-direction: column; /* mengatur arah flexbox, yang secara default adalah dari kiri ke kanan. */
+  align-items: flex-start; /* endefinisikan bagaimana item-item pada container flex tersebut diletakkan sepanjang garis tegak lurus pada sumbu utama  */
+  justify-content: center; /* mensejajarkan item selalu di tengah dalam satu baris */
+  padding: 20px; /* menata letak pada halaman website agar terlihat lebih rapi */
+  max-width: 800px; /* menentukan lebar maksimum dari suatu elemen */
+  margin:0 auto; /* memberikan spasi disekitar elemen */
+}
+
+.content{
+    display: flex; /* mengubah ke mode flexbox */
+    flex-direction: row; /* mengatur arah flexbox, yang secara default adalah dari kiri ke kanan. */
+    align-items: center; /* endefinisikan bagaimana item-item pada container flex tersebut diletakkan sepanjang garis tegak lurus pada sumbu utama  */
+    width: 100%; /* mengatur lebar dan tinggi pada elemen */
+  
+}
+
+.container h1{
+    text-align: left;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    border-bottom: 4px solid burlywood;
+}
+
+.text {
+  flex: 1; /* untuk pengaturan layout, posisi dan tampilan dari suatu konten yang ukurannya belum diketahui atau bernilai dinamis. */
+  padding: 30px; /* menata letak pada halaman website agar terlihat lebih rapi */
+  text-align: left; /*  mengatur posisi text */
+}
+
+.image {
+  flex: 1; /* untuk pengaturan layout, posisi dan tampilan dari suatu konten yang ukurannya belum diketahui atau bernilai dinamis. */
+  padding: 20px; /* menata letak pada halaman website agar terlihat lebih rapi */
+}
+
+.button{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: burlywood;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 2px;
+    align-self: flex-end;
+      
+}
+
+.flex-container{
+display: flex; /* mengubah ke mode flexbox */
+flex-wrap: wrap; /* mengatur item flexbox dapat diwrap/apabila container tidak cukup lagi untuk membungkus item, maka item akan diturunkan */ 
+flex-direction: row; /* Mengatur arah item ke row/satu baris */
+justify-content: center; /* mensejajarkan item selalu di tengah dalam satu baris */
+padding-top: 60px;
+}
+
+.item{
+width: 300px;
+height: 120px;
+background-color: burlywood;
+margin: 3px;
+box-sizing: border-box;
+flex-grow:1; /* mengatur setiap item flexbox dapat melebar 1 bagian dari total item*/
+flex-shrink: 1; /* mengatur setiap item flexbox dapat menciut 1 bagian dari total item*/
+font-size: 20px;
+text-align: center;
+padding-top: 50px;
+float: left;
+padding: 60px;
+}
+
+.container1{
+    position: absolute;
+    right: 60%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 20px 25px;
+    width: 300px;
+    margin-top: 630px;
+    
+    background-color: burlywood;
+
+}
+
+.container1 label{
+text-align: left;
+color: #000000;
+}
+.container1 form input{
+width: calc(100% - 20px);
+padding: 8px 10px;
+margin-bottom: 15px;
+border: none;
+background-color: transparent;
+border-bottom: 2px solid rgb(0, 0, 0);
+color: #fff;
+font-size: 20px;
+}
+.container1 form button{
+width: 100%;
+padding: 5px 0;
+border: none;
+background-color:#2979ff;
+font-size: 18px;
+color: #fafafa;
+}
+
+table {
+    width: 70x;
+    border-collapse: collapse;
+    margin: 50px;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    min-height: 100vh;
+    float: right;
+}
+
+td {
+    border: 10px solid #ccc;
+    padding: 10px;
+    vertical-align: top;
+    text-align: center;
+}
+
+.text-cell {
+    width: 50%;
+    padding-top: 50px;
+}
+
+.image-cell {
+    width: 50%;
+    text-align: center;
+    padding-top: 50px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.text-heading {
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+}
