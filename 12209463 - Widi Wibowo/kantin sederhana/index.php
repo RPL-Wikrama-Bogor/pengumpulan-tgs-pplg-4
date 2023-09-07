@@ -163,7 +163,7 @@ input[type="submit"]:hover {
                 <p>Total Belanja:</p>
                 <p class="harga">Rp <?php echo number_format($total, 0, ",", "."); ?></p>
             </div>
-            <p>Terimakasih telah membeli di toko kami, semoga puas dengan produk-produk kami jangan lupa ke Warung Lim lagi!!</p>
+            <p>Terimakasih telah membeli di toko kami, semoga puas dengan produk-produk kami jangan lupa ke Warung Wijaya lagi!!</p>
         <?php } ?>
 
     </div>
