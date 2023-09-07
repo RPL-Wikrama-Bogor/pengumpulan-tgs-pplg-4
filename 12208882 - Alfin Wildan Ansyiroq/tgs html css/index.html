@@ -1,111 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>RRQ</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas</title>
     <style>
- body{
-    margin-left : 0;
-    font-family : Arial;
-    background-color: white;
- }
-
- .container{
-    clear : both;
-    padding : 14px;
-    border: 1px solid orange;
-    overflow : hidden;
-    background-color: orange;
-    margin-top: -10px;
-    margin-right: -8px;
- }
-
- .image{
-    float : right;
-    width : 40%;
-    margin-right : 2px;
-    
- }
-
- .image img{
-    max-width : 750%;   
-    height: 300px;
- }
-
- .content{
-    float : left;
-    margin-left: 10px;
-    text-decoration: white;
-    
-    
- }
-
- .admin-button{
-    float : right;
- }
-
- button.administration {
-    background-color: yellow; 
-    color: black;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 20px;
-}
-
- .column1, .column2 {
-    text-align: center;
-
-    float: left;
-    width: 22%;
-    margin-top: 150px;
-    padding: 8px;
-    background-color: orange;
-    border: 1px solid #FFA500;
-    margin-left: 10px;
-    margin-bottom: 100px;
-
- }
- .column3, .column4 {
-    
-    text-align: center;
-    float: left;
-    width: 22%;
-    margin-top: 100px;
-    padding: 8px;
-    background-color: orange;
-    border: 1px solid #FFA500;
-    margin-left: 10px;
-    margin-bottom: 10px;
-
- }
- .registration-form {
-            clear: both;
-            margin-top: 50px;
-            text-align: center;
-        }
-
-        .form {
-        width: 500px;
-        border-radius: 1rem;
-        background-color: #F4EEEE;
-        padding: 2rem;
-        border-radius: 15px;
-        height: 500px;
-        margin-top: 600px;
+      li {
+        font-family: roboto;
       }
-      input {
-        width: 90%;
-      }
-      .alasan {
-        height: 200px;
-      }
-      label {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-      button {
-        float: right;
-      }
-      a {
+     a{
         background-color: #F4EEEE;
         float: right;
         text-decoration: none;
@@ -113,79 +17,251 @@
         padding: 15px;
         color: black;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
+     }
+     a:hover {
+      color: #5C8374;
+      transition: 0.3s;
+     }
+
+     text{
+        float: left;
+        width: 50%;
+     }
+     .gambar{
+        width: 50%;
+        margin: 100px  1px 10px 1px;
+        float: right;
+        padding-right: -200px;
+        clear: left ;
+     }
+    
+     img{
+          width:550%;
+          max-width: 100%;
+          margin-left : 115px;
+          border-radius: 15px;
+          margin-top: -30px;
+        }
+    .text{
+        font-size: 25px;
+    }
+    .baris{
+        box-sizing: border-box;
+				padding: 20px;
+      }
+      .kolom{
+        width: 295px;
+        height: 120px;
+        background-color: #F4EEEE;
+        margin: 3px;
+        box-sizing: border-box;
+				padding: 10px;
+      }
+      .kolom1,.kolom2, .kolom3, .kolom4{
+        float: left;
+        text-align: center;
+        padding-top: 3rem;
+        border-radius: 15px;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .kolom:hover {
+        width: 290px;
+        transition: 0.3s;
+        background-color: #5C8374;
+      }
+      .form {
+        width: 400px;
+        margin: 15px;
+        margin-top: 10px;
+        border-radius: 1rem;
+        background-color: #F4EEEE;
+        padding: 2rem;
+        border-radius: 15px;
+      }
+      input {
+     width: 400px;
+     height: 25px;
+     margin: 10px 0;
+ }
+ 
+ textarea {
+     width: 400px;
+ }
+ 
+ label {
+     color: #000;
+ }
+ 
+ button {
+     background: #F4EEEE;
+     width: 100px;
+     padding: 5px;
+     margin-top: -10px;
+     border-radius: 5px;
+     cursor: pointer;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 10px;
+     float: right;
+ }
+ button:hover {
+  background: #5C8374 ;
+ }
+      .keterangan {
+        float: right;
+        height: 50%;
+        width: 52%;
+    }
+    
+    .keterangan h3 {
+        text-align: start;
+    }
+    
+    .ket1 {
+        display: flex;
+        width: 95%;
+        height: 200px;
+        border: 1px solid black;
+    
+    }
+    
+    .ket1 .isi {
+        font-size: 15px;
+        width: 180px;
+        margin-left: 20px;
+        margin-top: 5%;
+       }
+       
+       .ket2 .isi {
+           font-size: 15px;
+           width: 180px;
+           margin-left: 15px;
+           margin-top: 5%;
+       }
+    .tanggal {
+        position: absolute;
+        right: 80px;
+        font-size: 15px;
+    }
+    
+    .ket1 img {
+       width: 150px;
+        height: 100px;
+        margin-left: 200px;
+        margin-top: 70px;
+    }
+    
+    .ket2 {
+        display: flex;
+        width: 95%;
+        height: 200px;
+        border: 1px solid black;
+        margin-top: 50px;
+    
+    }
+    
+    
+    .ket2 img {
+        width: 150px;
+        height: 100px;
+        margin-left: 200px;
+        margin-top: 70px;
+    }
+    .card1 {
+
+     color: #fff;
+     padding: 20px;
+     float: left;
+ }
+ 
+ .card h1 {
+     font-size: 20px;
+     text-align: center;
+     color: #000;
+ }
+ .content .keterangan footer {
+        background: rgb(249,248,77);
+        justify-content: center;
+        width: 205vh;
+        margin-left: -800px;
+        background: linear-gradient(90deg, rgba(249,248,77,0.3218079468115371) 0%, rgba(255,172,0,0.8204073865874475) 56%);
+        padding: 1rem 5rem;
+        padding-bottom: 1rem 0 3rem;
+        margin-top: 15rem;
+        text-align: center;
       }
     </style>
-    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    
-    <div class="container">
-        <div class="admin-button">
-            <button class="administration">Administration</button>
-        </div>
-    </div>
-    <div class="image">
-        <br>
-        <img src="rrq.jpg" alt="Image">
-    </div>
-    <div class="content">
-        <h2>RRQ HOSHI</h2>
-        <p>Terbentuk pada bulan Agustus 2017, RRQ O2 beranggotakan para pemain terbaik di Mobile</p>
-        <p> Legends yang selalu berada di deretan teratas</p>
-        <p>top global dunia. Keahlian para pemain tersebut bahkan telah diakui oleh </p>
-        <p> pemain Mobile Legends mancanegaraKini RRQ O2 berganti nama</p>
-        <p> menjadi RRQ Hoshi. Divisi Mobile Legends RRQ menjadi lengkap dengan .</p>
-        <p>turut hadirnya RRQ Sena sebagai tim kedua yang akan menjadi perwakilan RRQ di MDL</p>
-    </div>
-    
-  
-    <div class="column1">
-        <b><p>Jumlah Roaster</p></b>
-        <b><p>9</p></b>
-
-    </div>
-    
-    <div class="column2">
-        <b><p>Piala MPL</p></b>
-        <b><p>3</p></b>
-
-    </div>
-    
-    <div class="column3">
-        <b><p>Runner-up</p></b>
-        <b><p>3</p></b>
-
-    </div>
-    
-    <div class="column4">
-        <b><p>3rd place</p></b>
-        <b><p>1</p></b>
-
-    </div>
-
-    <div class="form">
-            <label for="" class="label">Nama Lengkap:</label>
-        <input type="text" name="nama" id="nama">
-        <br>
-        <label for="" class="label">Umur:</label>
-        <br>
-        <input type="number" name="umur" id="umur">
-        <br>
-        <label for="" class="label">Rank:</label>
-        <input type="text" name="rank" id="rank">
-        <br>
-        <label for="" class="label">No Telepon:</label>
-        <input type="number" name="no" id="no">
-        <br>
-        <label for=" "alasan>Alasan masuk</label>
-        <input type="text" class="alasan" name="alasan" id="alasan">
-        <br>
-        <label for="" class="label">Upload Gambar akun</label>
-        <br>
-        <input type="file" name="gambar" id="gambar">
-        <br>
-        <button type="submit" name="submit">Kirim</button>
+  <a href="login.html">Administrator</a>
+  <div class="gambar">
+      <img src="img\bage.webp" alt="">
       </div>
-</body>
+      <br><br>
+    <h1>Angkasa dan Keindahannya</h1>
+    <div class="text">
+      <ol>
+        <li>"Dengan menyangkal prinsip ilmiah, seseorang dapat mempertahankan paradoks apa pun." - Galileo Galilei</li>
+        <br>
+        <li> "Karena ada hukum seperti gravitasi, alam semesta dapat dan akan menciptakan dirinya sendiri dari ketiadaan." - Stephen Hawking</li>
+        <br>
+        <li> "Ada dua kemungkinan: kita sendirian di alam semesta atau tidak. Keduanya sama-sama menakutkan."  - Fynx</li>
+        <br>
+      </ol>
+    </div>
+    <section class="baris">
+      <div class="kolom kolom1">Kolom 1</div>
+      <div class="kolom kolom2">Kolom 2</div>
+      <div class="kolom kolom3">Kolom 3</div>
+      <div class="kolom kolom3">Kolom 4</div>
+    </section>
+
+    <div class="card1">
+    <div class="form">
+      <label for="" class="label">NIK:</label>
+      <br>
+      <input type="text" name="nik" id="nik">
+      <br>
+      <label for="" class="label">Nama Lengkap:</label>
+      <input type="text" name="nama" id="nama">
+      <br>
+      <label for="" class="label">No Telepon:</label>
+      <input type="text" name="no" id="no">
+      <br>
+      <tr>
+        <td><label>Pengaduan :</label></td><br>
+            <br>
+                <textarea type="message" name="pengaduan" cols="30" rows="10"></textarea>
+            <br>
+      </tr>
+      <br>
+      <label for="" class="label">Upload Gambar Terkait</label>
+      <br>
+      <input type="file" name="gambar" id="gambar">
+      <br>
+      <br> <button>Kirim</button>
+    </div>
+</div>
+<div class="content">
+            <div class="keterangan">
+                <h3>Laporan Pengaduan</h3>
+                <div class="ket1">
+                    <p class="isi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, facilis.</p>
+                    <p class="tanggal">33 September 2023:Alfin Wildan</p>
+                    <img src="img\bege.jpeg" alt="">
+                </div>
+                <div class="ket2">
+                    <p class="isi">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, facilis.</p>
+                    <p class="tanggal">33 September 2023:Alfin Wildan</p>
+                    <img src="img\bege.jpeg" alt="">
+                </div>
+                <footer>
+                  <center>
+                  <div class="credit">
+                    <p>Created by Alfin Wildan. | &copy; 2023.</p>
+                  </div>
+                </center>
+                </footer>
+            </div>
+        </div>
 </body>
 </html>
