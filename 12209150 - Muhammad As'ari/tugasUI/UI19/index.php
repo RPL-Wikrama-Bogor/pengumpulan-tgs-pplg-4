@@ -1,22 +1,21 @@
-<?php 
-class Bioskop {
+<?php
+class Bioskop
+{
     protected $Ekonomi = 0,
-           $Vip = 0,
-           $Eksekutif = 0,
-           $KeuntunganEkonomi = 7,
-           $KeuntunganVip = 0,
-           $KeuntunganEksekutif = 0,
-           $TotalTiketTerjual = 0,
-           $TotalKeuntungan = 0;
+    $Vip = 0,
+    $Eksekutif = 0,
+    $KeuntunganEkonomi = 7,
+    $KeuntunganVip = 0,
+    $KeuntunganEksekutif = 0,
+    $TotalTiketTerjual = 0,
+    $TotalKeuntungan = 0;
 
 
-    public function __construct($Ekonomi, $Vip, $Eksekutif) 
+    public function __construct($Ekonomi, $Vip, $Eksekutif)
     {
-        if (!is_numeric($Ekonomi) || !is_numeric($Vip) || !is_numeric($Eksekutif)) 
-        {
+        if (!is_numeric($Ekonomi) || !is_numeric($Vip) || !is_numeric($Eksekutif)) {
             exit("<p class='error'>Input harus berupa angka</p>");
-        } elseif ($Ekonomi > 50 || $Vip > 50 || $Eksekutif > 50) 
-        {
+        } elseif ($Ekonomi > 50 || $Vip > 50 || $Eksekutif > 50) {
             exit("<p class='error'>Input harus diantara 1 - 50</p>");
         }
 
@@ -32,7 +31,7 @@ class Bioskop {
     }
 
     //
-    public function cariKeuntunganVip() 
+    public function cariKeuntunganVip()
     {
         if ($this->Vip >= 35) {
             $this->KeuntunganVip = 25;
@@ -43,7 +42,7 @@ class Bioskop {
         }
     }
 
-    public function cariKeuntunganEksekutif() 
+    public function cariKeuntunganEksekutif()
     {
         if ($this->Eksekutif >= 40) {
             $this->KeuntunganEksekutif = 20;
@@ -64,13 +63,14 @@ class Bioskop {
         echo "<p class='keuntungan output'> Keuntungan Ekonomi : " . $this->KeuntunganEkonomi . "%</p>";
         echo "<p class='keuntungan output'> Keuntungan Vip : " . $this->KeuntunganVip . "%</p>";
         echo "<p class='keuntungan output'> Keuntungan Eksekutif : " . $this->KeuntunganEksekutif . "%</p>";
-        
+
     }
 }
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LKPD No 19</title>
@@ -88,8 +88,8 @@ class Bioskop {
             <input type="submit" name="submit">
         </form>
         <div class="empty-div">
-        
-            <?php 
+
+            <?php
             if (isset($_POST["submit"])) {
                 if (empty($_POST["Ekonomi"]) && empty($_POST["Vip"]) && empty($_POST["Eksekutif"])) {
                     echo "<p class='error'>Masukan input terlebih dahulu</p>";
@@ -97,8 +97,8 @@ class Bioskop {
                     $Ekonomi = $_POST["Ekonomi"];
                     $Vip = $_POST["Vip"];
                     $Eksekutif = $_POST["Eksekutif"];
-                    
-                    $Bioskop = new Bioskop($Ekonomi,$Vip,$Eksekutif);
+
+                    $Bioskop = new Bioskop($Ekonomi, $Vip, $Eksekutif);
                     $Bioskop->outputHasil();
                 }
             }
@@ -106,4 +106,5 @@ class Bioskop {
         </div>
     </div>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 //
 $bil = readline("Bilangan : ");
 $satuan = $bil % 10;

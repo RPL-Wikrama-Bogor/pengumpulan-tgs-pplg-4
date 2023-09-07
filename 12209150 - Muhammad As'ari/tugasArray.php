@@ -1,4 +1,4 @@
-<?php 
+<?php
 $nilai = [20, 80, 72, 60, 50, 40];
 
 echo "Nilai saya :";
@@ -29,7 +29,7 @@ if ($index) {
 
 echo "<br>Setelah melakukan perbaikan untuk nilai 72, saya mendapat nilai " . $nilai[$index];
 echo "<br> Jadi nilai saya menjadi : ";
-foreach($nilai as $item) {
+foreach ($nilai as $item) {
     echo "$item, ";
 }
 
