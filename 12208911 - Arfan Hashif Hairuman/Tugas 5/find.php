@@ -47,6 +47,7 @@ $siswa =  [[
 
 
 $nama = null;
+
 $umurFilter = isset($_GET['umurFilter']) ? $_GET['umurFilter'] : 0;
 $siswa17 = [];
 
@@ -102,8 +103,7 @@ if ($umurFilter >= 17) {
             <ol>
                 <?php foreach ($siwa17 as $siswa) { ?>
                     <li>
-                        Nama: <?php echo $siswa['nama']; ?><br>
-
+                        Nama: <?php echo $siswa['nama'] . " : " .  $siswa['umur']; ?><br>
                     </li>
                 <?php } ?>
             </ol>
