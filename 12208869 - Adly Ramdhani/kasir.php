@@ -93,21 +93,10 @@ $listmenu = [
             <h1>Daftar Menu</h1>
             <br>
             <table>
-                <tr>
-                    <td>
-                       <ol>  
-                            <b>Makanan</b>
-                            <li>Menu : Nasi Goreng <br> Harga : 15000 </li>
-                            <li>Menu : Mie Goreng <br> Harga : 10000 </li>
-                            <li>Menu : Kwetiaw <br> Harga : 15000 </li>
-                       </ol>
-                       <ol>  
-                            <b>Minuman</b>
-                            <li>Menu : Es Jeruk <br> Harga : 5000 </li>
-                            <li>Menu : Teh Manis <br> Harga : 5000 </li>
-                        </ol>  
-                    </td>
-                </tr>
+            <?php foreach ($listmenu as $menu) : ?>
+                <div class="menu">
+                    <p><?php echo $menu['Nama'] ?> - Rp <?php echo $menu['Harga'] ?></p>
+            <?php endforeach; ?>
             </table>
         </div>
 
