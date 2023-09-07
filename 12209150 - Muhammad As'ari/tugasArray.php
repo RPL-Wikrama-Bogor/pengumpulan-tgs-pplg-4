@@ -1,4 +1,4 @@
-<?php 
+<?php
 $nilai = [20, 80, 72, 60, 50, 40];
 
 echo "Nilai saya :";
@@ -9,6 +9,7 @@ foreach ($nilai as $item) {
 echo "<br>Dari keseluruhann nilai yang paling tinggi ialah : " . max($nilai);
 echo "<br>Sedangkan nilai yang paling kecil : " . min($nilai);
 
+//
 $sort = $nilai;
 sort($sort);
 echo "<br>Apablia diurutkan dari yang terkecil menjadi : " . implode(", ", $sort);
@@ -28,7 +29,7 @@ if ($index) {
 
 echo "<br>Setelah melakukan perbaikan untuk nilai 72, saya mendapat nilai " . $nilai[$index];
 echo "<br> Jadi nilai saya menjadi : ";
-foreach($nilai as $item) {
+foreach ($nilai as $item) {
     echo "$item, ";
 }
 

@@ -18,6 +18,7 @@ print(x % y)
 print(x ** y)
 print(x // y)
 
+#
 # Operator pertbandingan
 
 x = 5 == 5
