@@ -9,6 +9,7 @@ foreach ($nilai as $item) {
 echo "<br>Dari keseluruhann nilai yang paling tinggi ialah : " . max($nilai);
 echo "<br>Sedangkan nilai yang paling kecil : " . min($nilai);
 
+//
 $sort = $nilai;
 sort($sort);
 echo "<br>Apablia diurutkan dari yang terkecil menjadi : " . implode(", ", $sort);

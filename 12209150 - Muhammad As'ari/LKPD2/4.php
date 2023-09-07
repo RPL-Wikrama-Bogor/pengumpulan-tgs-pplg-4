@@ -1,4 +1,5 @@
 <?php 
+//
 class kantor {
     protected $namakaryawan = "", 
            $tunj, 

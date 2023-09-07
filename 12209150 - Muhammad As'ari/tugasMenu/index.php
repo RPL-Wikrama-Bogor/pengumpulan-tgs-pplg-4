@@ -1,4 +1,5 @@
 <?php
+//
 $Makanan = [
     [
         "Makanan" => "Mie goreng",

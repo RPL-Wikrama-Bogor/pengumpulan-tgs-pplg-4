@@ -31,6 +31,7 @@ class Bioskop {
         $this->TotalKeuntungan = $this->KeuntunganEkonomi + $this->KeuntunganVip + $this->KeuntunganEksekutif;
     }
 
+    //
     public function cariKeuntunganVip() 
     {
         if ($this->Vip >= 35) {

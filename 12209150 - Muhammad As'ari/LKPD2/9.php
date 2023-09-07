@@ -1,4 +1,5 @@
 <?php 
+//
 $fahrenheit = readline("Fahrenheit : ");
 $celcius = ($fahrenheit - 32) * 5 / 9;
 

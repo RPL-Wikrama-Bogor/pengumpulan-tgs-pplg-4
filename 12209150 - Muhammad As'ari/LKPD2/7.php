@@ -1,4 +1,5 @@
 <?php 
+//
 $totalGram = readline("Total Gram : ");
 $hargaBefore = 500 * $totalGram;
 $diskon = 5 * $hargaBefore / 100 ;

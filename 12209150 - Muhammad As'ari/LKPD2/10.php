@@ -1,4 +1,5 @@
 <?php
+//
 $mtk = readline("mtk : ");
 $dpk = readline("dpk : ");
 $pabp = readline("pabp : ");
