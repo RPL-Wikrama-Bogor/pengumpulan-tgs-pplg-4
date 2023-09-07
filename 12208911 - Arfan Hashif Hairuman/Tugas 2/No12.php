@@ -18,7 +18,7 @@ $det4 = 59;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menambah Detik ke jam</title>
+    <title>Menambah Detik ke Jam</title>
     <link rel="stylesheet" href="No12.css">
 </head>
 
