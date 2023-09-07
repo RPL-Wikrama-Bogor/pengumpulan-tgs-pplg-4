@@ -9,4 +9,3 @@ $r = $bb % 1000;
 
 echo "Ratusan: " . ($r - $p) / 100 . ", Puluhan: " . ($p - $s) / 10 . ", Satuan: " . $s;
 
-?>
