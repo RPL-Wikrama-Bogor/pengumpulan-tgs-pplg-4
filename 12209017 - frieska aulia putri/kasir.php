@@ -127,6 +127,7 @@
         <h2>Order Makanan</h2>
         <label for="nama_makanan">Nama Makanan:</label>
         <select name="nama_makanan" id="nama_makanan">
+        <option disabled hidden selected> --pilih--</option>
             <?php foreach ($menu as $key => $item): ?>
                 <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
             <?php endforeach; ?>
@@ -139,6 +140,7 @@
         <h2>Order Minuman</h2>
         <label for="nama_minuman">Nama Minuman:</label>
         <select name="nama_minuman" id="nama_minuman">
+        <option disabled hidden selected> --pilih--</option>
             <?php foreach ($minum as $key => $item): ?>
                 <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
             <?php endforeach; ?>
