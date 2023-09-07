@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Pegawai</title>
+    <title>No Pegawai substract</title>
     <link rel="stylesheet" href="No11.css">
 </head>
 
