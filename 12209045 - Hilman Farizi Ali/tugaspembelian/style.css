@@ -1,0 +1,15 @@
+body {
+    justify-content: center;
+    align-items: center;
+    min-height: 20vh;
+    display: grid;
+   background-color: steelblue;
+
+ } 
+ .kotak {
+    background-color: #8a2be2;
+    border: 1px solid ;
+    border-radius: 5px;
+    padding: 2px;
+ }
+   
