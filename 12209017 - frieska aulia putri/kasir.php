@@ -1,194 +1,217 @@
+<?php
+$menus = [
+    [
+        'menu' => 'Nasi Goreng',
+        'harga' => 15000,
+        'tipe' => 'makanan'
+    ],
+    [
+        'menu' => 'Mie Goreng',
+        'harga' => 10000,
+        'tipe' => 'makanan'
+    ],
+    [
+        'menu' => 'pangsit goreng',
+        'harga' => 15000,
+        'tipe' => 'makanan'
+    ],
+    [
+        'menu' => 'mie ayam',
+        'harga' => 8000,
+        'tipe' => 'makanan'
+    ],
+    [
+        'menu' => 'Es Jeruk',
+        'harga' => 5000,
+        'tipe' => 'minuman'
+    ],
+    [
+        'menu' => 'Teh Manis',
+        'harga' => 5000,
+        'tipe' => 'minuman'
+    ],
+    [
+        'menu' => 'jus buah',
+        'harga' => 10000,
+        'tipe' => 'minuman'
+    ]
+]
+    ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>MENU DAN HARGA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PEMESANAN Makanan</title>
     <style>
-        table {
-            border-collapse: collapse;
-            width: 50%;
-            margin: 20px auto;
+        body {
+            font-family: Arial, sans-serif;             
+            margin: 0;
+            padding: 0;
         }
 
-        th, td {
-            border: 1px solid black;
-            padding: 8px;
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+        .struk{
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 400px;
+            margin: 0 auto;
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
             text-align: left;
         }
 
-        th {
-            background-color: #f2f2f2;
+        select,
+        .number {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
         }
 
-        .total {
+        label {
             font-weight: bold;
         }
-        .kotak{
-            background-color: white;
-            border-radius: 15px;
-            outline : auto;
-            max-width: 100%;
-            text-align: center;
-            padding: 30px 70px;
-            margin: 30px 400px;
-            margin-top: 5%;
+
+        .submit {   
+            padding: 10px 200px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
         }
-        .inpt{
-            margin:25px;
-            padding: 10px;
-            width:80px;
-            border-radius: 40px;
-            border:none;
-            background-color:#FFC6AC;
-           
+
+        h2 {
+            font-size: 20px;
+            margin-top: 20px;
         }
-        h1{
-            text-align: center;
+
+        p {
+            margin-bottom: 20px;
         }
-        .menu{
-            background-color: white;
-            border-radius: 15px;
-            outline : auto;
-            max-width: 100%;
-            padding: 20px 20px;
-            margin: 60px 400px;
-            margin-top: 5%;
-        }
-        h2{
-            text-align : center;
-        } 
     </style>
+
 </head>
+
 <body>
-    <h1>DAFTAR MENU</h1>
-
-    <div class="menu">
-        <h2>Menu Makanan</h2>
-        <ul>
-            <li>Nasi Goreng    : Rp 15.000</li>
-            <li>Mie Goreng     : Rp 15.000</li>
-            <li>Kwetiaw Goreng : Rp 15.000</li>
-            <li>Pangsit Goreng : Rp 10.000</li>
-            <li>Mie Ayam       : Rp 10.000</li>
-        </ul>
-
-        <h2>Aneka Minuman</h2>
-        <ul>
-            <li>Es Jeruk       : Rp 5.000</li>
-            <li>Teh Manis      : Rp 5.000</li>
-            <li>Lemon Tea      : Rp 5.000</li>
-            <li>Aneka Jus Buah : Rp 10.000</li>
-        </ul>
-    </div>
-    <?php
-
-    $menu = array(
-        "nasi_goreng" => array("Nama" => "Nasi Goreng", "Harga" => 15000),
-        "mie_goreng" => array("Nama" => "Mie Goreng", "Harga" => 10000),
-        "kwetiau" => array("Nama" => "Kwetiau", "Harga" => 15000),
-        "toge_goreng" => array("Nama" => "toge goreng", "Harga" => 10000),
-        "bakso" => array("Nama" => "bakso", "Harga" => 10000)
-    );
-    $minum = array(
-        "es_jeruk" => array("Nama" => "Es Jeruk", "Harga" => 10000),
-        "teh_manis" => array("Nama" => "Teh Manis", "Harga" => 5000),
-        "wedang_jahe" => array("Nama" => "wedang jahe", "Harga" => 10000),
-        "jus_buah" => array("Nama" => "jus buah", "Harga" => 10000)
-    );
-
-    $namaMakanan = "";
-    $jumlahMakanan = 0;
-    $namaMinuman = "";
-    $jumlahMinuman = 0;
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $namaMakanan = $_POST["nama_makanan"];
-        $jumlahMakanan = intval($_POST["jumlah_makanan"]);
-        $namaMinuman = $_POST["nama_minuman"];
-        $jumlahMinuman = intval($_POST["jumlah_minuman"]);
-    }
-
-  
-    if (array_key_exists($namaMakanan, $menu) && array_key_exists($namaMinuman, $minum)) {   
-      
-        $totalHarga = ($menu[$namaMakanan]["Harga"] * $jumlahMakanan) + ($minum[$namaMinuman]["Harga"] * $jumlahMinuman);
-
-        $diskon = 0;
-        $totalItem = $jumlahMakanan + $jumlahMinuman;
-        if ($totalItem >= 5) {
-            $diskon = 0.10 * $totalHarga;
-        }
-    } else {
-        $totalHarga = 0;
-        $diskon = 0;
-    }
-    ?> 
-     <div class="kotak">
-    <form method="post">
-        <h2>Order Makanan</h2>
-        <label for="nama_makanan">Nama Makanan:</label>
-        <select name="nama_makanan" id="nama_makanan">
-        <option disabled hidden selected> --pilih--</option>
-            <?php foreach ($menu as $key => $item): ?>
-                <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <br>
-        <label for="jumlah_makanan">Jumlah Makanan:</label>
-        <input type="number" name="jumlah_makanan" id="jumlah_makanan" min="0">
-        <br>
-
-        <h2>Order Minuman</h2>
-        <label for="nama_minuman">Nama Minuman:</label>
-        <select name="nama_minuman" id="nama_minuman">
-        <option disabled hidden selected> --pilih--</option>
-            <?php foreach ($minum as $key => $item): ?>
-                <option value="<?php echo $key; ?>"><?php echo $item["Nama"]; ?></option>
-            <?php endforeach; ?>
-        </select>
-        <br>
-        <label for="jumlah_minuman">Jumlah Minuman:</label>
-        <input type="number" name="jumlah_minuman" id="jumlah_minuman" min="0">
-        <br>
-        
-        <input class="inpt" type="submit" value="Pesan">
-    </form>
-   
-    
-    <?php if ($totalHarga > 0): ?>
-        <h2>Payment Receipt</h2>
+    <form action="" method="post">
+        <h2>DAFTAR MENU</h2>
         <table>
             <tr>
-                <th>Menu</th>
-                <th>Jumlah</th>
-                <th>Harga Satuan</th>
-                <th>total</th>
+                <td><strong>Menu</strong></td>
+                <td><strong>Harga</strong></td>
             </tr>
-            <tr>
-                <td><?php echo $menu[$namaMakanan]["Nama"]; ?></td>
-                <td><?php echo $jumlahMakanan; ?></td>
-                <td><?php echo $menu[$namaMakanan]["Harga"]; ?></td>
-                <td><?php echo $menu[$namaMakanan]["Harga"] * $jumlahMakanan; ?></td>
-            </tr>
-            <tr>
-                <td><?php echo $minum[$namaMinuman]["Nama"]; ?></td>
-                <td><?php echo $jumlahMinuman; ?></td>
-                <td><?php echo $minum[$namaMinuman]["Harga"]; ?></td>
-                <td><?php echo $minum[$namaMinuman]["Harga"] * $jumlahMinuman; ?></td>
-            </tr>
-            <tr class="total">
-                <td colspan="3">Total</td>
-                <td><?php echo $totalHarga; ?></td>
-            </tr>
-            <tr class="total">
-                <td colspan="3">Diskon (10%)</td>
-                <td><?php echo $diskon; ?></td>
-            </tr>
-            <tr class="total">
-                <td colspan="3">Total Harga</td>
-                <td><?php echo $totalHarga - $diskon; ?></td>
-            </tr>
+            <?php foreach ($menus as $key => $item): ?>
+                <tr>
+                    <td>
+                        <?= $item['menu'] ?>
+                    </td>
+                    <td>
+                        <?= number_format($item['harga'], 0, ',', '.'); ?>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
         </table>
-    <?php endif; ?>
-    </div>
+        <br>
+        <br>
+
+        <form action="" method="post">
+            <h2>PESAN</h2>
+            <label for="food_menu">Pilih Makanan:</label>
+            <select id="food_menu" name="food_menu">
+                <option hidden disabled selected>---select here---</option>
+                <?php foreach ($menus as $key => $value): ?>
+                    <?php if ($value['tipe'] == 'makanan'): ?>
+                        <option value="<?= $value['menu']; ?>"><?= $value['menu']; ?></option>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </select><br>
+
+            <label for="food_quantity">Jumlah Pembelian Makanan:</label>
+            <input class="number" type="number" id="food_quantity" name="food_quantity" required><br>
+
+            <label for="drink_menu">Pilih Minuman:</label>
+            <select id="drink_menu" name="drink_menu">
+                <option hidden disabled selected>---select here---</option>
+                <?php foreach ($menus as $key => $value): ?>
+                    <?php if ($value['tipe'] == 'minuman'): ?>
+                        <option value="<?= $value['menu']; ?>"><?= $value['menu']; ?></option>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </select><br>
+
+            <label for="drink_quantity">Jumlah Pembelian Minuman:</label>
+            <input class="number" type="number" id="drink_quantity" name="drink_quantity" required><br>
+            <input class="submit" type="submit" name="submit" value="Beli">
+        </form>
+
+
+        <?php
+        if (isset($_POST['submit'])) {
+            $food_menu = $_POST["food_menu"];
+            $food_quantity = $_POST["food_quantity"];
+            $drink_menu = $_POST["drink_menu"];
+            $drink_quantity = $_POST["drink_quantity"];
+
+            foreach ($menus as $item) {
+                if ($item['menu'] == $food_menu) {
+                    $food_price = $item['harga'];
+                    $total_makan = $food_price * $food_quantity;
+                } elseif ($item['menu'] == $drink_menu) {
+                    $drink_price = $item['harga'];
+                    $total_minum = $drink_price * $drink_quantity;
+                }
+            }
+
+            $total = $total_makan + $total_minum;
+            ?>
+            <div class="struk">
+                <h2>STRUK PEMBELIAN</h2>
+                <p> Makanan :
+                    <?= $food_menu ?> x
+                    <?= $food_quantity ?><br> Harga Makanan :
+                    <?= number_format($total_makan, 0, ',', '.'); ?>
+                    <br>Minuman :
+                    <?= $drink_menu ?> x
+                    <?= $drink_quantity ?><br> Harga Minuman :
+                    <?= number_format($total_minum, 0, ',', '.'); ?>
+                    <br>Total Pembayaran: <b>Rp
+                <?= number_format($total, 0, ',', '.'); ?>
+            </b></p>
+            </div>
+
+
+        <?php } ?>
+
 </body>
+
 </html>
