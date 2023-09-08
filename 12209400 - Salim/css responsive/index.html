@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .text {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .image {
+            flex: 1;
+            text-align: right;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: burlywood;
+            color: #ffffff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            margin-bottom: 30px;
+            align-self: flex-end;
+        }
+        
+        .baris{
+        box-sizing: border-box;
+				padding: 20px;
+      }
+      .kolom{
+        width: 320px;
+        height: 100px;
+        background-color: burlywood;
+        margin: 5px;
+        box-sizing: border-box;
+		padding: 50x;
+        font-size: 15px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        text-align: center;
+        margin-top: 250px;
+      }
+      .kolom1,.kolom2, .kolom3, .kolom4{
+        float: left;
+        padding: 70px ;
+      }
+
+
+      .form{
+        background-color: burlywood;
+       margin-top: 50px;
+        width: 400px;
+        height: 400px;
+        padding: 20px;
+        float: left;
+        justify-content: center;
+      }
+
+      .formu{
+        padding: 20px;
+        color: black;
+        float: left;
+        margin-top: 0px;
+      }
+
+      h1{
+        color: black;
+      }
+      .kirim{
+        float: right;
+        text-decoration: none;
+        background-color: white;
+        color: rgb(83, 95, 155);
+        padding: 5px 30px;
+        border-radius: 50px;
+        margin-top: 10px;
+      }
+
+      table {
+            width: 70x;
+            border-collapse: collapse;
+            margin: 50px;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            min-height: 100vh;
+            float: right;
+        }
+
+        td {
+            border: 10px solid #ccc;
+            padding: 10px;
+            vertical-align: top;
+            text-align: center;
+        }
+
+        .text-cell {
+            width: 50%;
+            padding-top: 50px;
+        }
+
+        .image-cell {
+            width: 50%;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text-heading {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+        }
+       
+        .floater {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #3498db;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .floater:hover {
+            transform: translateX(-10px);
+        }
+     
+    </style>
+
+     <div class="container">
+        <a class="button" href="#">Login</a>
+        <div class="content">
+            <div class="text">
+                <h1>REAL MADRID</h1>
+                <p> Umumnya dikenal sebagai Real Madrid, adalah klub sepak bola profesional yang berbasis di Madrid, Spanyol.
+                    Didirikan pada tahun 1902 sebagai Madrid Football Club, secara tradisional mengenakan kostum kandang putih.</p>
+            </div>
+            <div class="image">
+                <img src="img/rm.png" alt="Gambar Contoh">
+            </div>
+        </div>
+    </div>
+
+    <section class="baris">
+        <div class="kolom kolom1">Champions league 14</div>
+        <div class="kolom kolom2">Laliga 35</div>
+        <div class="kolom kolom3">Piala super spanyol 12</div>
+        <div class="kolom kolom4">Piala raja spanyol 20</div>
+   </section>
+
+<div class="form">
+    <div class="formu">
+        <h1>Ingin menjadi madrista?</h1>
+        <form action="">
+            <div>
+                <label for="nama">YOUR NAME</label>
+                <br>
+                <input type="string" id="nama" required>
+            </div>
+            <div >
+                <label for="age">YOUR AGE</label>
+                <br>
+                <input type="number" id="age" required>
+            </div>
+            <div >
+                <label for="STATUS">YOUR IDOL</label>
+                <br>
+                <input type="string" id="STATUS" required>
+            </div>
+            <p>Upload a File</p>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <label for="fileInput">Select a file:</label>
+                <input type="file" id="fileInput" name="fileInput">
+                <button type="submit">Upload</button>
+            </form>
+            <a href="" class="kirim">Send</a>
+        </form>
+    </div>
+</div>
+
+
+
+<table>
+    <tr>
+        <td class="text-cell">
+            <p>Cristiano Ronaldo dos Santos Aveiro legenda dari Real Madrid.</p>
+        </td>
+        <td class="image-cell">
+            <img src="img/cr7.jpg" alt="Gambar">
+        </td>
+    </tr>
+    <tr>
+        <td class="text-cell">
+            <p>Sergio Ramos Garcia legenda dan juga kapten dari Real Madrid .</p>
+        </td>
+        <td class="image-cell">
+            <img src="img/sr4.jpg" alt="Gambar lain">
+        </td>
+    </tr>
+</table>
+
+<div class="floater">Copyright © slm.</div>
+
+</body>
+</html>

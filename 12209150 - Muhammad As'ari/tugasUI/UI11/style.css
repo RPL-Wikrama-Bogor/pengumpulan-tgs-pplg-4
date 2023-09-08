@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@500&family=Roboto:ital,wght@0,400;1,300&family=Varela+Round&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.form-container {
+  background-color: rgba(181, 188, 216, 0.568);
+  width: 90%;
+  max-width: 467px;
+  padding: 20px;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+/* */
+
+.form-container h3 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: rgb(66, 75, 90);
+}
+
+.form-container label {
+  font-size: 18px;
+  color: rgb(111, 113, 116);
+}
+
+h4 {
+  color: rgb(111, 113, 116);
+}
+
+.form-container button {
+  margin-top: 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #258cd1;
+}
+
+input[type="number"]{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(111, 113, 116);
+  padding: 6px 8px;
+  margin-bottom: 4px;
+}
+
+input[type="submit"]{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(111, 113, 116);
+  padding: 2px 8px;
+}
+
+.form-container input:focus {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.output {
+  margin-top: 17px;
+}
+
+input::placeholder {
+  color: rgba(111, 113, 116, 0.75);
+}
+
+.top-input {
+  margin-top: 6px;
+}
+

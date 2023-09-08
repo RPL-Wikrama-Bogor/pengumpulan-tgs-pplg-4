@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+        .cntn{
+            padding-top: 10px;
+        }
+       .button {
+            margin-top: 16px;
+            background-color:#E19898;
+            color: #ffffff;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            float: right;
+        }
+
+        .button:hover {
+            background-color:#cc8383;
+        }
+
+        a {
+            font-size: 15px;
+            text-decoration:none;
+           
+        }
+
+        .txt {
+            padding-top: 10px;
+            
+            
+        }
+        .img {
+            float: right;
+            margin-top: -270px;
+            
+        }
+        
+        .ts {
+            padding-top: 35px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .baris{
+            box-sizing: border-box;
+            padding-top: 150px;
+            
+            
+        }
+        .kolom{
+            width: 305px;
+            height: 80px;
+            background-color: #E19898;
+            margin: 3px;
+            box-sizing: border-box;
+            padding: 30px;
+            border-radius: 4px;
+        }
+
+        .kolom1,.kolom2,.kolom3,.kolom4{
+        float: left;
+        text-align: center;
+        }
+
+        /* card */
+
+        .card {
+            background-color: #eee7e7f1;
+            margin-top: 10%;
+            width: 34rem;
+            height: 29rem;
+            border-radius: 30px;
+            
+        }
+
+        .ct {
+            margin: 30px;
+            padding: 20px;
+        }
+
+        .ct h3 {
+            text-align: center;
+        }
+
+        .submit-button {
+            background-color:  #E19898; 
+            color: #ffffff; 
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            float: right; 
+        }
+
+        .submit-button:hover {
+            background-color:  #cc8383; 
+        }
+
+        .dta{
+            float: right;
+            margin-top: -30rem;
+        }
+        .d1{
+            height: 10rem;
+            width: 40em;
+            border: 1px solid #000;
+        }
+
+        .d2{
+            margin-top: 10px;
+            border: 1px solid #000;
+            height: 10rem;
+            width: 40rem;
+        }
+
+        footer{
+            background-color: #E19898;
+            text-align: center;
+            height: 27px;
+            margin: -8px -8px;
+        }
+        
+        main {
+        flex-grow: 1;
+       
+        }
+
+     @media (max-width: 768px) {
+
+        main{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .button {
+            float: none;
+            margin-top: 10px;
+        }
+
+        .cntn {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .img {
+            float: none;
+            margin: 10px auto;
+            width: auto;
+        }
+
+        .baris {
+            padding-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .kolom {
+            width: 100%;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .card {
+            width: 90%;
+            margin: 10% auto;
+        }
+
+        .ct {
+            padding: 10px;
+        }
+
+        .submit-button {
+            float: none;
+        }
+
+        .dta {
+            margin-top: 20px;
+        }
+
+        .d1,
+        .d2 {
+            width: 100%;
+        }
+
+        footer {
+            margin: 20px -8px;
+        }
+    }
+
+    </style>
+</head>
+<body>
+<main>
+    <button class="button" >Administrator</button>
+
+    <div class="cntn">
+        <div class="txt">
+            <div class="ts">
+            <h2>Pengaduan Masyarakat</h2>
+            <p><b>1. Keselamatan adalah prioritas</b>
+                <br>"Keselamatan adalah keutamaan kita bersama. Mari kita semua bekerja sama<br> untuk menjaga diri dan orang lain."?</p>
+            <p><b>2. Bertanggung Jawab</b>
+                <br>"Setiap individu memiliki tanggung jawab untuk melindungi komunitas.<br> Tindakan Anda berpengaruh."</p>
+            <p><b>3. Peduli pada Sesama</b>
+                <br>"Tetap berhubungan dengan keluarga, teman, dan tetangga Anda.<br> Tanyakan kepada mereka bagaimana keadaannya.<br> Kecilkan jarak sosial, tapi jangan kecilkan hati."</p>
+            </div>
+        </div>
+        <div class="img">
+            <img src="img/pt.jpg" alt="">
+        </div>
+    </div>
+
+    
+
+    <section class="baris">
+	   <div class="kolom kolom1">Jumlah Kecamatan <br> 15</div>
+	   <div class="kolom kolom2">Jumlah Desa <br> 42</div>
+	   <div class="kolom kolom3">Jumlah Penduduk <br> 12.000</div>
+	   <div class="kolom kolom4">Data per Tahun <br> 2023</div>
+  </section>
+
+
+  <div class="card">
+        <div class="ct">
+            <h3><b>Buat Pengaduan</b></h3>
+            <form action="">
+                <label>NIS:</label><br>
+                <input type="text" size="60"><br><br>
+                <label for="">Nama Lengkap :</label><br>
+                <input rows=""size="60"></input><br>
+                <br><label for="">No Tlp :</label><br>
+                <input rows=""size="60"></input><br>
+                <br><label for="">Pengaduan :</label><br>
+                <textarea rows="5"></textarea>
+                <br><br><label for="">Upload Gambar Terkait : </label><br>
+                <input type="file" name="" id="">
+                <button class="submit-button">submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="dta">
+        <h3><b>Laporan Pengaduan</b></h3>
+        <div class="d1">
+
+        </div>
+        <div class="d2">
+
+        </div>
+    </div>
+</main>
+    <footer><h4>Copyright @2023;</h4></footer>
+</body>
+</html>
