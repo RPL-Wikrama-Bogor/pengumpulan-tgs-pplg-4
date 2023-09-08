@@ -10,4 +10,5 @@ if(isset($_POST['submit'])) {
     $hasil = $_POST['jarak'] / 2;
     echo "waktu tempuhnya adalah $hasil detik";
 }
+
 ?>

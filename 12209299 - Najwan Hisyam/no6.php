@@ -1,6 +1,6 @@
 <?php  
 // mencari nilai tertinggi, dan juga menghitung berapa orang yang mendapatkan nilai tertinggi tersebut
-
+// 
 $siswa = array();
 $i = 0;
 $max = 0;
