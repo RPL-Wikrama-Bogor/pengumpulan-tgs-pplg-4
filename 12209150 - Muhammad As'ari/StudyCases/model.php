@@ -7,52 +7,60 @@ class Shell
     protected $hargaSVPD = 183100;
     protected $hargaSVPN = 165100;
     protected $Type = "";
-    protected $Price = 0;
+    protected $totalPrice = 0;
+    protected $totalLiter = 0;
+    protected $tax = 0.11;
 
-    protected function getHargaSSuper()
-    {
-        return $this->hargaSSuper;
+    protected function getHargaBensin($productName) {
+        switch ($productName) {
+            case "SS":
+                return $this->hargaSSuper;
+            case "SVP":
+                return $this->hargaSVP;
+            case "SVPD":
+                return $this->hargaSVPD;
+            case "SVPN":
+                return $this->hargaSVPN;
+        }
     }
-    protected function getHargaSVP()
+    public function getTipeBensin()
     {
-        return $this->hargaSVP;
+        return $this->Type;
     }
-    protected function getHargaSVPD()
+    public function getTotalHarga()
     {
-        return $this->hargaSVPD;
+        return $this->totalPrice;
     }
-    protected function getHargaSVPN()
+    public function getTotalLiter()
     {
-        return $this->hargaSVPN;
+        return $this->totalLiter;
     }
 }
 
 class Beli extends Shell
 {
-    public function __construct($product, $total)
+    public function __construct($productName, $total)
     {
-        switch ($product) {
+    $this->totalLiter = $total;
+        switch ($productName) {
             case "SS":
-                $this->Price = ($this->getHargaSSuper() * $total) * 0.11;
+                $this->totalPrice = ($this->getHargaBensin($productName) * $total) * $this->tax;
                 $this->Type = "SSuper";
                 break;
             case "SVP":
-                $this->Price = ($this->getHargaSVP() * $total) * 0.11;
+                $this->totalPrice = ($this->getHargaBensin($productName) * $total) * $this->tax;
                 $this->Type = "SVpower";
                 break;
             case "SVPD":
-                $this->Price = ($this->getHargaSVPD() * $total) * 0.11;
+                $this->totalPrice = ($this->getHargaBensin($productName) * $total) * $this->tax;
                 $this->Type = "SVPDiesel";
                 break;
             case "SVPN":
-                $this->Price = ($this->getHargaSVPN() * $total) * 0.11;
+                $this->totalPrice = ($this->getHargaBensin($productName) * $total) * $this->tax;
                 $this->Type = "SVPNitro";
                 break;
         }
     }
-
-    public function getOutput() {
-        echo $this->Type;
-        echo number_format($this->Price, 2, '.');
-    }
 }
+
+?>
