@@ -10,7 +10,7 @@
         <input type="submit" name="submit" value="Cetak Informasi">
     </form>
 
-    
+
     <?php
     
     if (isset($_POST['submit'])) {
