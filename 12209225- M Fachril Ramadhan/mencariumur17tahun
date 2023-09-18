@@ -86,18 +86,5 @@ if (isset($_POST["cariUsia"])){
         <?php endforeach; ?>
     </ul>
     </div>
-
-
-    <style>
-        .card{
-            background-color: #F9DEC9;
-        border-radius: 10px;
-        max-width: 100%;
-        text-align: center;
-        padding: 70px 120px;
-        margin: 100px 400px;
-    }
-
-    </style>
 </body>
 </html>
