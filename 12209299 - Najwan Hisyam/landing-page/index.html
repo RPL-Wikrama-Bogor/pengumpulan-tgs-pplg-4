@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <style>
+        /*  */
+        body {
+            background-color: #171717;
+            /* Warna latar belakang gelap */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #FFFFFF;
+            /* Warna teks putih */
+        }
+
+        .navbar {
+            background-color: #333333;
+            /* Warna latar belakang navbar gelap */
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            padding-right: 3%;
+        }
+
+        .navbar a .button {
+            background-color: gray;
+            color: #F3EBEB;
+            /* Warna teks tombol abu-abu terang */
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .navbar a .button:hover {
+            color: black;
+        }
+
+        header {
+            padding: 0px 1rem;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-text {
+            flex: 1%;
+            max-width: 800px;
+        }
+
+        .header-image img {
+            margin-top: 28px;
+            max-width: 400px;
+            height: auto;
+        }
+
+        .column-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 1rem;
+        }
+
+        .column {
+            flex-basis: 23%;
+            padding: 1rem;
+            background-color: #292929;
+            /* Warna latar belakang kolom gelap */
+            border: 1px solid #444444;
+            /* Warna garis tepi kolom */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .column p {
+            margin-top: 0;
+        }
+
+        /* Gaya untuk wadah form */
+        .form-section {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #444444;
+            background-color: #292929;
+            border-radius: 4px;
+        }
+
+        .form-table {
+            display: table;
+            width: 100%;
+        }
+
+        .form-row {
+            display: table-row;
+        }
+
+        .form-cell {
+            display: table-cell;
+            padding: 8px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+
+        /* */
+        input[type="text"],
+        input[type="nik"],
+        input[type="number"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #444444;
+            background-color: #292929;
+            color: #FFFFFF;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: gray;
+            color: #F3EBEB;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="button">
+            <a href="#"><button class="button">Administrator</button></a>
+        </div>
+    </div>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Nissan GTR R-35</h1>
+                <p>Nissan GT-R adalah sebuah mobil sport yang dibuat oleh Nissan,
+                    Nissan GTR merupakan mobil sport berpenggerak empat roda dan menggunakan mesin 6 silinder twin-turbo
+                </p>
+                <p>walaupun masih memakai mesin 6 silinder twin-turbo, mesin Skyline GTR yang legendaris, RB26DETT,
+                    telah diganti dengan mesin VR38DETT yang berkonfigurasi V serta dengan isi slinder yang lebih besar,
+                    yaitu 3.800 CC (di mana sebelumnya, RB26DETT mempunyai kapasitas 2.600 CC).</p>
+            </div>
+            <div class="header-image">
+                <img src="Wallpaper 4k Nissan Gtr 2019 Wallpaper.jpeg" alt="Background Image">
+            </div>
+        </div>
+    </header>
+    <div class="column-container">
+        <div class="column">
+            <h2>Rangka dan Warna Body</h2>
+            <p>Random explanation text here.</p>
+        </div>
+        <div class="column">
+            <h2>Ban dan Pengereman </h2>
+            <p>Another random explanation text here.</p>
+        </div>
+        <div class="column">
+            <h2>Barang Modif</h2>
+            <p>Yet another random explanation text here.</p>
+        </div>
+        <div class="column">
+            <h2>Seputar Mesin</h2>
+            <p>One more random explanation text here.</p>
+        </div>
+    </div>
+
+    <div class="form-section">
+        <h3>Ini form</h3>
+        <form>
+            <div class="form-table">
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="Nama">Nama :</label>
+                    </div>
+                    <div class="form-cell">
+                        <input type="text" id="Nama" name="name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="nik">Nik :</label>
+                    </div>
+                    <div class="form-cell">
+                        <input type="nik" id="nik" name="name">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="no">No telp.:</label>
+                    </div>
+                    <div class="form-cell">
+                        <input type="no" id="no" name="number">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-cell">
+                        <label for="keluhan">Keluhan:</label>
+                    </div>
+                    <div class="form-cell">
+                        <textarea id="keluhan" name="keluhan" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-cell">
+                        <!-- Spasi kosong untuk tombol submit di sebelah kiri -->
+                    </div>
+                    <div class="form-cell">
+
+</body>
+
+</html>
