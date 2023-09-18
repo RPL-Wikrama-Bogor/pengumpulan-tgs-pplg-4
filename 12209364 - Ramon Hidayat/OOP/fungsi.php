@@ -5,6 +5,7 @@ class Fuel
     protected $price;
     protected $amount;
 
+
     public function __construct($type, $amount)
     {
         $this->type = $type;
@@ -33,7 +34,7 @@ class Fuel
     public function getTotalLiter()
     {
         return $this->amount;
-    }
+        }
 
     public function getTotalHarga()
     {

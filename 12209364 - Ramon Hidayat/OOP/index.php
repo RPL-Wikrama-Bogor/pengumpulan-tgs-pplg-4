@@ -4,6 +4,7 @@
  $text = false;
 
  if (isset($_POST["submit"])) {
+
      $text = true;
      $productName = $_POST["select"];
      $jumlah = $_POST["jumlah"];
