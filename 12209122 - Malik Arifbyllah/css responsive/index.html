@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(238, 238, 238);
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 17px;
+            line-height: 1.2;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .navbar{
+            background-color: #CEDEBD;
+            padding: 10px;
+            margin: 0;
+            overflow: hidden;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: right;
+            align-items: flex-start;
+            position: relative; 
+            background-color: #fff; 
+            padding: 10px; 
+        }
+        
+        .text {
+            flex: 1;
+            padding-right: 70px;
+            margin: 20px;
+            padding: 22px;
+            margin-top: 0;
+        }
+        
+        img {
+            width: 550px;
+            max-width: 100%;
+            height: auto;
+            right: 20px;
+            top: 180px;
+            padding-left: 20px;
+            margin-top: 50px;
+        }
+            
+        a{
+        background-color: #9EB384;
+        float: right;
+        text-decoration: none;
+        border-radius: 50px;          
+        padding: 15px;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        a:hover{
+            background-color: #F4EEEE;
+            text-decoration: none;
+            border-radius: 50px;
+        }
+
+        .baris {
+            display: flex; 
+            flex-wrap: wrap; 
+        }
+
+        .kolom {
+            width: 250px;
+            height: 120px;
+            background-color: #9EB384;
+            margin: 5px;
+            box-sizing: border-box;
+            border-radius: 25px;
+            padding: 12px;
+            text-align: center;
+        }
+        .kolom:hover {
+            background-color: #93B1A6;
+            transition: 0.4s;
+        }
+
+        .kolom1, .kolom2, .kolom3, .kolom4 {
+            flex: 1; 
+            text-align: center;
+            padding-top: 3rem;
+            border-radius: 15px;
+        }
+
+        .kolom4 {
+            background-color: #9EB384;
+            margin: 5px;
+        }
+        .form {
+        width: 500px;
+        border-radius: 1rem;
+        background-color: #9EB384;
+        padding: 2rem;
+        border-radius: 15px;
+      }
+      input {
+        width: 90%;
+        padding: 0.2rem;
+        border-radius: 5px;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+      .pengaduan {
+        height: 200px;
+      }
+      label {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      button {
+        float: inline-end;
+        border-radius: 15px;
+        background-color: #183D3D;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+      }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="content">
+            <div class="text">
+                <h1>Pengaduan Masyarakat</h1>
+                <ol>
+                <li>Keamanan dan Ketertiban: Pengaduan terkait keamanan dan ketertiban seperti kejahatan, 
+                tindak kekerasan, perampokan, atau tindakan mengganggu ketertiban umum.</li>
+                <li>Lingkungan: Pengaduan terkait masalah lingkungan seperti polusi udara, pencemaran air, dan kerusakan lingkungan lainnya.</li>
+                <li>Korupsi: Pengaduan terkait tindakan korupsi oleh pejabat pemerintah atau individu lainnya.</li>
+                <li>Hak Asasi Manusia: Pengaduan terkait pelanggaran hak asasi manusia, termasuk diskriminasi, penyalahgunaan kekuasaan oleh aparat pemerintah, dan kebebasan sipil.</li>
+            </ol>
+        </div>
+        <img src="c:\Users\user\Downloads\Chart-Pengaduan-Copy.jpg" alt="">
+            <a href="">Administrator</a>
+    </div>
+</div>
+    <section class="baris">
+        <div class="kolom kolom1">10 Orang</div>
+        <div class="kolom kolom2">10 Pengaduan</div>
+        <div class="kolom kolom3">2 masalah rumit</div>
+        <div class="kolom kolom4">6 file</div> 
+    </section>
+    <div class="form">
+        <label for="" class="label">NIK:</label>
+        <br>
+        <input type="text" name="nik" id="nik">
+        <br>
+        <label for="" class="label">Nama Lengkap:</label>
+        <input type="text" name="nama" id="nama">
+        <br>
+        <label for="" class="label">No Telepon:</label>
+        <input type="text" name="no" id="no">
+        <br>
+        <label for=" "pengaduan">Pengaduan</label>
+        <input type="text" class="pengaduan" name="pengaduan" id="pengaduan">
+        <br>
+        <label for="" class="label">Upload Gambar Terkait</label>
+        <br>
+        <input type="file" name="gambar" id="gambar">
+        <br>
+        
+        <br> <button>Kirim</button>
+      </div>
+</body>
+</html>

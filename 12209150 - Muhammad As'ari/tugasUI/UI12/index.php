@@ -11,9 +11,11 @@ $det3 = 59;
 $jam4 = 23;
 $men4 = 59;
 $det4 = 59;
+//
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -25,10 +27,18 @@ $det4 = 59;
 <body>
     <div class="form-container">
         <h4>Jam Sebelum Penambahan</h4>
-        <h5><?= sprintf("%02d", $jam1) .":". $men1 . ":" . $det1; ?></h5>
-        <h5><?= sprintf("%02d", $jam2).":".$men2.":".$det2; ?></h5>
-        <h5><?= sprintf("%02d", $jam3).":".$men3.":".$det3; ?></h5>
-        <h5><?= "$jam4:$men4:$det4"; ?></h5>
+        <h5>
+            <?= sprintf("%02d", $jam1) . ":" . $men1 . ":" . $det1; ?>
+        </h5>
+        <h5>
+            <?= sprintf("%02d", $jam2) . ":" . $men2 . ":" . $det2; ?>
+        </h5>
+        <h5>
+            <?= sprintf("%02d", $jam3) . ":" . $men3 . ":" . $det3; ?>
+        </h5>
+        <h5>
+            <?= "$jam4:$men4:$det4"; ?>
+        </h5>
         <br>
 
         <form action="" method="post">
@@ -37,54 +47,62 @@ $det4 = 59;
             <input type="submit" name="submit">
         </form>
 
-<?php
-if (isset($_POST["submit"])) {
-    if (empty($_POST["det"])) {
-        exit("<p class='error'>Masukan input terlebih dahulu</p>");
-    } else {
-    $d = $_POST["det"];
+        <?php
+        if (isset($_POST["submit"])) {
+            if (empty($_POST["det"])) {
+                exit("<p class='error'>Masukan input terlebih dahulu</p>");
+            } else {
+                $d = $_POST["det"];
 
-    $det1 += $d;
-    $det2 += $d;
-    $det3 += $d;
-    $det4 += $d;
+                $det1 += $d;
+                $det2 += $d;
+                $det3 += $d;
+                $det4 += $d;
 
-    $men1 += intdiv($det1, 60);
-    $men2 += intdiv($det2, 60);
-    $men3 += intdiv($det3, 60);
-    $men4 += intdiv($det4, 60);
+                $men1 += intdiv($det1, 60);
+                $men2 += intdiv($det2, 60);
+                $men3 += intdiv($det3, 60);
+                $men4 += intdiv($det4, 60);
 
-    $det1 %= 60;
-    $det2 %= 60;
-    $det3 %= 60;
-    $det4 %= 60;
+                $det1 %= 60;
+                $det2 %= 60;
+                $det3 %= 60;
+                $det4 %= 60;
 
-    $jam1 += intdiv($men1, 60);
-    $jam2 += intdiv($men2, 60);
-    $jam3 += intdiv($men3, 60);
-    $jam4 += intdiv($men4, 60);
+                $jam1 += intdiv($men1, 60);
+                $jam2 += intdiv($men2, 60);
+                $jam3 += intdiv($men3, 60);
+                $jam4 += intdiv($men4, 60);
 
-    $men1 %= 60;
-    $men2 %= 60;
-    $men3 %= 60;
-    $men4 %= 60;
+                $men1 %= 60;
+                $men2 %= 60;
+                $men3 %= 60;
+                $men4 %= 60;
 
-    $jam1 %= 24;
-    $jam2 %= 24;
-    $jam3 %= 24;
-    $jam4 %= 24;
-    }
-?>
-    <div class="sudh">
-    <br>
-    <h4>Jam sesudah ditambah <?= $d?> detik</h4>
-    <h5><?= sprintf("%02d", $jam1) . ":" . sprintf("%02d", $men1) . ":" . sprintf("%02d", $det1) ?></h5>
-    <h5><?= sprintf("%02d", $jam2) . ":" . sprintf("%02d", $men2) . ":" . sprintf("%02d", $det2) ?></h5>
-    <h5><?= sprintf("%02d", $jam3) . ":" . sprintf("%02d", $men3) . ":" . sprintf("%02d", $det3) ?></h5>
-    <h5><?= sprintf("%02d", $jam4) . ":" . sprintf("%02d", $men4) . ":" . sprintf("%02d", $det4) ?></h5>
+                $jam1 %= 24;
+                $jam2 %= 24;
+                $jam3 %= 24;
+                $jam4 %= 24;
+            }
+            ?>
+            <br>
+            <h4>Jam sesudah ditambah
+                <?= $d ?> detik
+            </h4>
+            <h5>
+                <?= sprintf("%02d", $jam1) . ":" . sprintf("%02d", $men1) . ":" . sprintf("%02d", $det1) ?>
+            </h5>
+            <h5>
+                <?= sprintf("%02d", $jam2) . ":" . sprintf("%02d", $men2) . ":" . sprintf("%02d", $det2) ?>
+            </h5>
+            <h5>
+                <?= sprintf("%02d", $jam3) . ":" . sprintf("%02d", $men3) . ":" . sprintf("%02d", $det3) ?>
+            </h5>
+            <h5>
+                <?= sprintf("%02d", $jam4) . ":" . sprintf("%02d", $men4) . ":" . sprintf("%02d", $det4) ?>
+            </h5>
+        <?php } ?>
     </div>
-<?php } ?>
-</div>
 </body>
 
 </html>
