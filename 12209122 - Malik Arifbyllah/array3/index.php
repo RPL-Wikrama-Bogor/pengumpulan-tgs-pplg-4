@@ -60,51 +60,6 @@ $siswa = [
     <title>Data Siswa</title>
 </head>
 <body>
-<style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-
-        h3 {
-            color: #333;
-        }
-
-        a {
-            text-decoration: none;
-            color: blue;
-        }
-
-        ul, ol {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        li {
-            margin-bottom: 10px;
-        }
-
-        form {
-            margin-top: 10px;
-        }
-
-        input[type="text"] {
-            padding: 5px;
-            width: 200px;
-        }
-
-        button {
-            padding: 5px 10px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #555;
-        }
-    </style>
     <h3>Data Siswa</h3>
 
  
