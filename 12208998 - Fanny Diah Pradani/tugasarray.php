@@ -115,7 +115,7 @@ $menus = [
         <label for="drink_menu">Pilih Minuman:</label>
         <select id="drink_menu" name="drink_menu">
         <option hidden disabled selected>--pilih minuman--</option>
-            <?php foreach ($menus as $item): ?>
+            <?php foreach ($menus as $item): ?>            
                 <?php if ($item['tipe'] == 'minuman'): ?>
                     <option value="<?= $item['menu']; ?>"><?= $item['menu']; ?> - Rp <?= number_format($item['harga'], 0, ',', '.'); ?></option>
                     <?php endif; ?>
