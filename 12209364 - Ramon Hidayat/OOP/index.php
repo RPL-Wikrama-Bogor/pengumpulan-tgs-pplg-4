@@ -9,7 +9,6 @@ if (isset($_POST["submit"])) {
     $productName = $_POST["select"];
     $jumlah = $_POST["jumlah"];
     $model = new Fuel($productName, $jumlah);
-
 }
 ?>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -65,7 +64,7 @@ if (isset($_POST["submit"])) {
         <div class="col-md-6">
             <?php if($text == true) {?>
                 <div class="text">
-                    <p>Anda membeli bahan bakar minyak tipe <?= $model->getType() ?> </p> <!-- Use getType() here -->
+                    <p>Anda membeli bahan bakar minyak tipe <?= $model->getType() ?> </p>
                     <p>Dengan harga : <?= number_format($model->getPrice(), 1, ",", ".") ?></p>
                     <p>Total liter : <?= $model->getTotalLiter() ?></p>
                 </div>
@@ -74,3 +73,4 @@ if (isset($_POST["submit"])) {
         </div>
     </div>
 </div>
+
