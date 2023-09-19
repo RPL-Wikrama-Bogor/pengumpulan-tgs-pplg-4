@@ -36,6 +36,7 @@ $data = [
         'umur' => 18
     ],
     [
+<<<<<<< HEAD
         'name' => 'Desta Restiani Anwar',
         'nis' => 12208960,
         'rayon' => 'Ciawi 1',
@@ -44,6 +45,15 @@ $data = [
     ]
 ];
 
+=======
+        'name' => 'Syamil Fauzan',
+        'nis' => 12209450,
+        'rayon' => 'Ciawi 3',
+        'namapj' => 'Amanda',
+        'umur' => 18
+    ],
+];
+>>>>>>> d50524a645412b8d1ebbf81c3b15dcd62cb95edc
 ?>
 
 <!DOCTYPE html>
@@ -56,6 +66,7 @@ $data = [
 </head>
 
 <body>
+<<<<<<< HEAD
 <div class="container">
     <h1>Pencarian Data Siswa</h1>
 
@@ -106,12 +117,65 @@ $data = [
             if ($found) {
                 foreach ($filter as $item) {
                     echo "<tr>  
+=======
+    <div class="container">
+        <h1>Pencarian Data Siswa</h1>
+
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="nama">Nama</label> <!--tidak efektif kalo pake nama kalo di real time-->
+                <input type="text" class="form-control" id="nama" name="nama">
+            </div>
+            <div class="form-group">
+                <label for="umur">Umur</label>
+                <select name="umur" id="umur" class="form-control">
+                    <option value="">Pilih umur</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                </select>
+            </div>
+            <button type="submit" name="submit" class="btn btn-primary">Cari</button>
+        </form>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>NIS</th>
+                    <th>Rayon</th>
+                    <th>Penanggung Jawab</th>
+                    <th>Umur</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                
+                if (isset($_POST["submit"])) {
+                    $nama = $_POST["nama"];
+                    $umur = $_POST["umur"];
+                    $found = false;
+                    $filter = [];
+
+                    foreach ($data as $item) {
+                        if ($item["name"] === $nama || $item["umur"] == $umur) {
+                            $filter[] = $item;
+                            $found = true;
+                    }
+                }
+            }
+                if (isset($_POST["submit"])) {
+                    if ($found) {
+                        foreach ($filter as $item) {
+                            echo "<tr>  
+>>>>>>> d50524a645412b8d1ebbf81c3b15dcd62cb95edc
                                 <td>{$item["name"]}</td>
                                 <td>{$item["nis"]}</td>
                                 <td>{$item["rayon"]}</td>
                                 <td>{$item["namapj"]}</td>
                                 <td>{$item["umur"]}</td>
                             </tr>";
+<<<<<<< HEAD
                 }
             } else {
                 echo "<tr>
@@ -125,5 +189,20 @@ $data = [
 </div>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+=======
+                    }
+                    } else {
+                        echo "<tr>
+                            <td colspan='5'>Data tidak ditemukan</td>
+                        </tr>";
+                }
+            }
+                ?>
+            </tbody>
+        </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+>>>>>>> d50524a645412b8d1ebbf81c3b15dcd62cb95edc
 </body>
 </html>
