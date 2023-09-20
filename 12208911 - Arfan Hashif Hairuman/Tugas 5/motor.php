@@ -36,12 +36,12 @@ class Motor {
         return $options;
     }
 }
-
 class Rental extends Motor {
     public $hari;
     public $pelanggan;
     public $tipe;
     public $total;
+    public $perHari;
 
     public function __construct($pelanggan,$hari, $tipe) {
         $this->tipe = $tipe;
@@ -51,6 +51,15 @@ class Rental extends Motor {
 
     public function isMember($namaPelanggan) {
         return in_array($namaPelanggan, $this->Member);
+    }
+
+    public function harga($tipeMotor) {
+        foreach ($this->Motor as $station) {
+            if ($station['nama'] === $tipeMotor) {
+                $this->perHari = $station['harga'];
+                return $this->perHari;
+            }
+        }
     }
 
     public function totalHarga() {
@@ -70,6 +79,8 @@ class Rental extends Motor {
         echo "<center> Atas nama: " . $this->pelanggan ."</center>";
         echo "<br>";
         echo "<center> Anda merental Motor dengan tipe: " . $this->tipe ."</center>";
+        echo "<br>";
+        echo "<center> Harga per-hari nya: " . $this->perHari ."</center>";
         echo "<br>";
         echo "<center> Dengan durasi: " . $this->hari . " Hari" . "</center>";
         echo "<br>";
@@ -113,6 +124,7 @@ class Rental extends Motor {
         $nama = $_POST['pelanggan'];
         $bayar = new Rental($nama, $banyak, $pilihan);
         $total = $bayar->totalHarga();
+        $bayar->harga($pilihan);
         $bayar->printNota();
     }
     ?>
