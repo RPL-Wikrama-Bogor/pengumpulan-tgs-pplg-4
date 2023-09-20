@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Beli bensin di Ciawi</title>
+    <title>Shell Ciawi</title>
     <style>
         .result-table {
             width: 100%;
@@ -48,6 +48,11 @@
             width: 200px;
             margin-left: 70px;
         }
+
+        .namalogo{
+            font-family: Courier;
+            color: #ffff;
+        }
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
@@ -61,6 +66,7 @@
                 <div class="card-body">
                     <form method="POST" action="">
                         <img src="logoshell.png" alt="">
+                        <h1 class="namalogo">Shell</h1>
                         <br>
                         <label for="jumlah_liter">Masukkan Jumlah liter</label>
                         <input type="number" name="jumlah_liter" id="jumlah_liter" required><br><br>
