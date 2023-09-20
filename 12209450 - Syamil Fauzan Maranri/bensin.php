@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Kalkulator Beli Bahan Bakar</title>
+    <title>Beli bensin di Ciawi</title>
 </head>
 <body>
     <h1>Belanja Bahan Bakar</h1>
