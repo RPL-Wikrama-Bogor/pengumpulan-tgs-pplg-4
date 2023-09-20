@@ -23,6 +23,30 @@ class Motor {
         [
             'nama' => 'XSR',
             'harga' => 110700
+        ],
+        [
+            'nama' => 'CBR-150',
+            'harga' => 120700
+        ],
+        [
+            'nama' => 'R-15',
+            'harga' => 122500
+        ],
+        [
+            'nama' => 'Rebel-250',
+            'harga' => 222500
+        ],
+        [
+            'nama' => 'CBR-250',
+            'harga' => 152500
+        ],
+        [
+            'nama' => 'R-25',
+            'harga' => 146500
+        ],
+        [
+            'nama' => 'ZX-25R',
+            'harga' => 212500
         ]
     ];
 
