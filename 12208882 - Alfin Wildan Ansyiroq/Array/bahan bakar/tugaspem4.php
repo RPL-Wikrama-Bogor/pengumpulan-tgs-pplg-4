@@ -16,6 +16,7 @@
          <select name="jenis" required>
             <option value="SSuper">Shell Super</option>
             <option value="SVPower">Shell V-Power</option>
+            <option value="SVPowerDiesel">Shell V-Power Diesel</option>
             <option value="SVPowerNitro">Shell V-Power Nitro</option>
          </select>
         </div>
@@ -25,7 +26,7 @@
     <?php
     require 'logic.php';
     $logic = new Pembelian();
-    $logic->setHarga(10000,15000,18000,20000);
+    $logic->setHarga(15420,16130,18310,16510);
     if(isset($_POST['beli'])) {
         $logic->jenisYangDipilih = ($_POST['jenis']);
         $logic->totalLiter = ($_POST['liter']);
