@@ -1,32 +1,50 @@
-<?php 
-$juara = 0;
-
-for ($i = 1; $i <= 15; $i++) {
-    echo "Siswa ke-$i\n";
-    
-    $mtk = (int) readline("Mtk: ");
-    $dpk = (int) readline("DPK: ");
-    $ing = (int) readline("Ingg: ");
-    $agama = (int) readline("Agama: ");
-    $indo = (int) readline("Indo: ");
-    $kehadiran = (int) readline("Kehadiran: ");
-
-    if ($kehadiran != 100) {
-        echo "Kehadiran tidak mencapai 100\n";
-        continue;
+<html>
+<head>
+    <title> Nomor 02 </title>
+    <style>
+    body {
+        background-color: silver;
     }
 
-    $total = $mtk + $dpk + $ing + $agama + $indo;
-
-    if ($total <= 475) {
-        echo "Total nilai tidak mencapai 475\n";
-        continue;
+    .card {
+        background-color: grey;
+        border-radius: 15px;
+        outline : auto;
+        max-width: 100%;
+        text-align: center;
+        padding: 50px 90px;
+        margin: 145px 400px;
     }
-        
-    if ($total > $juara) {
-        $juara = $total;
+    input {
+        border-radius: 15px;
+        margin: 5px;
     }
-}
+    </style>
+    <body>
+        <div class="card">
+        <form name="form1" method="POST">
+            <h1>Masukkan Total Gram</h1>
+        <input type="number" name="totalGram"></input><br><br>
+        <input type="submit" name="gram" value="Submit"></input>
+    </form>
+    </body>
+</head>
+</html>
 
-echo "Nilai tertinggi: $juara\n";
+
+<?php
+    if(isset($_POST['gram'])) {
+        $g = $_REQUEST['totalGram'];
+
+
+        $hj = $g / 100 * 500;
+        $d = $hj * 5 / 100;
+        $hsd = $hj - $d;
+
+
+        echo "Harga Sebelum Diskon : $hj ribu rupiah </br>";
+        echo "Diskon : $d ribu rupiah </br>";
+        echo "Harga Setelah Diskon : $hsd ribu rupiah </br>";
+    }
 ?>
+</div>

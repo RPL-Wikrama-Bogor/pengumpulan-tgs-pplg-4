@@ -2,7 +2,7 @@
 <html>
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Nomor 03</title>
+    <title> Nomor 04</title>
 <style>
     body {
         background-color: silver;
@@ -23,27 +23,30 @@
     }
     </style>
 
-    <body>
-    <div class="card">
-        <h2>Form Input Angka</h2>
+  <body>
+
+  <div class="card">
+    <h2>Input Cuaca</h2>
 <form action="" method="POST">
-<label for="angka">masukkan Angka:</label>
-<input type="text" id="angka" name="angka" required>
+<label for="suhu">Suhu:</label>
+<input type="text" id="suhu" name="suhu" required placeholder="Fahrenheit">
 <br><br>
  <input type="submit" value="Submit" name="hitung"><br><br>
 </form>
 
 <?php 
 if (isset($_POST["hitung"])) {
- $a = $_POST["angka"];
- $rb = floor ($a / 1000) % $a;
- $rt = floor ($a / 100) % 10;
- $p = floor ($a / 10) % 10; 
- $s = $a % 10;
+ $suhu = $_POST["suhu"];
 
- echo   $rb. " ribuan ".$rt . " ratusan ". $p. ' puluhan '. $s. ' satuan '; 
+ $c = ($suhu-32)*5/9;
+ if ($c > '300' ) {
+    echo "cuaca panas";
+  } elseif ($c < '250' ) {
+    echo "cuaca dingin";
+  } else {
+    echo "cuaca normal";}
  }
  ?>
+ </div>
 </body>
 </html>
-</div>
