@@ -4,7 +4,8 @@
     <title>Beli bensin di Ciawi</title>
 </head>
 <body>
-    <h1>Belanja Bahan Bakar</h1>
+    <h1>Selamat datang</h1>
+    <h3>Silahkan masukkan pesanan anda</h3>
     <form method="POST" action="">
         <label for="jumlah_liter">Masukkan Jumlah liter</label>
         <input type="number" name="jumlah_liter" id="jumlah_liter" required><br><br>
