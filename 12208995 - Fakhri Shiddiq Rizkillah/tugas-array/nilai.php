@@ -1,29 +1,32 @@
 <?php
 $nilai = array(80, 78, 72, 84, 92, 88);
 
-echo "Nilai asli:<br>";
+echo "Nilai asli:";
 foreach ($nilai as $key => $value) {
-    echo "$key: $value<br>";
+    echo "$key: $value";
 }
-
+echo "<br>";
 $terbesar = max($nilai);
 $terkecil = min($nilai);
 
-echo "<br>Nilai terbesar: " . $terbesar . "<br>";
-echo "Nilai terkecil: " . $terkecil . "<br>";
+echo "Nilai terbesar: " . $terbesar . "";
+echo "<br>";
+echo "Nilai terkecil: " . $terkecil . "";
+echo "<br>";
 
 arsort($nilai);
 
-echo "<br>Nilai dari terbesar ke terkecil:<br>";
+echo "Nilai dari terbesar ke terkecil:";
 foreach ($nilai as $key => $value) {
-    echo "$key: $value<br>";
+    echo "$key: $value";
 }
 
 asort($nilai);
+echo "<br>";
 
-echo "<br>Nilai dari terkecil ke terbesar:<br>";
+echo "Nilai dari terkecil ke terbesar:";
 foreach ($nilai as $key => $value) {
-    echo "$key: $value<br>";
+    echo "$key: $value";
 }
 
 echo"<br>";
@@ -38,16 +41,19 @@ if ($ubah !== false) {
     $nilai[$ubah] = 75;
 }
 
-echo "<br>Nilai setelah perubahan:<br>";
+echo "Nilai setelah perubahan:";
 ksort($nilai);
 foreach ($nilai as $key => $value) {
-    echo "$key: $value<br>";
+    echo "$key: $value";
 }
+echo"<br>";
 
 arsort($nilai);
 
-echo "<br>Nilai dari terbesar ke terkecil setelah perubahan:<br>";
+
+echo "Nilai dari terbesar ke terkecil setelah perubahan:";
 foreach ($nilai as $key => $value) {
-    echo "$key: $value<br>";
+    echo "$key: $value";
 }
+
 ?>
