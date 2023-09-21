@@ -5,6 +5,12 @@ class Motor{
               $beat,
               $vario,
               $pajak;
+    public    $members = [
+                ['nama'=>'rifa',
+                 'member'=>10
+                ]
+              ];
+              
 
 
     public function gethargaS()
@@ -30,6 +36,7 @@ class Motor{
         return $this->pajak;
 
     }
+    
 
     
    
@@ -42,6 +49,9 @@ class Pinjam extends Motor{
         $scoopy = $this->gethargaS();
         $beat = $this->gethargaB();
         $vario = $this->gethargaV();
+        $nama = $_POST['nama'];
+
+        
         
         switch($tipe){
             case 'scoopy':
@@ -54,14 +64,28 @@ class Pinjam extends Motor{
                 $harga = $vario;
                 break;
         }
-       
         $total = $harga * $waktu; 
         $sebelum = $total + $pajak;
-        $uang = number_format($sebelum, 3, '.');
-        return $uang;
+        
+        
+        foreach ($this->members as $member) {
+            if ($member['nama'] === $nama) {
+                $memberStatus = $member['member'];               
+            }else{
+                $memberStatus = 0;
+            }
+       }
+                $diskon = ($sebelum * $memberStatus) / 100;
+                $setelah = $sebelum - $diskon; 
+                $hasil = $setelah;
+                $uang = number_format($hasil, 3, '.');
+                return $uang;
+    }
+        
+       
     }
     
-}
+
 
 if(isset($_POST['submit']) ){
     $waktu = $_POST['waktu'];
