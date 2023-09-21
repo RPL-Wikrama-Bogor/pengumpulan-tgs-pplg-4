@@ -1,47 +1,81 @@
 <?php
+class RentalMotor {
+    private $nama;
+    private $lamaWaktu;
+    private $jenis; 
+    private $harga;
+    private $total;
+
+    public function __construct($nama, $lamaWaktu, $jenis) {
+        $this->nama = $nama;
+        $this->lamaWaktu = intval($lamaWaktu);
+        $this->jenis = $jenis;
+        $this->harga = $this->calculateHarga();
+        $this->total = $this->calculateTotal();
+    }
+
+    private function calculateHarga() {
+        switch ($this->jenis) {
+            case "ZX-25R":
+                return 1000000;
+            case "H2-R":
+                return 10000000;
+            case "Vario":
+                return 70000;
+            case "Scoopy":
+                return 50000;
+            case "CBR-1000RR":
+                return 7000000;
+            case "R1-M":
+                return 7500000;
+            case "Ducati Panigale":
+                return 9000000;
+            default:
+                return 0;
+        }
+    }
+
+    private function calculateTotal() {
+        if ($this->lamaWaktu > 2) {
+            return $this->lamaWaktu * $this->harga * 0.95;
+        } else {
+            return $this->lamaWaktu * $this->harga;
+        }
+    }
+
+    public function getNama() {
+        return $this->nama;
+    }
+
+    public function getJenis() {
+        return $this->jenis;
+    }
+
+    public function getLamaWaktu() {
+        return $this->lamaWaktu;
+    }
+
+    public function getHarga() {
+        return $this->harga;
+    }
+
+    public function getTotal() {
+        return $this->total;
+    }
+}
+
 $nama = "";
 $lamaWaktu = 0;
 $jenis = "";
-$harga = 0;
 $total = 0;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nama = $_POST["nama_pelanggan"];
-    $lamaWaktu = intval($_POST["lama_rental"]);
+    $lamaWaktu = $_POST["lama_rental"];
     $jenis = $_POST["jenis_motor"];
-
-    switch ($jenis) {
-        case "ZX-25R":
-            $harga = 1000000;
-            break;
-        case "H2-R":
-            $harga = 10000000;
-            break;
-        case "Vario":
-            $harga = 70000;
-            break;
-        case "Scoopy":
-            $harga = 50000;
-            break;
-        case "CBR-1000RR":
-            $harga = 7000000;
-            break;
-        case "R1-M":
-            $harga = 7500000;
-            break;
-        case "Ducati Panigale":
-            $harga = 9000000;
-            break;
-        default:
-            $harga = 0;
-    }
-
-    if ($lamaWaktu > 2) {
-        $total = $lamaWaktu * $harga * 0.95;
-    } else {
-        $total = $lamaWaktu * $harga;
-    }
 }
+
+$calculator = new RentalMotor($nama, $lamaWaktu, $jenis);
 ?>
 
 <!DOCTYPE html>
@@ -137,20 +171,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
                 <?php
-                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    if ($total > 0) {
-                        echo "<h2>$nama berstatus sebagai Member mendapatkan diskon 5%</h2>";
-                        echo "<table>";
-                        echo "<tr><th>Jenis Motor</th><th>Lama Rental (hari)</th><th>Harga Rental per Hari</th><th>Total Harga</th></tr>";
-                        echo "<tr><td>$jenis</td><td>$lamaWaktu</td><td>Rp " . number_format($harga, 0, ',', '.') . "</td><td>Rp " . number_format($total, 0, ',', '.') . "</td></tr>";
-                        echo "</table>";
-                    } else {
-                        echo "<h2>$nama berstatus sebagai Member mendapatkan diskon 5%</h2>";
-                        echo "<p>Jenis motor yang dirental adalah $jenis Selama $lamaWaktu hari</p>";
-                        echo "<p>Harga Rental per harinya Rp " . number_format($harga, 0, ',', '.') . "</p>";
-                        echo "<p>Besar yang harus dibayarkan Rp " . number_format($total, 0, ',', '.') . "</p>";
-                    }
+               if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if ($calculator->getTotal() > 0) {
+                    echo "<h2>$nama berstatus sebagai Member mendapatkan diskon 5%</h2>";
+                    echo "<table>";
+                    echo "<tr><th>Jenis Motor</th><th>Lama Rental (hari)</th><th>Harga Rental per Hari</th><th>Total Harga</th></tr>";
+                    echo "<tr><td>$jenis</td><td>$lamaWaktu</td><td>Rp " . number_format($calculator->getHarga(), 0, ',', '.') . "</td><td>Rp " . number_format($calculator->getTotal(), 0, ',', '.') . "</td></tr>";
+                    echo "</table>";
+                } else {
+                    echo "<h2>$nama berstatus sebagai Member mendapatkan diskon 5%</h2>";
+                    echo "<p>Jenis motor yang dirental adalah $jenis Selama $lamaWaktu hari</p>";
+                    echo "<p>Harga Rental per harinya Rp " . number_format($calculator->getHarga(), 0, ',', '.') . "</p>";
+                    echo "<p>Besar yang harus dibayarkan Rp " . number_format($calculator->getTotal(), 0, ',', '.') . "</p>";
                 }
+            }
+            
                 ?>
 </body>
 
