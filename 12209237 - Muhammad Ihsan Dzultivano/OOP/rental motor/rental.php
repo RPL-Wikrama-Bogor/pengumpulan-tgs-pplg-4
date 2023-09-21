@@ -145,17 +145,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
                 <?php
                 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    if ($total > 0) {
-                        echo "<h2>$nama berstatus sebagai Member mendapatkan diskon 5%</h2>";
+                    if ($total > 0 && $lamaWaktu <= 2) {
                         echo "<table>";
                         echo "<tr><th>Jenis Motor</th><th>Lama Rental (hari)</th><th>Harga Rental per Hari</th><th>Total Harga</th></tr>";
                         echo "<tr><td>$jenis</td><td>$lamaWaktu</td><td>Rp " . number_format($harga, 0, ',', '.') . "</td><td>Rp " . number_format($total, 0, ',', '.') . "</td></tr>";
                         echo "</table>";
                     } else {
                         echo "<h2>$nama berstatus sebagai Member mendapatkan diskon 5%</h2>";
-                        echo "<p>Jenis motor yang dirental adalah $jenis Selama $lamaWaktu hari</p>";
-                        echo "<p>Harga Rental per harinya Rp " . number_format($harga, 0, ',', '.') . "</p>";
-                        echo "<p>Besar yang harus dibayarkan Rp " . number_format($total, 0, ',', '.') . "</p>";
+                        echo "<table>";
+                        echo "<tr><th>Jenis Motor</th><th>Lama Rental (hari)</th><th>Harga Rental per Hari</th><th>Total Harga</th></tr>";
+                        echo "<tr><td>$jenis</td><td>$lamaWaktu</td><td>Rp " . number_format($harga, 0, ',', '.') . "</td><td>Rp " . number_format($total, 0, ',', '.') . "</td></tr>";
+                        echo "</table>";
                     }
                 }
                 ?>
