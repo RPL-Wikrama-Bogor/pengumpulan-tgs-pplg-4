@@ -7,37 +7,40 @@
     <title>Rental Motor</title>
 </head>
 <style>
-  .floater {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #3498db;
-        color: #fff;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        transition: transform 0.3s ease-in-out;
-    }
-
-        .floater:hover {
-            transform: translateX(-10px);
-        }
-
-        
         body {
-            background-image: url('img/wpp.jpg'); 
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
             font-family: Arial, sans-serif;
         }
-        /* Rest of your CSS code */
-  
-</style>
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin: 0 auto;
+            max-width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+        }
+        table td {
+            padding: 8px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
 <body>
 
-<center>
-<h1>RENTALIM</h1>
+<h1>RENTALIN</h1>
 
 <form action="" method="post">
         <table>
@@ -81,14 +84,12 @@
             </tr>
 
                 <tr>
-                    <td>
+                    <td colspan="3" style="text-align:center;">
                         <button type="submit" name="submit">Pinjam</button>
                     </td>
                 </tr>
         </table>
     </form>
-    <div class="floater">Copyright © SLM.</div>
-    
 </body>
 </html>
 
@@ -99,7 +100,7 @@ class RentalMotor {
     private $Beat,
             $Vario,
             $Vespa,
-            $Nmax;
+            $Harley;
     public  $nama,
             $waktu,
             $jenis,
@@ -138,14 +139,32 @@ class RentalMotor {
         }
     
 
-        public function cetakPeminjaman() {
-            echo 
-            "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-            echo "<center>";
-            echo $this->nama . " meminjam motor bertipe " .
-            $this->jenis . "<br>";
-            echo "Dengan waktu : "  . $this->waktu . " hari
-            <br>";
+    public function cetakPeminjaman() {
+        echo '<!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Hasil Peminjaman</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                .result {
+                    text-align: center;
+                    border: 1px solid #ccc;
+                    border-radius: 5px;
+                    padding: 20px;
+                    max-width: 400px;
+                    margin: 0 auto;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="result">
+                <h1>Hasil Peminjaman</h1>
+                <p><strong>' . $this->nama . '</strong> meminjam motor bertipe <strong>' . $this->jenis . '</strong></p>
+                <p>Dengan waktu: ' . $this->waktu . ' hari</p>';
 
         if ($this->Member) {
             echo "Anda adalah member, Anda mendapatkan diskon 5%.<br>";
@@ -155,8 +174,6 @@ class RentalMotor {
         number_format($this->hargaPinjam(), 0, '', '.') .
         "<br>";
         echo "</center>";
-        echo 
-        "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
     }
 }
 ?>
