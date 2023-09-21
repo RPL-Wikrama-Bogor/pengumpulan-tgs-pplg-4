@@ -5,12 +5,12 @@ class DataBahanBakar {
     private $HargaSVPower;
     private $HargaSVPowerDiesel;
     private $HargaSVPowerNitro;
-
+    
     public $jenisYangDipilih;
     public $totalLiter;
 
     protected $totalPembayaran;
-
+    protected $ppn = 0.10;
    public function setHarga($valSSuper, $valSVPower, $valSVPowerDiesel, $valSVPowerNitro){
     //mengisi nilai ke attribute, nilai nantinya diisi dari luar class melalui fungsi setter ini
     //nilai dari luar diambil kedalam class melalui parameter (variable yg ada di dalam kurung), nilai dari luar tersebut disimpan ke attribute yg sudah tersedia ($this->)
@@ -32,16 +32,16 @@ class DataBahanBakar {
 }
 class Pembelian extends DataBahanBakar {
     public function totalHarga() {
-        $this->totalPembayaran = $this->getHarga()
-        [$this->jenisYangDipilih] *
-        $this->totalLiter;
+        $hargaBahanBakar = $this->getHarga()[$this->jenisYangDipilih];
+        $totalHargaTanpaPPN = $hargaBahanBakar * $this->totalLiter;
+        $totalHargaDenganPPN = $totalHargaTanpaPPN + ($totalHargaTanpaPPN * $this->ppn);
+        $this->totalPembayaran = $totalHargaDenganPPN;
     }
 
     public function cetakBukti() {
-        echo"------------------------------------------------";
+        echo "------------------------------------------------";
         echo "<br/>";
-        echo "Jenis Bahan Bakar: " .
-        $this->jenisYangDipilih;
+        echo "Jenis Bahan Bakar: " . $this->jenisYangDipilih;
         echo "<br/>";
         echo "Total Liter: " . $this->totalLiter;
         echo "<br/>";
@@ -49,6 +49,6 @@ class Pembelian extends DataBahanBakar {
         echo "<br/>";
         echo "-----------------------------------------------";
     }
-
 }
+
 ?>
