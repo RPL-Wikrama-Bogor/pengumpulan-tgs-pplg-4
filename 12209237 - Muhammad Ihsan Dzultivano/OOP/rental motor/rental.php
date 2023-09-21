@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $jenis = $_POST["jenis_motor"];
 
     switch ($jenis) {
-        case "Kawasaki Ninja 250":
+        case "Kawasaki Z1000 Sugomi":
             $harga = 1000000;
             break;
         case "Kawasaki ZX-6 R":
@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         case "Yamaha R25":
             $harga = 500000;
             break;
-        case "Kawasaki Ninja 250 Karbulator":
+        case "Kawasaki Ninja 250 Karbu":
             $harga = 200000;
             break;
         case "Honda CBR 250 RR/Baby RR":
@@ -129,10 +129,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                     <label for="jenis_motor">Nama Motor</label>
                     <select name="jenis_motor" id="jenis_motor" required>
-                        <option value="Kawasaki Ninja 250">Kawasaki Ninja 250</option>
+                        <option value="Kawasaki Z1000 Sugomi">Kawasaki Z1000 Sugomi</option>
                         <option value="Kawasaki ZX-4 R">Kawasaki ZX-4 R</option>
                         <option value="Yamaha R25">Yamaha R25</option>
-                        <option value="Kawasaki Ninja 250 Karbulator">Kawasaki Ninja 250 Karbulator</option>
+                        <option value="Kawasaki Ninja 250 Karbu">Kawasaki Ninja 250 Karbu</option>
                         <option value="Honda CBR 250 RR/Baby RR">Honda CBR 250 RR/Baby RR</option>
                         <option value="Yamaha XMAX">Yamaha XMAX</option>
                         <option value="Yamaha Aerox 155">Yamaha Aerox 155</option>
