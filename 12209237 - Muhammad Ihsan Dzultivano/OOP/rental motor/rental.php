@@ -114,10 +114,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <h1>Formulir Rental Motor Kang Jull</h1>
+    <br><br><br>
     <div class="d-flex justify-content-center">
         <div class="card">
             <div class="card-body">
-                <img class="profil" src="profilrental.jpg" alt="">
                 <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <h1>Rental Motor Kang Jull</h1>
                     <br>
