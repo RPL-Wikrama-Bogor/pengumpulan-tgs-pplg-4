@@ -1,85 +1,119 @@
 <?php
 
-class Motor{
+class Motor {
     protected $scoopy,
               $beat,
               $vario,
-              $pajak;
+              $nama,
+              $jenis,
+              $waktu;
+    protected $members = [
+        ['nama'=>'rifa',
+         'member'=>0.05
+        ],
+        ['nama'=>'catur',
+         'member'=>0.05
+        ]
+    ];
 
 
-    public function gethargaS()
-    {
-        $this->scoopy = 100;
-        return $this->scoopy;
+    public function setHargaS($Hscoopy){
+        $this ->scoopy = $Hscoopy;
     }
-    public function gethargaB()
-    {
-        $this->beat = 120;
-        return $this->beat;
-
+    public function setHargaB($Hbeat){
+        $this ->beat = $Hbeat;
     }
-    public function gethargaV()
-    {
-        $this->vario = 150;
-        return $this->vario;
-
+    public function setHargaV($Hvario){
+        $this ->vario = $Hvario;
     }
-    public function gethargaP()
-    {
-        $this->pajak = 10;
-        return $this->pajak;
-
+    public function getHargaS(){
+        $scoopy = $this->scoopy;
+        return $scoopy;
     }
-
+    public function getHargaB(){
+        $beat = $this->beat;
+        return $beat;
+    }
+    public function getHargaV(){
+        $vario = $this->vario;
+        return $vario;
+    }
     
-   
-}
-class Pinjam extends Motor{
+    public function setnama($nama){
+        $this->nama = $nama;
+        return $this->nama;
+    }
+    public function setwaktu($waktu){
+        $this->waktu = $waktu;
+        return $this->waktu;
+    }
+    public function setjenis($jenis){
+        $this->jenis = $jenis;
+        return $this->jenis;
+    }
 
-    public function setharga($tipe, $waktu){
-        $harga = 0;
-        $pajak = $this->gethargaP();
-        $scoopy = $this->gethargaS();
-        $beat = $this->gethargaB();
-        $vario = $this->gethargaV();
+}
+
+
+
+class Pinjam extends Motor{
+    
+    public function getstruk($tipe){
+
+        $memberStatus = 0;
+        foreach ($this->members as $member) {
+            if ($member['nama'] === $this->nama) {
+                $memberStatus = $member['member'];
+                break;
+            }
+        }
         
         switch($tipe){
             case 'scoopy':
-                $harga = $scoopy;
+                $harga = $this->getHargaS();
                 break;
             case 'beat':
-                $harga = $beat;
+                $harga = $this->getHargaB();
                 break;
             case 'vario':
-                $harga = $vario;
+                $harga = $this->getHargaV();
                 break;
+            
         }
-       
-        $total = $harga * $waktu; 
-        $sebelum = $total + $pajak;
-        $uang = number_format($sebelum, 3, '.');
-        return $uang;
-    }
-    
+        $rental = $this->waktu * $harga;
+        $diskon = $rental * $memberStatus;
+        $setelah = $rental - $diskon;
+        
+        $pinjam = number_format($setelah, 3, '.', ',');
+        return $pinjam;
+    } 
 }
 
-if(isset($_POST['submit']) ){
-    $waktu = $_POST['waktu'];
-    $tipe = $_POST['tipe'];
-    $nama = $_POST['nama'];
-    $pinjam = new Pinjam();
+$pinjam = new Pinjam();
 
-    $total = $pinjam->setharga($tipe, $waktu);
+$pinjam->setHargaS(100);
+$pinjam->setHargaB(120);
+$pinjam->setHargaV(150);
+
+if(isset($_POST['submit']) ){
+    $nama = $_POST['nama'];
+    $tipe = $_POST['tipe'];
+    $waktu = $_POST['waktu'];
+
+    $pinjam->setnama($nama);
+    $pinjam->setwaktu($waktu);
+    $pinjam->setjenis($tipe);
+
+    $harga = $pinjam->getstruk($tipe);
 
     echo "========================================== <br>";
     echo "nama peminjam = $nama <br>";
     echo "Meminjam = $tipe <br> Selama $waktu hari <br>";
-    echo "harga yang harus dibayar = $total <br>";
+    echo "harga yang harus dibayar = $harga <br>";
     echo "=========================================== <br>";
-
 }
-?>
 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -100,7 +134,7 @@ if(isset($_POST['submit']) ){
             <option value="beat">beat</option>
             <option value="vario">vario</option>
         </select>
-        <input type="submit" name="submit" placeholder="Pinjam">
+        <input type="submit" name="submit" value="Pinjam">
     </form>
 
 </body>
