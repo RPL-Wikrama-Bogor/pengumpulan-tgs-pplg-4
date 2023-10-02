@@ -69,6 +69,7 @@
     }
     ?>
 
+    <!-- pisahkan makanan dan minuman -->
     <form method="post">
         <h2>Menu Makanan</h2>
         <label for="nama_makanan">Nama Makanan / Minuman:</label>

@@ -94,7 +94,8 @@
         }
 
         // Menghitung total belanjaan setelah diskon
-        $total_setelah_diskon = $total_harga - $diskon;
+        // gak mungkin total harga hanya dikurang diskon yang belum dikalikan.
+        $total_setelah_diskon = $total_harga - ($total_harga * $diskon/100);
 
         // Menampilkan detail pesanan
         echo "<h2>Detail Pesanan:</h2>";
@@ -118,6 +119,9 @@ foreach ($pesanan as $jenis => $items) {
         $diskon += 10; 
     }
 }
+
+
+$diskon = $total_harga * $diskon/100;
 
 
 echo "<h2>Total Belanjaan Keseluruhan:</h2>";

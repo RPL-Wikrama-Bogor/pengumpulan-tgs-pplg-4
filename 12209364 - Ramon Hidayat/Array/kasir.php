@@ -12,7 +12,7 @@ $makanan = [
         "makanan" => "Sate ayam",
         "harga" => 20000
     ],
-    [
+    [   
         "makanan" => "Sate kambing",
         "harga" => 25000
     ],

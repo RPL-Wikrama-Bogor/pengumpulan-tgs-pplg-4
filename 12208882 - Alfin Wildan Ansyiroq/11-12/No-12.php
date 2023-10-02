@@ -76,6 +76,7 @@ $ss = 0;
 </html>
 
 <?php
+    // Waktu : 2Jam60Menit0Detik seharusnnya 3 jam.
     if(isset($_POST['submit'])) {
         $hh = $_POST['jam'];
         $mm = $_POST['menit'];

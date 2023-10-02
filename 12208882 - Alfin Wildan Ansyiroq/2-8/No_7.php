@@ -30,6 +30,7 @@ for ($i=1; $i<=15 ; $i++) {
     }
 }
 
+// undefined $siswa_juara
 if ($siswa_juara != 0) {
     echo "Juara kelas : siswa ke $siswa_juara dengan rata-rata $juara \n";
 

@@ -33,7 +33,7 @@ $pesanMinuman = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $makanan = $_POST["makanan"];
-    $jumlahMakanan = $_POST["jumlahmax"];
+    $jumlahMakanan = $_POST["jumlahmak"];
     $minuman = $_POST["minuman"];
     $jumlahMinuman = $_POST["jumlahmin"];
 

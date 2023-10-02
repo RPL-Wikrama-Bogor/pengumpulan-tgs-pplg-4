@@ -131,6 +131,7 @@
         echo "<tr><th>Menu</th><th>Jumlah</th><th>Total Harga</th></tr>";
         echo "<tr><td>$menuMakanan</td><td>$jumlahMakanan</td><td>Rp " . number_format($totalMakanan, 0, ',', '.') . "</td></tr>";
         echo "<tr><td>$menuMinuman</td><td>$jumlahMinuman</td><td>Rp " . number_format($totalMinuman, 0, ',', '.') . "</td></tr>";
+        // subtotal itu bukan total harga.
         echo "<tr><th colspan='2'>Subtotal</th><td>Rp " . number_format($totalHarga, 0, ',', '.') . "</td></tr>";
         echo "<tr><th colspan='2'>Diskon (10%)</th><td>Rp " . number_format($diskon, 0, ',', '.') . "</td></tr>";
         echo "<tr><th colspan='2'>Total Harga</th><td>Rp " . number_format($totalHarga, 0, ',', '.') . "</td></tr>";

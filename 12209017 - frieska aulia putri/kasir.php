@@ -182,6 +182,7 @@ $menus = [
             $drink_menu = $_POST["drink_menu"];
             $drink_quantity = $_POST["drink_quantity"];
 
+            // belum ada diskonnya
             foreach ($menus as $item) {
                 if ($item['menu'] == $food_menu) {
                     $food_price = $item['harga'];

@@ -60,7 +60,8 @@ if (isset($_POST['submit'])) {
     }
     $no_golongan = substr($no_pegawai, 0, 1);
     $tanggal = substr($no_pegawai, 1, 2);
-    $bulan = substr($no_pegawai, 3, 1);
+    // $bulan = substr($no_pegawai, 3, 1);
+    $bulan = substr($no_pegawai, 3, 2);
     $tahun = substr($no_pegawai, 5, 4);
     $no_urutan = substr($no_pegawai, 9, 2);
 

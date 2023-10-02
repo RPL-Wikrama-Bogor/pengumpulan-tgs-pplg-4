@@ -73,7 +73,7 @@
         }
         
         // Menghitung total belanjaan setelah diskon
-        $total_setelah_diskon = $total_harga - $diskon;
+        $total_setelah_diskon = $total_harga - ($total_harga * $diskon/100);
         
         // Menampilkan detail pesanan
         echo "<h2>Detail Pesanan:</h2>";
@@ -90,6 +90,7 @@
         // Menampilkan total belanjaan, diskon, dan total belanjaan setelah diskon
         echo "<h2>Total Belanjaan Keseluruhan:</h2>";
         echo "Total Belanjaan Sebelum Diskon: Rp" . number_format($total_harga, 3) . "<br>";
+        // bukan Rp tapi % 
         echo "Diskon: Rp" . number_format($diskon,) . "<br>";
         echo "Total Belanjaan Setelah Diskon: Rp" . number_format($total_setelah_diskon, 3) . "<br>";
     }

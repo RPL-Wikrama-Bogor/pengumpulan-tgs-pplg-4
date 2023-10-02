@@ -140,6 +140,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Menghitung total
     $total_cost = 0;
     
+    // belum ada diskon
     foreach ($menus as $item) {
         if ($item['menu'] == $food_menu) {
             $food_price = $item['harga'];

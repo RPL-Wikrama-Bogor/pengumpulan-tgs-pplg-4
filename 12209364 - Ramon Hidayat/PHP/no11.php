@@ -48,7 +48,8 @@
         } else {
             $nogol = substr($nop, 0, 1);
             $tanggal = substr($nop, 1, 2);
-            $bulan = substr($nop, 3, 1);
+            // $bulan = substr($nop, 3, 1);
+            $bulan = substr($nop, 3, 2);
             $tahun = substr($nop, 5, 4);
             $urutan = substr($nop, 9, 2);
 
