@@ -6,8 +6,9 @@ class RentalMotor {
     private $jenis;
     private $harga;
     private $total;
+    // tidak ada member
 
-    public function _a_construct() {
+    public function __construct() {
         $this->nama = "";
         $this->lamaWaktu = 0;
         $this->jenis = "";

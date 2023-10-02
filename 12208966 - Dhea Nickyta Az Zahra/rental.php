@@ -79,7 +79,7 @@
     
     
         function __construct () {
-            $this->DMember = 0.5;
+            $this->DMember = 0.05;
         }
         
 

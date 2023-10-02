@@ -12,7 +12,7 @@
                 $jenis;
 
         function __construct() {
-            $this->diskon = 0.5;
+            $this->diskon = 0.05;
         }
 
         public function setHarga($motor1, $motor2, $motor3, $motor4) {

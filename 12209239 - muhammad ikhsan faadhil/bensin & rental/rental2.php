@@ -7,7 +7,7 @@ class RentalMotor {
     private $harga;
     private $total;
 
-    public function _a_construct() {
+    public function __construct() {
         $this->nama = "";
         $this->lamaWaktu = 0;
         $this->jenis = "";

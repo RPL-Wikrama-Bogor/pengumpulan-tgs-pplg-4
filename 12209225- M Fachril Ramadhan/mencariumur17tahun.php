@@ -8,7 +8,7 @@ $siswa = [
         "umur" => 17,
     ],
     [
-        "nama" => "Septian"
+        "nama" => "Septian",
         "nis" => "12209250",
         "rombel" => "PPLG XI-1",
         "rayon" => "Cicurug 3",

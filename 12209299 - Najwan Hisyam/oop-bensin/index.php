@@ -83,7 +83,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hargaShellVPowerNitro = 16510.00;
     $ppn = 10;
 
-    // Membaca input dari pengguna
+    // Membaca input dari pengguna  
     $jenisBensin = $_POST["jenis_bensin"];
     $jumlahLiter = $_POST["jumlah_liter"];
 
