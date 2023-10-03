@@ -1,6 +1,6 @@
 <div class="container">
     <h3 class="mb-3">Edit Buku : <?= $data['buku']['judul']?></h3>
-    <form action="<?= BASE_URL; ?>" method="post">
+    <form action="<?= BASE_URL ?>/buku/updateBuku" method="post">
         <div class="class-body">
             <input type="hidden" name="id" value="<?= $data['buku']['id']; ?>">
             <div class="form-group mb-3">

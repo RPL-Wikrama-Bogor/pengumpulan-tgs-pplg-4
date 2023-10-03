@@ -45,10 +45,10 @@ class Buku extends Controller
     public function updateBuku()
     {
         if ($this->model('BukuModel')->updateDataBuku($_POST) > 0) {
-            header('location: '. BASE_URL . '/buku/index');
+            header('location: ' . BASE_URL . '/buku/index');
             exit;
         } else {
-            header('location: '. BASE_URL . '/buku/index');
+            header('location: ' . BASE_URL . '/buku/index');
             exit;
         }
     }

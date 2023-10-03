@@ -7,11 +7,11 @@
     <table class="table table-success table-striped tabe-bordered">
         <thead>
             <tr>
-                <th class="col"></th>
-                <th class="col"></th>
-                <th class="col"></th>
-                <th class="col"></th>
-                <th class="col"></th>
+                <th class="col">#</th>
+                <th class="col">Judul</th>
+                <th class="col">Penulis</th>
+                <th class="col">Tanggal Selesai</th>
+                <th class="col">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -34,7 +34,6 @@
                         <a href="<?= BASE_URL ?>/buku/edit/<?= $row['id'] ?>" class="btn btn-primary">Edit</a>
                         <a href="<?= BASE_URL ?>/buku/hapus/<?= $row['id'] ?>" class="btn btn-danger"
                             onclick="return confirm('Hapus Data?')" ;>Hapus</a>
-                        <a href=""></a>
                     </td>
                 </tr>
                 <?php $no++; endforeach; ?>

@@ -1,6 +1,6 @@
 <div class="container">
     <div class="jumbotron py4 px-5">
-        <h1 class="display-4">Selamat datang!</h1>
+        <h1 class="display-4">Rawr</h1>
         <hr class="my-4">
         <p>نص عربي يُستخدم كبديل للنص الحقيقي في صناعة الطباعة والنشر. يُستخدم هذا النص بشكل شائع لعرض تصميمات ومظاهر الصفحة دون الحاجة إلى النص الفعلي. يعود أصل نص اللوريم إلى الكتابات اللات</p>
     </div>
