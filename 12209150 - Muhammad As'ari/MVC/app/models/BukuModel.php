@@ -36,7 +36,7 @@ class BukuModel {
 
     public function updateDataBuku($data)
     {
-        $query = "UPDATE tb_buku SET judul=:judul, penulis=:penulis, tgl_selesai=:tgl_selesai WHERE id=:id";
+        $query = "UPDATE $this->table SET judul=:judul, penulis=:penulis, tgl_selesai=:tgl_selesai WHERE id=:id";
         $this->db->query($query);
         $this->db->bind('id', $data['id']);
         $this->db->bind('judul', $data['judul']);

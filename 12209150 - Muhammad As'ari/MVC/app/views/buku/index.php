@@ -1,5 +1,5 @@
 <div class="container">
-    <h3 class="mb3">Daftar Buku</h3>
+    <h3 class="mb3">Daftar Peminjaman</h3>
     <br>
     <a href="<?= BASE_URL; ?>/buku/tambah" class="btn btn-primary">Tambah Buku</a>
     <br>
