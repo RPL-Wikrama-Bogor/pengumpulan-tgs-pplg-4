@@ -25,9 +25,11 @@
             } else {
                 $ng = intval(substr($np, 0, 1));
                 $tgl = intval(substr($np, 1, 2));
-                $bln = intval(substr($np, 4, 2));
-                $thn = intval(substr($np, 6, 4));
-                $nu = intval(substr($np, 10, 2));
+                // Rev
+                $bln = intval(substr($np, 3, 2));
+                // Rev
+                $thn = intval(substr($np, 5, 4));
+                $nu = intval(substr($np, 9, 2));
                 ?>
                 <h4>Nomor golongan: <?= $ng; ?></h4>
                 <h4>Nomor urut: <?= $nu; ?></h4>
@@ -38,5 +40,4 @@
         ?>
     </div>
 </body>
-<!-- 120201200704  Rev -->
 </html>
