@@ -90,6 +90,7 @@ if (isset($_POST['submit'])) {
         echo "Desember";
     }
 
+    // variabel dibawah hanya menyertakan angka tidak dengan nama bulan.
     $tanggal_lahir = $tanggal . $bulan . $tahun;
 
     echo "<br/>";

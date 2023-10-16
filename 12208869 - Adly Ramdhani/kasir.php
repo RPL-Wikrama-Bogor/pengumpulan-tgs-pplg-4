@@ -161,8 +161,9 @@ $listmenu = [
                            if (isset($_POST['Beli'])) {
                             $jenismakan = $_POST['Namamak'];
                             $jenisminum = $_POST['Namamin'];
-                            $jummak = $_POST['jummak'];
-                            $jummin = $_POST['jummin'];
+                            $jummak = (int)$_POST['jummak'];
+                            $jummin = (int)$_POST['jummin'];
+                            // jumlah makanan tidak tertampil jika tidak memakai (int)
 
                             $total_harga_makanan = 0;
                             $total_harga_minuman = 0;

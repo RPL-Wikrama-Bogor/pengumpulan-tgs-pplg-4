@@ -36,6 +36,7 @@ if ($key !== false) {
 
 //mengurutkan nilai 72-72
 asort:($nilai);
+// nilai 72 belum diganti menjadi 75
 echo"setelah perbaikan dari nilai 72 ke 75 maka nilai saya sekarang : $strnilai <br>";
 
 // Mengurutkan dari terbesar ke terkecil setelah mengubah nilai 72 menjadi 75

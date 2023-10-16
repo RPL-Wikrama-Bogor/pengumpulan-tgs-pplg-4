@@ -69,7 +69,8 @@ class Pinjam extends Rental
             echo $_POST['nama'] . " Tidak berstatus sebagai member, Diskon 0% <br>";
         }
 
-        $total = (($harga * $lama) + $this->pajak) * $this->diskon;
+        $diskon = (($harga * $lama) + $this->pajak) * $this->diskon; // kalau ini yang ditampilin bukannya diskon doang? bukan yang harus dibayar
+        $total = (($harga * $lama) + $this->pajak) - $diskon;
         echo "Jenis Motor yang dirental: " . $_POST['motor'] . ", Selama " . $lama . " Hari <br>";
         echo "Harga rental per hari: " . $harga . "<br>";
         echo "pajak yang di bayar". $this->pajak. "<br>";

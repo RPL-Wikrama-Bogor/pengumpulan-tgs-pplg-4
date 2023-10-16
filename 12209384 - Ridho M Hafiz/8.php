@@ -12,6 +12,7 @@
         $bilangan = intval($_POST["bilangan"]);
 
         $satuan = $bilangan % 10;
+        // implicit conversion from float to int
         $puluhan = ($bilangan / 10) % 10;
         $ratusan = ($bilangan / 100) % 10;
 

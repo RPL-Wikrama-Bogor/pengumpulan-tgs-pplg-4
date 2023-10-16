@@ -24,6 +24,7 @@ $index = array_search(72, $nilai);
 if($index){
     $nilai[$index] = 75;
 }
+// hasilnya tidak sesuai
 echo "Setelah melakukan perbaikan untuk nilai 72, saya mendapat nilai: " . min($nilai);
 echo "<br>";
 rsort($nilai);

@@ -78,6 +78,7 @@ if ($_POST) {
     $harga_makanan = null;
     $harga_minuman = null;
     foreach ($daftarMenu as $item) {
+        // variable makanan dan minuman dari mana?
         if ($item["menu"] === $makanan) {
             $harga_makanan = $item["harga_makanan"];
         }

@@ -6,5 +6,6 @@
     $menit2 = floor($menit/60);
     $detik = floor($total%60);
 
+    // menit kurang tepat
     echo "$jam jam, $menit2 menit, $detik detik";
 ?>
