@@ -74,6 +74,23 @@
     </div>
 
     <?php
+    // if (isset($_POST['submit'])) {
+    //     require_once 'controller.php';
+
+    //     $namaPelanggan = $_POST['namaPelanggan'];
+    //     $lamaRental = (int)$_POST['lamaRental'];
+    //     $jenisMotor = $_POST['jenisMotor'];
+
+    //     // Daftar member yang sudah terdaftar
+    //     // $daftarMember = ['budi', 'nindi', 'nadin', 'roni', 'harry'];
+
+    //     // Tentukan status member berdasarkan apakah nama ada dalam daftar member
+    //     // $isMember = in_array($namaPelanggan, $daftarMember);
+
+
+    ?>
+    <?php
+    $isMember = false; // Inisialisasi dengan nilai default
     if (isset($_POST['submit'])) {
         require_once 'controller.php';
 
@@ -81,26 +98,14 @@
         $lamaRental = (int)$_POST['lamaRental'];
         $jenisMotor = $_POST['jenisMotor'];
 
-        // Daftar member yang sudah terdaftar
-        $daftarMember = ['budi', 'nindi', 'nadin', 'roni', 'harry'];
-
-        // Tentukan status member berdasarkan apakah nama ada dalam daftar member
-        $isMember = in_array($namaPelanggan, $daftarMember);
-
         $rentalMotor = new RentalMotor($namaPelanggan, $lamaRental, $jenisMotor, $isMember);
-        $hasilRental = $rentalMotor->hitungTotalHarga();
-
-        echo "<div class='output-box'>";
-        echo "<p>Status Member: {$hasilRental['statusMember']}</p>";
-        echo "<p>Jenis Motor yang dirental adalah {$hasilRental['namaMotor']} selama {$hasilRental['lamaRental']} hari.</p>";
-        echo "<p>Harga yang harus dibayarkan (setelah pajak): Rp " . number_format($hasilRental['totalHarga'], 0, ',', '.') . "</p>";
-
-        if ($isMember) {
-            echo "<p>Anda Berstatus sebagai Member dan Mendapatkan Diskon Sebesar 5% </p>";
-        }
-        echo "</div>";
+        echo "<h2>Detail Peminjaman</h2>";
+        $rentalMotor->tampilkanDetailPeminjaman();
     }
+
     ?>
+
+
 </body>
 
 </html>
