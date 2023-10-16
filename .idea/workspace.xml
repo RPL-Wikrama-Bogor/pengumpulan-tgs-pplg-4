@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bb3a620-9624-41e9-a604-2ff04c0b4973" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/12209363 - Ramadhan Alfajrie/array/bensin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/12209363 - Ramadhan Alfajrie/array/cafe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/12209363 - Ramadhan Alfajrie/array/min-max.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/12209225 - M Fachril Ramadhan/12208995 - Fakhri Shiddiq Rizkillah/_.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.laravel-idea.search-composer-json": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "12209363",
+    "git-widget-placeholder": "12209225",
     "last_opened_file_path": "C:/xampp/htdocs/pengumpulan-tgs-pplg-4",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
@@ -119,7 +117,8 @@
       <workItem from="1696384841560" duration="727000" />
       <workItem from="1696385719575" duration="1043000" />
       <workItem from="1697435530034" duration="873000" />
-      <workItem from="1697436712775" duration="356000" />
+      <workItem from="1697436712775" duration="1697000" />
+      <workItem from="1697442231502" duration="955000" />
     </task>
     <task id="LOCAL-00001" summary="studycase OOP">
       <option name="closed" value="true" />
