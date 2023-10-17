@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        body {
+            background-color: #7D7463;
+            margin: 0;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: #555;
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: right;
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            padding-right: 3%;
+        }
+
+        .navbar a .button {
+            background-color: gray;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .navbar a:hover button {
+            color: black;
+        }
+
+        header {
+            padding: 2rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+        }
+
+        .header-text {
+            flex: 1;
+            color: white;
+            margin-right: 50px;
+        }
+
+        .header-image {
+            display: flex; 
+            align-items: center;
+        }
+
+        .header-image img {
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .item {
+            max-width: 250px;
+            height: 100px;
+            background-color: #555;
+            color: white;
+            margin: 4px;
+            border: white;
+            flex-grow: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        .form-container {
+            margin: 120px 20px 40px;
+            padding: 20px;
+            background-color: #555;
+            border-radius: 10px;
+            text-align: center;
+            color: white;
+            float: left;
+            width: 380px;
+        }
+
+        .form-container input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: rgb(66, 66, 255);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 5px 10px;
+            float: right;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="button">
+            <a href="#"><button class="button">Administrator</button></a>
+        </div>
+    </div>
+    <header>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Jakarta</h1>
+                <p>Jakarta adalah ibu kota Indonesia dan sekaligus daerah otonom setingkat provinsi.
+                    Jakarta memiliki lima kota administrasi dan satu kabupaten administrasi. Sementara menurut pengertian secara umum, Jakarta merupakan kota metropolitan.</p>
+                   <p>Jakarta juga mempunyai julukan The Big Durian karena dianggap kota yang sebanding dengan New York City
+                       Jakarta terletak di pesisir bagian barat laut Pulau Jawa. Dahulu pernah dikenal sebagai Sunda Kelapa, Jayakarta, dan Batavia. </p> 
+            </div>
+            <div class="header-image">
+                <img src="img/TTlFgtlC4VUjSOzBzEnHwwLeOCh1bE-metaUXNSNGpmZE5yTTlsQTU0ZHpTY2lPcmh6OXV0bmMyOFBIQVRKYzR5VS5qcGc=-.jpg" alt="Background Image">
+            </div>
+        </div>
+        <section class="flex-container">
+            <div class="item">Item 1</div>
+            <div class="item">Item 2</div>
+            <div class="item">Item 3</div>
+            <div class="item">Item 4</div>  
+        </section>
+        <div class="form-container">
+            <h2>Formulir</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="text" placeholder="Your Email">
+                <input type="text" placeholder="Your Message"><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </header>
+</body>
+</html>

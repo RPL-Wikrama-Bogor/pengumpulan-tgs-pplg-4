@@ -1,0 +1,54 @@
+  body {
+            background-color: #fafafa;
+            font-family: sans-serif;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+        }
+
+        .card-body {
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 10px;
+        }
+
+        .form-control {
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+
+        .btn {
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 14px;
+            color: #fff;
+            background-color: #337ab7;
+            border: none;
+        }
+
+        .btn:hover {
+            background-color: #285e8e;
+        }
+
+        .text-elegant {
+            font-family: sans-serif;
+            font-weight: bold;
+            color: #337ab7;
+        }
