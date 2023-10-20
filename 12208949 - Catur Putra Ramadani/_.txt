@@ -1,0 +1,117 @@
+No 1.
+ms_propinsi -> ms_kota
+1. kardinalitas I - M ( one to many).
+2. key = kode_propinsi pada ms_propinsi sebagai primary key di tandai dengan simbol kunci, dan kode_propinsi pada ms_kota sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak kota pada propinsi.
+
+No 2.
+ms_kota -> ms_cabang
+1. kardinalitas I - M ( one to many).
+2. key = kode_kota pada ms_kota sebagai primary key di tandai dengan simbol kunci, dan kode_kota pada ms_cabang sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak cabang pada kota tersebut.
+
+No 3.
+ms_kategori -> ms_produk
+1. kardinalitas I - M ( one to many).
+2. key = kode_kategori pada ms_kategori sebagai primary key di tandai dengan simbol kunci, dan kode_kategori pada ms_produk sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak produk pada sebuah kategori.
+
+No 4.
+ms_cabang -> tr_penjualan
+1. kardinalitas I - M ( one to many).
+2. key = kode_cabang pada ms_cabang sebagai primary key di tandai dengan simbol kunci, dan kode_cabang pada tr_penjualan sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak penjualan pada suatu cabang.
+
+No 5.
+ms_produk -> tr_penjualan
+1. kardinalitas I - M ( one to many).
+2. key = kode_produk pada ms_produk sebagai primary key di tandai dengan simbol kunci, dan kode_produk pada tr_penjualan sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak 
+penjualan pada suatu produk.
+
+No 6.
+ms_karyawan -> ms_cabang -> tr_penjualan
+1. kardinalitas ms_karyawan -> ms_cabang = I - M ( one to many) dan  ms_cabang -> tr_penjualan = I - M .
+2. key = kode_cabang pada ms_cabang sebagai primary key di tandai dengan simbol kunci, dan kode_cabang pada ms_karyawan dantr_penjualan sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak karyawan pada suatu cabang dan seberapa banyak penjualan pada cabang tersebut.
+
+No 7.
+ms_harga_harian -> tr_penjualan   
+1. kardinalitas M - M ( many to many).
+2. key = kode_produk dan kode_cabang pada ms_harga_harian sebagai primary key di tandai dengan simbol kunci, dan kode_produk dan kode_cabang pada tr_penjualan sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak 
+penjualan pada harga harian.
+
+
+
+
+
+
+No 1.
+brands -> products
+1. kardinalitas I - M ( one to many).
+2. key = brand_id pada brands sebagai primary key di tandai dengan simbol kunci/bintang, dan brand_id pada products sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak produk dalam brand.
+
+No 2.
+categories -> products
+1. kardinalitas I - M ( one to many).
+2. key = category_id pada categories sebagai primary key di tandai dengan simbol kunci/bintang, dan category_id pada products sebagai foreign key. 
+3. Tujuannya untuk mengetahui berapa banyak kategori dalam produk.
+
+No 3.
+products -> order_items
+1. kardinalitas I - M ( one to many).
+2. key = product_id pada products sebagai primary key di tandai dengan simbol kunci/bintang, dan product_id pada order_items sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak order item dalam sebuah produk.
+
+No 3.
+products -> order_items
+1. kardinalitas I - M ( one to many).
+2. key = product_id pada products sebagai primary key di tandai dengan simbol kunci/bintang, dan product_id pada order_items sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak order item dalam sebuah produk.
+
+No 4.
+stores -> staffs
+1. kardinalitas I - M ( one to many).
+2. key = store_id pada stores sebagai primary key di tandai dengan simbol kunci/bintang, dan store_id pada staffs sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak staff/karytawan pada store/toko.
+
+No 5.
+staffs -> orders
+1. kardinalitas I - M ( one to many).
+2. key = staff_id pada stores sebagai primary key di tandai dengan simbol kunci/bintang, dan staff_id pada orders sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak pesanan pada stafnya.
+
+No 6.
+stores -> orders
+1. kardinalitas I - M ( one to many).
+2. key = store_id pada stores sebagai primary key di tandai dengan simbol kunci/bintang, dan store_id pada orders sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak pesanan pada sebuah toko.
+
+No 7.
+products -> stocks
+1. kardinalitas I - M ( one to many).
+2. key = store_id pada products sebagai primary key di tandai dengan simbol kunci/bintang, dan store_id pada stockssebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak stok dalam sebuah produk.
+
+No 8.
+stores -> stocks
+1. kardinalitas I - M ( one to many).
+2. key = store_id pada stores sebagai primary key di tandai dengan simbol kunci/bintang, dan store_id pada stocks sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak stok item dalam sebuah toko.
+
+No 9.
+customers -> orders
+1. kardinalitas M - M ( many to many).
+2. key = customer_id pada customers sebagai primary key di tandai dengan simbol kunci/bintang, dan customer_id pada order sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak pelanggan dalam sebuah orderan.
+
+No 10.
+orders -> order_items
+1. kardinalitas 1 - M (one to many).
+2. key = order_id pada orders sebagai primary key di tandai dengan simbol kunci/bintang, dan order_id pada order_items sebagai foreign key. 
+3. Tujuannya untuk mengetahui ada berapa banyak pesanan dalam sebuah orderan.
+
+
+
