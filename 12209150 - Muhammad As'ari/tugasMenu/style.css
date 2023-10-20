@@ -1,0 +1,48 @@
+//
+.daftar-menu, .pilih-menu {
+    width: 600px; 
+    margin: 0 auto; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.daftar-menu h2, .pilih-menu h2 {
+    text-align: center;
+}
+
+.daftar-menu p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+
+.makanan,
+.minuman {
+    color: rgb(80, 86, 99);
+    margin-top: 17px;
+}
+
+.minuman {
+    margin-top: 18px;
+}
+
+.daftar-menu {
+    margin-top: 12px;
+}
+
+.pilih-menu {
+    margin-top: 15px;
+}
+
+label {
+    margin-top: 4px;
+}
+
+.top-label {
+    font-size: 22px;
+}
+
+.list-item {
+    color: rgb(105, 109, 119);
+}

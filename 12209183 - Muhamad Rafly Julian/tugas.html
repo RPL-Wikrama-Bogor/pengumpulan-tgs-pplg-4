@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>burung</title>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: aqua;
+}
+
+.content {
+  display: flex;
+ 
+  padding: 20px;
+}
+
+.text {
+  flex: 1;
+  padding-right: 500px;
+}
+
+.image img {
+  width: 500px;
+  max-width: 100%;
+  padding-top: 80px;
+  
+}
+.flex-container{
+	display: flex; /* mengubah ke mode flexbox */
+	flex-wrap: wrap; /* mengatur item flexbox dapat diwrap/apabila container tidak cukup lagi untuk membungkus item, maka item akan diturunkan */ 
+	flex-direction: row; /* Mengatur arah item ke row/satu baris */
+	justify-content: center; /* mensejajarkan item selalu di tengah dalam satu baris */
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.item{
+	width: 333px;
+	height: 120px;
+	background-color: rgb(25, 235, 189);
+	margin: 3px;
+	box-sizing: border-box;
+	flex-grow:1; /* mengatur setiap item flexbox dapat melebar 1 bagian dari total item*/
+	flex-shrink: 1; /* mengatur setiap item flexbox dapat menciut 1 bagian dari total item*/
+  font-size: 20px;
+  text-align: center;
+  padding-top: 50px;
+  
+    
+}
+.login-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #13d5e6;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  float: right;
+  padding-left: 20px;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.form-container {
+  background-color: #119eba;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding-bottom: 20px;
+  width: 500px;
+  
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #0056b3;
+}
+
+table {
+  border-collapse: collapse;
+  width: 700px;
+  border: 1px solid black;
+  float: right;
+  padding-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+img {
+  width: 200px;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+  <div class="content">
+    <div class="text">
+        <!-- <button class="login-button">Login</button> -->
+        <h1>BURUNG</h1>
+        <p>Burung adalah anggota kelompok hewan bertulang belakang yang memiliki bulu dan sayap. Jenis-jenis burung begitu bervariasi, mulai dari burung kolibri yang kecil dan dapat mengepakkan sayap dengan sangat cepat, penguin yang menyelam dengan sayapnya, hingga burung unta, yang lebih tinggi dari manusia.</p>
+    </div>
+    <!-- <button class="login-button">Login</button> -->
+    <div class="image">
+      <img src="burung.jpg" alt="">
+      <button class="login-button">Donasi</button>
+    </div>
+    <!-- <div class="button">
+        <button>haha</button>
+    </div> -->
+  </div>
+
+
+  <section class="flex-container">
+    <div class="item">Burung Pipit</div>
+    <div class="item">Burung Kaka Tua</div>
+    <div class="item">Burung Elang</div>
+    <div class="item">Burung Beo</div>
+</section>
+<table>
+  <tr>
+    <td>Burung Pipit: Pipit adalah nama umum bagi sekelompok burung kecil pemakan biji-bijian yang menyebar di wilayah tropis Dunia Lama dan Australasia. Burung-burung ini sekarang dimasukkan ke dalam suku Estrildidae, meski ada juga yang menganggap kelompok ini adalah anak-suku, bagian dari suku Passeridae yang lebih luas</td>
+    <td><img src="pipit.jpg" alt=""></td>
+  </tr>
+  <tr>
+    <td>Burung Kaka Tua: Kakatua adalah jenis burung hias yang memiliki bulu yang indah dengan lengkingan suara yang cukup nyaring. Spesies ini termasuk salah satu burung dengan kecerdasan yang cukup bagus, sehingga sering digunakan untuk acara-acara hiburan di kebun binatang atau tempat hiburan lainnya</td>
+    <td><img src="kakatua.jpg" alt=""></td>
+  </tr>
+  <tr>
+    <td>Burung Elang: Elang adalah salah satu dari jenis burung predator yang terdapat di seluruh Indonesia. Dalam Bahasa inggris, eagle atau elang merujuk pada burung pemangsa berukuran besar dari suku Accipitridae terutama genus Aquila.</td>
+    <td><img src="elang.jpg" alt=""></td>
+  </tr>
+  <tr>
+    <td>Burung Beo: Beo, mamiang, atau tiong emas adalah sejenis burung anggota suku Sturnidae. Wilayah persebaran alaminya adalah mulai dari Sri Lanka, India, Himalaya, Asia Tenggara. Burung ini dapat ditemukan di dataran rendah hingga dataran tinggi lebih dari 2000m.</td>
+    <td><img src="beo.jpg" alt=""></td>
+  </tr>
+</table>
+<div class="form-container">
+    <h2>Pendataan Burung terbagus</h2>
+    <form action="#" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Email:</label>
+      <input type="text" id="password" name="password" required>
+
+      <label for="username">BURUNG TERBAGUS JATUH KEPADA:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <button type="submit" class="submit-button">Kirim</button>
+    </form>
+  </div>
+</body>
+</html>
