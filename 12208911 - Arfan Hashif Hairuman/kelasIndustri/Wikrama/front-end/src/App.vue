@@ -116,7 +116,7 @@ export default {
   },
   methods: {
     numberCounter() {
-      alert('ini nomor ' + this.count);
+      alert('ini donat ke ' + this.count);
       this.count++;
     },
     resetCount() {
