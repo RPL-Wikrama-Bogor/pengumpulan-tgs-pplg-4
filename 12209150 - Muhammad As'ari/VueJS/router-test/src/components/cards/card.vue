@@ -63,7 +63,7 @@
   
   .card-text {
     padding: 20px;
-    width: 60%; /* Adjust the text size as needed */
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -86,7 +86,7 @@
   }
   
   .author-profile-picture {
-    width: 40px; /* Adjust the profile picture size as needed */
+    width: 40px; 
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
@@ -127,4 +127,6 @@
     width: 18px;
     height: 17px;
   }
+
+  /* test */
   </style>
