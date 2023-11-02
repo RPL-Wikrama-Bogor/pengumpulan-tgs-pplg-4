@@ -1,5 +1,5 @@
 {
-  "name": "studycase-vuejs-2",
+  "name": "study-kasus-2",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,8 +8,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.5"
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.4.0",
