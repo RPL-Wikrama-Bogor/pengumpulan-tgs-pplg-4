@@ -55,6 +55,7 @@ $siswa = [
 <body>
     <h1>Data Siswa</h1>
 
+    <!-- Opsi 1: Menampilkan data yang memiliki umur >= 17 -->
     <h2><a href="?opsi=umur">Cari yang sudah berusia lebih dari 17 tahun</a></h2>
 
     <?php
@@ -69,6 +70,7 @@ $siswa = [
     }
     ?>
 
+    <!-- Opsi 2: Menampilkan data dari nama yang dicari -->
     <h2>Cari berdasarkan nama</h2>
     <form method="post">
         <input type="text" name="nama_cari" placeholder="Masukkan nama">
@@ -95,6 +97,8 @@ $siswa = [
     }
     ?>
 
+
+    <!-- Menampilkan seluruh data siswa -->
     <h2>Seluruh Data Siswa</h2>
     <ul>
         <?php
@@ -104,4 +108,5 @@ $siswa = [
         ?>
     </ul>
 </body>
+</html>
 </html>
