@@ -97,6 +97,7 @@ $siswa = [
     }
     ?>
 
+
     <!-- Menampilkan seluruh data siswa -->
     <h2>Seluruh Data Siswa</h2>
     <ul>
@@ -107,4 +108,5 @@ $siswa = [
         ?>
     </ul>
 </body>
+</html>
 </html>

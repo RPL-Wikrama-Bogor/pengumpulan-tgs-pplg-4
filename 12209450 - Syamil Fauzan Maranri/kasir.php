@@ -29,6 +29,7 @@
 
     <?php
     // Daftar menu dalam bentuk array asosiatif
+    // Pisahkan makanan dan minuman
     $menu = array(
         "nasi_goreng" => array("Nama" => "Nasi Goreng", "Harga" => 15000),
         "mie_goreng" => array("Nama" => "Mie Goreng", "Harga" => 10000),

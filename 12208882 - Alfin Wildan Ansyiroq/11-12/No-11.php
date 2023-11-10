@@ -103,6 +103,7 @@ if (isset($_POST["submit"])) {
     // ambil empat angka dari no_pegawai
     $no_urutan = substr($no_pegawai, 9, 2 ) ;
 
+    // urutan bulan dioutput tidak sesuai
     if ( $bulan == "01") {
          $bulan = "Januari";
     } else if ( $bulan == "02") {

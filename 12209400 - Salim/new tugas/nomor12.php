@@ -63,6 +63,7 @@ if (isset($_POST['submit'])) {
 
     $Detik += 1;
 
+    // 2 Jam 60 Menit 60 Detik harusnya 3 jam 0 menit
     if ($Detik >= 60) {
         $Menit += 1;
         $detik = 00;
