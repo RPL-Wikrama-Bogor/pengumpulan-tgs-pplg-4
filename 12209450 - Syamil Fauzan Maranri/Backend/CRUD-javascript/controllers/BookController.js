@@ -5,6 +5,54 @@ const dbConfig = require("../config/database");
 const { responseNotFound, responseSuccess } = require("../traits/ApiResponse");
 const pool = mysql.createPool(dbConfig);
 
+const search = (req, res) =>{
+  const keyword = req.query.keyword
+  // contoh akses -> 'http://localhost:1111/search/keyword'
+
+  const query = `SELECT * FROM books WHERE nama LIKE '%${keyword}'`
+
+  pool.getConnection((err, connection) =>{
+    if(err) throw err
+    connection.query(query, (err, results) =>{
+      if(err) throw err
+
+      if(results.length == 0){
+        return res.json({
+          message: 'Data tidak ditemukan'
+        })
+      }
+
+      responseSuccess(res, results, 'Book successfully fetched')
+    })
+
+    connection.release()
+  })
+}
+
+const sortBy = (req, res) =>{
+  const orderBy = req.query.order
+
+  // DESC / ASC
+  const query = `SELECT * FROM books ORDER BY nama ${orderBy}`
+
+  pool.getConnection((err, connection) =>{
+    if(err) throw err
+
+    connection.query(query, (err, results) =>{
+
+      if(results.length == 0){
+        responseNotFound(res)
+        return
+      }
+
+      responseSuccess(res, results, 'Book successfully fetched')
+    })
+    
+    connection.release()
+  })
+}
+
+
 const getBooks = (req, res) => {
   const query = "SELECT * FROM books";
 
@@ -20,6 +68,7 @@ const getBooks = (req, res) => {
     connection.release();
   });
 };
+
 const getBook = (req, res) => {
   const id = req.params.id;
 
@@ -119,36 +168,6 @@ const deleteBook = (req, res) => {
     connection.release();
   });
 };
-
-
-const searchBookByName = (req, res) => {
-    const searchTerm = req.query.name;
-  
-    if (!searchTerm) {
-      // Handle if no search term is provided
-      return res.status(400).json({ error: "Search term (name) is required" });
-    }
-  
-    const query = `SELECT * FROM books WHERE nama LIKE ?`;
-    const searchValue = `%${searchTerm}%`;
-  
-    pool.getConnection((err, connection) => {
-      if (err) throw err;
-  
-      connection.query(query, [searchValue], (err, results) => {
-        if (err) throw err;
-  
-        if (results.length == 0) {
-          responseNotFound(res);
-          return;
-        }
-  
-        responseSuccess(res, results, "Books successfully fetched by name");
-      });
-  
-      connection.release();
-    });
-  };
   
   module.exports = {
     getBooks,
@@ -156,5 +175,6 @@ const searchBookByName = (req, res) => {
     addBook,
     updateBook,
     deleteBook,
-    searchBookByName,
+    search,
+    sortBy
   };

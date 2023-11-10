@@ -2,13 +2,17 @@ const express = require('express')
 const mysql = require('mysql2')
 const bookRoute = require('./routes/book')
 const authorRoute = require('./routes/author')
+const authRoute = require('./routes/auth')
 const dbConfig = require('./config/database')
 const pool = mysql.createPool(dbConfig)
+const authenticateJWT = require('./middleware/auth')
+const cors = require('cors')
 
 pool.on('error', (err) => {
     console.log(err);
 })
 
+app.use(cors())
 const app = express()
 const PORT = 1111
 
@@ -31,7 +35,8 @@ app.get('/', (req, res) => {
     res.end()
 })
 
-app.use('/book', bookRoute)
+app.use('/auth', authRoute)
+app.use('/book', authenticateJWT, bookRoute)
 app.use('/author', authorRoute)
 
 app.listen(PORT, () => {
