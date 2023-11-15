@@ -1,4 +1,4 @@
-const URL = "http://127.0.0.1:9000/api/";
+const URL = "http://127.0.0.1:8000/api/";
 
 async function Get(path, params) {
     const queryString = new URLSearchParams(params).toString();
