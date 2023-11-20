@@ -30,6 +30,7 @@
         $bilangan = $_POST['bil'];
 
         $satuan = $bilangan % 10;
+        // Implicit conversion from float to int
         $puluhan = ( $bilangan / 10) % 10;
         $ratusan = ( $bilangan / 100) % 10;
     //output

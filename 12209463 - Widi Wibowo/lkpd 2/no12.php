@@ -56,7 +56,8 @@ if (isset($_POST['submit'])) {
     $jam = $_POST['hours'];
     $menit = $_POST['minutes'];
     $detik = $_POST['seconds'];
-
+   
+    
     $detik += 1;
 
     if ($detik >= 60) {

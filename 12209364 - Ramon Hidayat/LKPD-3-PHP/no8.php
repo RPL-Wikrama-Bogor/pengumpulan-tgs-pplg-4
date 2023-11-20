@@ -29,6 +29,7 @@
         $bil = $_POST['bilangan'];
 
         $satuan = $bil % 10;
+        // Implicit conversion from float to int loses precision
         $puluhan = ($bil / 10) % 10;
         $ratusan = floor($bil / 100);
         $ribu = floor($bil/1000);

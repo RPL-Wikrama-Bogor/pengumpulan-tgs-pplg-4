@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>No Pegawai</title>
+    <title>No Pegawai substract</title>
     <link rel="stylesheet" href="No11.css">
 </head>
 
@@ -25,7 +25,8 @@
             } else {
                 $ng = intval(substr($np, 0, 1));
                 $tgl = intval(substr($np, 1, 2));
-                $bln = intval(substr($np, 4, 2));
+                // $bln = intval(substr($np, 4, 2));
+                $bln = intval(substr($np, 3, 2));
                 $thn = intval(substr($np, 6, 4));
                 $nu = intval(substr($np, 10, 2));
                 ?>

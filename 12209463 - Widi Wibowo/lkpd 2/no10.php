@@ -22,7 +22,8 @@
             $Nil_MTK  = intval ($_POST['nilai_MTK']);
 
             $Nil_rata = ( $Nil_PABP + $Nil_MTK + $Nil_DPK ) / 3;
-
+ 
+            
         if ($Nil_rata >=80 && $Nil_rata <=100) {
                 $grade = "A";
             } elseif ($Nil_rata >= 75) {

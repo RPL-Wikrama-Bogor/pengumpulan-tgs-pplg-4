@@ -1,4 +1,5 @@
 <?php
+//
 $mtk = readline("mtk : ");
 $dpk = readline("dpk : ");
 $pabp = readline("pabp : ");
@@ -11,15 +12,15 @@ $rata = ($mtk + $mtk + $pabp) / 3;
 
 if ($rata >= 80 && $rata <= 100) {
     echo "Grade A";
-}elseif ($rata >= 75 && $rata <= 80) {
+} elseif ($rata >= 75 && $rata <= 80) {
     echo "Grade B";
-}elseif ($rata >= 65 && $rata <= 75) {
+} elseif ($rata >= 65 && $rata <= 75) {
     echo "Grade C";
-}elseif ($rata >=45 && $rata <= 65) {
+} elseif ($rata >= 45 && $rata <= 65) {
     echo "Grade D";
-}elseif ($rata >=0 && $rata <=45) {
+} elseif ($rata >= 0 && $rata <= 45) {
     echo "Grade E";
-}else {
+} else {
     echo "Grade K";
 }
 ?>
