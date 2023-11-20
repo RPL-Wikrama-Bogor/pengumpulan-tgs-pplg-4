@@ -1,0 +1,21 @@
+<template>
+    <div class="blog blog-section">
+        <h3>
+            BLOG
+        </h3>
+        <div class="row-blog">
+            <CardBlog v-for="item in data" :blog="item"></CardBlog>
+        </div>
+    </div>
+</template>
+
+<script>
+import '@/assets/Blog.css';
+import CardBlog from '@/components/Blog/Card.vue';
+export default {
+    components: {
+        CardBlog
+    },
+    props: ['data']
+}
+</script>
