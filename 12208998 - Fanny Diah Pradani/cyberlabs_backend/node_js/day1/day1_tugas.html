@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+</body>
+
+<script>
+    const books = [
+      {
+        title: "Harry Potter and the Sorcerer's Stone",
+        author: "J.K. Rowling",
+        genre: "Fantasy",
+        year: 1997,
+      },
+      {
+        title: "to kill a Mockingbird",
+        author: "Harrper lee",
+        genre: "Fiction",
+        year: 1960,
+      },
+      {
+        title: "The Great Gastby",
+        author: "F. Scoot Fitzgerald",
+        genre: "Fiction",
+        year: 1925,
+      },
+    ];
+      
+    function getFictionBooks() {
+          const fictionBooks = books.filter((book) => book.genre === "Fiction");
+          return fictionBooks;
+        }
+        const fictionBooksList = getFictionBooks();
+        console.log("Judul buku dengan genre 'Fiction':");
+        fictionBooksList.forEach((book) => {
+          console.log(book.title);
+        });
+  
+  
+        xy = "========================"
+        console.log(xy)
+        
+  
+  const products = [
+      {
+          name: "Laptop",
+          price: 1000,
+      },
+      {
+          name: "Smartphone",
+          price: 500,
+      },
+      {
+          name: "Tablet",
+          price: 300,
+      },
+  ];
+  function Discount(products) {
+      const discountpresentase = 0.1; // 10%
+      return products.map(product => {
+          const discountPrice = product.price * (1 - discountpresentase);
+          const formatPrice = discountPrice % 1 === 0 ? discountPrice.toFixed(0) : discountPrice.toFixed(2);
+      return `${product.name} seharga $${formatPrice}`;
+      });
+  }
+  const discountProducts = Discount(products);
+  discountProducts.forEach(product => console.log(product));
+  
+  
+  rsk = "================"
+  console.log(rsk)
+  
+  //buatlah sebuah fungsi javascript untuk menyatukan array product dan newProduct lal
+  
+  const newProducts = [
+      {
+          name:"Kulkas",
+          proce: 200
+      },
+      {
+          name:"Tv",
+          proce: 300
+      },
+  ];
+  
+  </script>
+
+<body>
+
+</html>
