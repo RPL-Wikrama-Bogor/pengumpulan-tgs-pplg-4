@@ -5,12 +5,12 @@ $daftarMenu = [
         'Harga' => 15000,
     ],
     2 => [
-        'Menu' => 'Mie Goreng',
+        'Menu' =>~ 'Mie Goreng',
         'Harga' => 10000,
     ],
     3 => [
         'Menu' => 'Kwetiaw',
-        'Harga' => 15000,
+        'Harga' => 15000,~~~~``
     ],
     4 => [
         'Menu' => 'Es Jeruk',
