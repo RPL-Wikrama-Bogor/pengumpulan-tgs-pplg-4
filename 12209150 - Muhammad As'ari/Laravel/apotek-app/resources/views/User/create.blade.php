@@ -16,21 +16,21 @@
         @endif
 
     <div class="mb-3 row">
-        <label for="name" class="col-sm-2 col-form-label">Nama</label>
+        <label for="name" class="col-sm-2 col-form-label">Nama : </label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }} ">
         </div>
     </div>
     <div class="mb-3 row">
-        <label for="name" class="col-sm-2 col-form-label">Email</label>
+        <label for="email" class="col-sm-2 col-form-label">Email : </label>
         <div class="col-sm-10">
             <input type="text" class="form-control" id="email" name="email" value="{{ old('email') }} ">
         </div>
     </div>
     <div class="mb-3 row">
-        <label for="name" class="col-sm-2 col-form-label">Password</label>
+        <label for="email" class="col-sm-2 col-form-label">Password : </label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="password" name="password" value="{{ old('password') }} ">
+            <input type="text" class="form-control" id="password" name="password">
         </div>
     </div>
     <div class="mb-3 row">
@@ -38,11 +38,12 @@
         <div class="col-sm-10">
             <select class="form-select" id="role" name="role">
                 <option selected disabled hidden>Pilih</option>
-                <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>Admin</option>
-                <option value="cashier" {{ old('role') == 'cashier' ? 'selected' : '' }}>Kasir</option>
+                <option value="admin" {{ old('role') == 'admin' ? 'selected' : '' }}>admin</option>
+                <option value="cashier" {{ old('role') == 'cashier' ? 'selected' : '' }}>cashier</option>
             </select>
         </div>
     </div>
+
     <button type="submit" class="btn btn-primary mt-3">Tambah Data</button>
 </form>
 @endsection

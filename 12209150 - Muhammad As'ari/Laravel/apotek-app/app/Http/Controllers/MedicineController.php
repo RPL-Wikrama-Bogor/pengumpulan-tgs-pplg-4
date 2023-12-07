@@ -39,7 +39,7 @@ class MedicineController extends Controller
             'name.required' => 'Nama obat harus diisi.',
             'name.min' => 'Nama obat harus memiliki minimal :min karakter.',
             'type.required' => 'Jenis obat harus dipilih.',
-            'price.required' => 'Harga obat harus diisi)'
+            'price.required' => 'Harga obat harus diisi'
         ]);
 
         Medicine::create([
