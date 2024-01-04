@@ -1,0 +1,62 @@
+/* Make the modal smaller */
+.modal-content {
+    width: 80%;
+    max-width: 480px;
+    height: auto;
+    margin: auto;
+}
+
+/* Center the modal vertically and horizontally */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background color and borders */
+.modal-content {
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+/* Title styling */
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Close button */
+.close {
+    font-size: 20px;
+    color: #333;
+}
+
+/* Buttons */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Customize 'Cancel' and 'Delete' buttons */
+.modal-footer button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+/* Styling for 'Cancel' button */
+.modal-footer .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+/* Styling for 'Delete' button */
+.modal-footer .btn-danger {
+    background-color: #ff4444;
+    color: #fff;
+}
