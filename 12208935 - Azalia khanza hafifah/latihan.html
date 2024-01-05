@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       .back{
+        background-color: rgb(247, 245, 245);
+        
+       }
+        .klm{
+        width: 120px;
+        height: 50px;
+        background-color: #FFC6AC;
+        box-sizing: border-box;
+        margin: 20px;
+        float:right ;
+        border-radius: 40px;
+        text-align: center;
+        }
+        .gambar{
+            float: right;
+            margin-top: 7%;
+            float: right;
+            width: 20%
+            
+        }
+        .text{
+            font-size: 20px;
+            padding-top: 2%;
+            margin-right: 20%;
+        }
+        .baris{
+        box-sizing: border-box;
+				padding: 20px;
+      }
+      .kolom{
+        width: 250px;
+        height: 120px;
+        background-color: #FFC6AC;
+        margin: 3px;
+        box-sizing: border-box;
+				padding: 10px;
+      }
+      .kolom1,.kolom2, .kolom3{
+        float: left;
+        border-radius: 20%;
+        width: 310px;
+      }
+
+      .kotak{
+    margin-bottom: auto;
+    float: right;
+    width: 55%;
+    margin-top: 9%;
+    padding: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+     
+  }
+    
+  input[type="laporan"] {
+    width: 80%;
+    padding: 10%;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    
+    
+  }
+
+      .form-container {
+    max-width: 500px;
+    margin-right: 20%;
+    border: 1px solid #ccc;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 15%;
+    text-align: center;
+  }
+  .form-group {
+    margin-bottom:20px;
+  }
+
+  label {
+    display: block;
+    font-weight: block;
+    font-size: medium;
+    
+  }
+
+  input[type="text"],
+  input[type="rayon"] {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  button {
+    background-color: #FFC6AC;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: rgb(156, 60, 60);
+  }
+
+ 
+    </style>
+
+</head>
+<body>
+  <div class="back">
+     
+        <button class="klm"><h2>health</h2></button>
+      
+
+      <div class="gambar">
+        <img src="n.png" alt="">
+      </div>
+
+      <div class="text">
+        <h2>mental health</h2>
+        <h4>apa itu kesehatan mental?</h4>
+        <p> Mental health adalah keadaan sejahtera di mana setiap individu bisa mengeluarkan potensi di dalam diri masing masing (Menurut World Health Organization). deretan penyakit mental:</p>
+       <ul>
+        <li>gangguan kecemasan</li>       
+        <li>gangguan psikotik</li>
+        <li>skizofrenia</li>
+        <li>OCD (obessive)</li>
+       </ul>
+
+
+      </div>
+
+      <section class="baris">
+        <div class="kolom kolom1">    
+         gangguan kecemasan umumnya bisa merasakan beberapa gejala fisik, seperti tegang, sakit kepala, mual, sulit berkonsentrasi, kesulitan tidur, sesak napas, dan mudah merasa lelah.         
+        </div>
+
+        <div class="kolom kolom2">         
+          Psikotik adalah gangguan jiwa yg ditandai (sulit membedakan antara khayalan dan realitas). Penyebab dari gangguan PSIKOTIK adalah adanya gangguan keseimbangan zat kimia di dalam saraf otak.       
+        </div>
+
+        <div class="kolom kolom3">
+         Skizofrenia adalah gangguan mental serius yang membuat seseorang mengalami distorsi realitas. Para penderita skizofrenia dapat mengalami halusinasi, delusi, serta gangguan berpikir.         
+        </div>
+
+        <div class="kolom kolom3">
+          Obsessive compulsive disorder atau OCD adalah salah satu jenis gangguan mental yang membuat penderitanya melakukan tindakan tertentu berulang kali. OCD ini sedikit berkaitan dengan gangguan cemas.
+        </div>
+
+        <div class="kotak">
+          <div class="lpr">
+            <label for="nama">laporan:</label>
+            <input type="laporan" id="laporan" name="laporan" placeholder="">
+          </div>
+          <div class="lpr">
+            <label for="nama">pesan:</label>
+            <input type="laporan" id="laporan" name="laporan" placeholder="">
+          </div>
+         </div>
+
+        <div class="form-container">
+          <h2>Form data</h2>
+          <form>
+            <div class="form-group">
+              <label for="nama">Nama:</label>
+              <input type="text" id="nama" name="nama" placeholder="Masukkan Nama">
+            </div>
+            <div class="form-group">
+              <label for="rayon">Alamat:</label>
+              <input type="rayon" id="alamat" name="alamat" placeholder="Masukkan alamat">
+            </div>
+            <div class="form-group">
+              <label for="nis">No Telpon:</label>
+              <input type="text" id="no telpon" name="no telpon" placeholder="Masukkan no telpon">
+            </div>
+            <div class="form-group">
+              <label for="nis">penyakit:</label>
+              <input type="text" id="pesan" name="pesan" placeholder="Masukkan Pesan">
+            </div>
+            <div>
+              
+            </div>
+            <button type="submit">Submit</button>
+          </form>
+         </div>
+    </body>
+    </html>
+
+    

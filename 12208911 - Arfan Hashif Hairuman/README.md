@@ -1,0 +1,1 @@
+Mayoritas file di run di terminal
