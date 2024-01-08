@@ -26,6 +26,6 @@
                 <small class="text-danger"> {{ $message }}</small>
             @enderror
         </div>
-        <button type="submit" class="btn btn-success">LOGIN</button>
+        <button type="submit" class="btn btn-success"> LOGIN </button>
     </form>
 @endsection
