@@ -1,0 +1,177 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="kolom">
+        <h4>Admistrator</h4>
+    </div>
+
+    <div class="gmr">
+    <img src="planet.jpg" alt="" width="550">
+
+</div>
+    <div class="teks">
+      <h1>Apa Itu Planet ?</h1>
+        <p><b>Planet</b> adalah benda langit yang mengorbit bintang dan memiliki bentuk yang hampir <br>bulat karena gravitasi yang menarik materi di dalamnya ke pusat.</p>
+        <p>Planet berfungsi sebagai komponen dari tata surya, planet juga dapat dijadikan tempat <br> tinggal oleh makhluk. Namun, tidak semua planet dapat dihuni. Salah satu contohnya <br>adalah Bumi. Sebagai tempat tinggal bagi manusia, Bumi memiliki banyak fungsi penting.</p>
+        <h3>Jenis-Jenis Planet</h3>
+        <ol>
+            <li>Merkurius</li>
+            <li>Venus</li>
+            <li>Mars</li>
+            <li>Jupiter</li>
+        </ol>
+
+        <h4>Bagaimana Planet terbentuk?</h4>
+        <p>Belum diketahui secara pasti bagaimana planet terbentuk. Teori yang saat ini <br>mendominasi adalah planet terbentuk saat sebuah nebula berubah menjadi cakram gas <br> dan debu tipis. Sebuah protobintang terbentuk di intinya dan dikelilingi oleh cakram <br>protoplanet yang berputar.</p>
+    </div>
+    
+    <section class="baris">
+        <div class="list kolom1">Merkurius<br>diameternya sekitar 4.879 km</div>
+        <div class="list kolom2">Venus <br>diameternya sekitar 12.100 km</div>
+        <div class="list kolom3">Mars <br>diameternya sekitar 6.800 km</div>
+        <div class="list kolom4">Jupiter <br>  diameternya sekitar 142.860 km</div>
+   </section>
+
+   <div cl ass="form-container">
+    <h2>Form data siswa</h2>
+    <form>
+      <div class="form-group">
+        <label for="nama">Nama:</label>
+        <input type="text" id="nama" name="nama" placeholder="Masukkan Nama">
+      </div>
+      <div class="form-group">
+        <label for="rayon">Rayon:</label>
+        <input type="rayon" id="rayon" name="rayon" placeholder="Masukkan Rayon">
+      </div>
+      <div class="form-group">
+        <label for="nis">NIS:</label>
+        <input type="text" id="nis" name="nis" placeholder="Masukkan NIS">
+      </div>
+      <div class="form-group">
+        <label for="nis">Pesan:</label>
+        <input type="text" id="pesan" name="pesan" placeholder="Masukkan Pesan">
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+   </div>
+            <!----->
+    <style>
+        body{
+            background-color: #F1F6F9;
+            
+        }
+
+        .kolom h4{
+        width: 110px;
+        height: 40px;
+        background-color: #9BA4B5;
+        box-sizing: border-box;
+		    padding: 11px;
+        float: right;  
+        border-radius: 40px;
+        }
+
+        .gmr img{
+            margin-top: 7%;
+            margin: 7% -8%;
+            float: right;
+            
+        }
+
+        .teks h1{
+          margin-top: -5%;
+        }
+
+        .teks {
+          font-size: 22px;
+          padding-top: 7%;
+          padding-left: 3%;
+          text-align: justify;
+
+        }
+
+        .baris{
+          box-sizing: border-box;
+				  padding: 20px;
+          padding-top: 23%;
+          text-align: center;
+      }
+      .list{
+        width: 270px;
+        height: 90px;
+        background-color: #9BA4B5;
+        margin: 3%;
+        box-sizing: border-box;
+		    padding: 10px;
+        font-size: 22px;
+        border-radius: 40px;
+      }
+
+      .list:hover {
+    background-color: #C5DFF8;
+  }
+
+      .kolom1,.kolom2, .kolom3, .kolom4{
+        float: left;
+      }
+
+      .kolom3{
+        margin-top: -9%;
+      }
+
+      .kolom4{
+        margin-top: -9%;
+      }
+      .kolom1, .kolom2{
+        margin-top: -9%;
+        }
+
+    .form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+  .form-group {
+    margin-bottom:15px;
+  }
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="rayon"] {
+    width: 20%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+
+  button {
+    background-color: #9BA4B5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    
+  }
+
+  button:hover {
+    background-color: #9BA4B5;
+  }
+  
+    </style>
+</body>
+</html>

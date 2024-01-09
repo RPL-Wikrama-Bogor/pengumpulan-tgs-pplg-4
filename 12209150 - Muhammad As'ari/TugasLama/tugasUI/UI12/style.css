@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@500&family=Roboto:ital,wght@0,400;1,300&family=Varela+Round&display=swap');
+* {
+  font-family: 'poppins';
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+/* */
+.form-container {
+    background-color: rgba(181, 188, 216, 0.568);
+    width: 90%; 
+    max-width: 467px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+  }
+
+.form-container h4 {
+  font-size: 19px;
+  margin-bottom: 11px;
+  color: rgb(66, 75, 90);
+}
+  
+.form-container h5 {
+  font-size: 15px;
+  color: rgba(111, 113, 116, 0.61);
+}
+  
+.form-container button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  input[type="number"]{
+    padding: 2px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(111, 113, 116);
+  }
+
+  input[type="submit"]{
+    margin-top: 3px;
+    padding: 2px 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(111, 113, 116);
+  }
+  
+  .form-container input:focus{
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    outline: none;
+  }
+
+.error {
+  margin-top: 8px;
+  color: rgba(233, 47, 33, 0.568);
+}
