@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JKT48</title>
+    <style>
+      
+gi
+        .baris {
+            box-sizing: border-box;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .kolom {
+            flex: 1;
+            height: 100px;
+            background-color: #CD0C0D;
+            margin: 3px;
+            box-sizing: border-box;
+            padding: 40px;
+             color: beige;
+             text-align: center ;
+             font-weight: bold;
+             font-size: 25px;
+
+        }
+
+        .button1 {
+            background-color: #CD0C0D;
+            border-radius: 50px;
+            padding: 7px;
+            margin-left:1180px;
+            color: beige;
+            cursor: pointer;
+            /* float: right; */
+            
+        }
+        .btn{
+            background-color: beige;
+            border-radius: 50px;
+            padding: 7px;
+            color: #CD0C0D;
+            cursor: pointer;
+        }
+
+        ol {
+            background-color: #CD0C0D;
+            color: beige;
+            width: 50%;
+            float: left;
+            padding: 20px;
+            height: 330px;
+            box-sizing: border-box;
+          
+        }
+
+        img {
+            width: 500px;
+            margin-left:150px;
+            margin-right: 0px;
+            /* float: right; */
+             border-radius: 5px;
+        }
+
+        form {
+            width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #CD0C0D;
+            height: 500px;
+            margin-left: 25px;
+            color: beige;
+   
+        }
+        h3{
+            margin-left: 900px;
+            margin-top: -580px;
+        }
+        .input{
+            border-color: #ccc;
+            border-radius: 15px;
+            padding: 10px;
+            width: 580px;
+          
+        }
+        .txt{
+             border-radius: 30px;
+            width: 580px;
+        }
+
+        @media (max-width: 768px) {
+            .baris {
+                flex-direction: column;
+            }
+
+            .kolom {
+                width: 100%;
+            }
+
+            ol {
+                width: 100%;
+                float: none;
+                height: auto;
+            }
+
+            img {
+                width: 100%;
+                margin: 0;
+            }
+
+            form {
+                width: 100%;
+                margin-left: 0;
+            }
+            
+            h3 {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <button class="button1" id="myButton">Verifikasi akun</button>
+
+    <section class="baris">
+        <ol>
+            <h2>Istilah Di JKT48</h2>
+            <li>Oshi adalah istilah dalam budaya idola Jepang yang juga digunakan dalam JKT48, mengacu pada anggota favorit seseorang.</li>
+            <li>Jikoshoukai (自己紹介) adalah istilah dalam bahasa Jepang yang berarti "perkenalan diri sendiri." Dalam konteks grup 
+                idola seperti JKT48, AKB48, dan varian lainnya, jikoshoukai adalah bagian penting dari pertunjukan atau acara di mana 
+                setiap anggota memperkenalkan dirinya sendiri kepada penonton.</li>
+            <li>Shuffle adalah proses di mana anggota dari berbagai tim dipindahkan atau diacak untuk pertunjukan tertentu, yang bertujuan untuk 
+                memberikan variasi dalam penampilan panggung.</li>
+        </ol>
+        <img src="jkt48.jpeg">
+    </section>
+
+    <section class="baris">
+        <div class="kolom kolom1">Oshi</div>
+        <div class="kolom kolom2">jikoshoukai</div>
+        <div class="kolom kolom3">Shuffle</div>
+        <div class="kolom kolom3">Senbatsu</div>
+        <div class="kolom kolom4">Teater </div>
+    </section>
+
+    <form>
+        <label for="nama">Nama:</label>
+        <br>
+        <br>
+        <input  class="input" type="text" id="nama" name="nama" ><br><br>
+    
+        <label for="email">Email:</label>
+        <br>
+        <br>
+        <input class="input" type="email" id="email" name="email" ><br><br>
+    
+        <label class="input" name="pesan">Pesan:</label><br>
+        <br>
+        <textarea  class="txt" id="pesan" name="pesan" rows="10" cols="45"></textarea><br><br>
+        <input class="file" type="file" id="file" name="file"><br><br>
+        <button class="btn" type="submit" value="Kirim" style="margin-left: 500px;">Join Now</button>
+    </form>
+    <br><br>
+
+    <h3>Gen 12 Audition</h3>
+</body>
+
+</html>
